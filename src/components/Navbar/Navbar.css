@@ -1,0 +1,142 @@
+:root {
+  --PrimaryColor: hsl(190, 100%, 50%);
+  --HoverColor: #90ecff;
+  --PaleColor: hsl(190, 72%, 70%);
+  --WhiteColor: hsl(0, 0%, 100%);
+  --BlackColor: hsl(0, 0%, 18%);
+  --TextColor: hsl(240, 1%, 48%);
+  --BgColor: hsl(220, 10%, 94%);
+  --GreyText: rgb(190, 190, 190);
+  --InputColor: hsl(330, 12%, 97%);
+  --BiggestFontSize: 2.5rem;
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --NormalFontSize: .938rem;
+  --SmallFontSize: .813rem;
+  --SmallestFontSize: .75rem;
+}
+
+.topSection {
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  z-index: 1;
+}
+.topSection .topDiv {
+  display: relative;
+  padding: 1rem 3rem 0.5rem;
+}
+.topSection .topDiv .searchDiv {
+  padding: 0.8rem 1rem;
+  float: left;
+  border: 1px rgba(0, 0, 0, 0.281) solid;
+  width: 260px;
+  height: 35px;
+  border-radius: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.topSection .topDiv .searchDiv:hover {
+  cursor: pointer;
+}
+.topSection .topDiv .searchDiv input {
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--TextColor);
+}
+.topSection .topDiv .logo {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%, -50%);
+  color: var(--BlackColor);
+}
+.topSection .topDiv .logo a {
+  text-decoration: none;
+  color: var(--BlackColor);
+}
+.topSection .topDiv .iconDiv {
+  display: flex;
+  float: right;
+  gap: 1rem;
+}
+.topSection nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 3rem 4rem 1rem;
+}
+.topSection nav ul li {
+  font-weight: 600;
+  list-style-type: none;
+  color: var(--BlackColor);
+}
+.topSection nav ul li a:hover {
+  color: red;
+}
+.topSection .banner {
+  background-color: black;
+  text-align: center;
+  color: white;
+  padding: 0.6rem 0;
+  font-size: var(--SmallFontSize);
+}
+
+@media only screen and (max-width: 1024px) {
+  .topSection .topDiv {
+    margin-bottom: 2rem;
+    padding: 1rem 3rem;
+  }
+  .topSection .topDiv .searchDiv {
+    border: none;
+    width: 60px;
+  }
+  .topSection .topDiv .searchDiv input {
+    display: none;
+  }
+  .topSection .topDiv .searchDiv .small-icon {
+    font-size: var(--h1FontSize) !important;
+    color: var(--BlackColor);
+    margin-bottom: 0.5rem;
+  }
+  .topSection .topDiv .logo {
+    font-size: var(--SmallestFontSize);
+    top: 30%;
+  }
+  .topSection .topDiv .iconDiv .linkText .person,
+  .topSection .topDiv .iconDiv .linkText .heart {
+    display: none;
+  }
+  nav ul {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 896px) {
+  .topSection .topDiv {
+    margin-bottom: 1rem;
+  }
+  .topSection .topDiv .searchDiv {
+    border: none;
+    width: 60px;
+  }
+  .topSection .topDiv .searchDiv input {
+    display: none;
+  }
+  .topSection .topDiv .searchDiv .small-icon {
+    font-size: var(--h1FontSize) !important;
+    color: var(--BlackColor);
+    margin-bottom: 0.5rem;
+  }
+  .topSection .topDiv .logo {
+    font-size: var(--SmallestFontSize);
+    top: 30%;
+  }
+  nav ul {
+    display: none !important;
+  }
+}/*# sourceMappingURL=Navbar.css.map */
