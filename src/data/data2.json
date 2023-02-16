@@ -7,7 +7,7 @@
         "price": 50,
         "category": "Cap",
         "gender": "Women",
-        "brand": "LMC"
+        "brand": "DRAWFIT"
     },
 
     {
@@ -18,7 +18,7 @@
         "price": 49,
         "category": "Hoodie",
         "gender": "Men",
-        "brand": "Takeasy"
+        "brand": "TAKEASY"
     },
 
     {
@@ -29,7 +29,7 @@
         "price": 43,
         "category": "Cap",
         "gender": "Men",
-        "brand": "LMC"
+        "brand": "YESEYESEE"
     },
 
     {
@@ -40,7 +40,7 @@
         "price": 49,
         "category": "Sweatshirt",
         "gender": "Women",
-        "brand": "Graver"
+        "brand": "GRAVER"
     },
 
     {
@@ -51,7 +51,7 @@
         "price": 52,
         "category": "Cap",
         "gender": "Men",
-        "brand": "Takeasy"
+        "brand": "TAKEASY"
     },
 
     {
@@ -84,7 +84,7 @@
         "price": 49,
         "category": "Sweatshirt",
         "gender": "Women",
-        "brand": "Graver"
+        "brand": "GRAVER"
     },
 
     {
@@ -95,7 +95,7 @@
         "price": 49,
         "category": "Sweatshirt",
         "gender": "Women",
-        "brand": "Graver"
+        "brand": "GRAVER"
     },
 
     {
@@ -106,7 +106,7 @@
         "price": 49,
         "category": "Hoodie",
         "gender": "Women",
-        "brand": "Graver"
+        "brand": "URBANSTOFF"
     },
 
     {
@@ -117,6 +117,61 @@
         "price": 49,
         "category": "Hoodie",
         "gender": "Women",
-        "brand": "Takeasy"
+        "brand": "URBANSTOFF"
+    },
+
+    {
+        "id": 12,
+        "img": "https://search.pstatic.net/common/?src=http%3A%2F%2Fshop1.phinf.naver.net%2F20201207_229%2F1607336896727B5Ucn_JPEG%2F68895467L.jpg&type=sc960_832",
+        "name": "PIVVEE",
+        "description": "Holiday Signature Ball Cap [Green]",
+        "price": 50,
+        "category": "Cap",
+        "gender": "Women",
+        "brand": "DRAWFIT"
+    },
+
+    {
+        "id": 13,
+        "img": "https://search.pstatic.net/common/?src=http%3A%2F%2Fshop1.phinf.naver.net%2F20201207_229%2F1607336896727B5Ucn_JPEG%2F68895467L.jpg&type=sc960_832",
+        "name": "PIVVEE",
+        "description": "Holiday Signature Ball Cap [Green]",
+        "price": 50,
+        "category": "Shirt",
+        "gender": "Women",
+        "brand": "DRAWFIT"
+    },
+
+    {
+        "id": 14,
+        "img": "https://search.pstatic.net/common/?src=http%3A%2F%2Fshop1.phinf.naver.net%2F20201207_229%2F1607336896727B5Ucn_JPEG%2F68895467L.jpg&type=sc960_832",
+        "name": "JOEGUSH",
+        "description": "Holiday Signature Ball Cap [Green]",
+        "price": 50,
+        "category": "Shirt",
+        "gender": "Women",
+        "brand": "DRAWFIT"
+    },
+
+    {
+        "id": 15,
+        "img": "https://search.pstatic.net/common/?src=http%3A%2F%2Fshop1.phinf.naver.net%2F20201207_229%2F1607336896727B5Ucn_JPEG%2F68895467L.jpg&type=sc960_832",
+        "name": "SUNDAE SCHOOL",
+        "description": "Holiday Signature Ball Cap [Green]",
+        "price": 50,
+        "category": "Shirt",
+        "gender": "Women",
+        "brand": "DRAWFIT"
+    },
+
+    {
+        "id": 16,
+        "img": "https://search.pstatic.net/common/?src=http%3A%2F%2Fshop1.phinf.naver.net%2F20201207_229%2F1607336896727B5Ucn_JPEG%2F68895467L.jpg&type=sc960_832",
+        "name": "BAY LEAF CREWNECK",
+        "description": "Holiday Signature Ball Cap [Green]",
+        "price": 50,
+        "category": "Shirt",
+        "gender": "Women",
+        "brand": "RETRIEVER CLUB"
     }
 ]
