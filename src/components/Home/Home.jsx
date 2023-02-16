@@ -3,6 +3,7 @@ import { useState, useEffect} from 'react'
 import {motion} from 'framer-motion'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
 import { TbArrowBigRight } from 'react-icons/tb'
+import Navbar from '../Navbar/Navbar'
 
 import data from '../../data/data.json'
 
@@ -44,6 +45,8 @@ const Home = () => {
 
 
     return (
+      <>
+      <Navbar />
       <div className='contentSection'>
 
         <div className="heroDiv">
@@ -105,6 +108,7 @@ const Home = () => {
         </div>
 
       </div>
+      </>
     )
 
 

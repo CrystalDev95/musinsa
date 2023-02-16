@@ -2,41 +2,46 @@
 
 
 :root {
-    --PrimaryColor: hsl(190, 100%, 50%);
-    --HoverColor: #90ecff;
-    --PaleColor: hsl(190, 72%, 70%);
-    --WhiteColor: hsl(0, 0%, 100%);
-    --BlackColor: hsl(0, 0%, 18%);
-    --TextColor: hsl(240, 1%, 48%);
-    --BgColor: hsl(220, 10%, 94%);
-    --GreyText: rgb(190, 190, 190);
-    --InputColor: hsl(330, 12%, 97%);
+  --PrimaryColor: hsl(190, 100%, 50%);
+  --HoverColor: #90ecff;
+  --PaleColor: hsl(190, 72%, 70%);
+  --WhiteColor: hsl(0, 0%, 100%);
+  --BlackColor: hsl(0, 0%, 18%);
+  --TextColor: hsl(240, 1%, 48%);
+  --BgColor: hsl(220, 10%, 94%);
+  --GreyText: rgb(190, 190, 190);
+  --InputColor: hsl(330, 12%, 97%);
 
-    --BiggestFontSize: 2.5rem;
-    --h1FontSize: 1.5rem;
-    --h2FontSize: 1.25rem;
-    --h3FontSize: 1rem;
-    --NormalFontSize: .938rem;
-    --SmallFontSize: .813rem;
-    --SmallestFontSize: .75rem;
+  --BiggestFontSize: 2.5rem;
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --NormalFontSize: .938rem;
+  --SmallFontSize: .813rem;
+  --SmallestFontSize: .75rem;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-  
-  a {
-    text-decoration: none;
-    color: var(--BlackColor);
-  }
-  
-  li {
-    list-style: none;
-  }
 
-  .icon {
-    color: var(--BlackColor);
-    font-size: var(--h1FontSize);
-  }
+a {
+  text-decoration: none;
+  color: var(--BlackColor);
+}
+
+li {
+  list-style: none;
+}
+
+.icon {
+  color: var(--BlackColor);
+  font-size: var(--h1FontSize);
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}

@@ -21,26 +21,7 @@
   position: absolute;
   top: 25%;
   width: 100%;
-  padding: 0 1.5rem;
-}
-.clothSection .searchDiv {
-  display: flex;
-  padding: 0.8rem 1rem;
-  float: left;
-  border: 1px rgba(0, 0, 0, 0.281) solid;
-  width: 260px;
-  height: 35px;
-  border-radius: 0.5rem;
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-}
-.clothSection .searchDiv input {
-  outline: none;
-  border: none;
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--TextColor);
+  padding: 0 2rem;
 }
 .clothSection .topMenu {
   display: flex;
@@ -50,7 +31,7 @@
 .clothSection .topMenu .buttonDiv {
   gap: 2rem;
   display: flex;
-  padding: 1rem 0;
+  padding: 2rem 0;
 }
 .clothSection .topMenu .buttonDiv button {
   background-color: var(--InputColor);
@@ -61,27 +42,40 @@
   cursor: pointer;
   border: none;
 }
-.clothSection .topMenu .buttonDiv button:hover {
+.clothSection .topMenu .buttonDiv .dark {
   background-color: var(--BlackColor);
   color: var(--WhiteColor);
 }
 .clothSection .bodyDiv {
   display: flex;
-  padding: 1rem;
+  padding: 0.5rem 1rem 1rem;
 }
 .clothSection .bodyDiv .leftMenu {
-  display: flex;
-  flex-direction: column;
-  flex-basis: 20%;
-  height: 500px;
-  padding: 0 2rem 2rem;
-  gap: 1rem;
+  display: block;
+  width: 200px;
+  position: static;
+  margin-right: 12px;
+  z-index: 0;
+  flex-shrink: 0;
 }
-.clothSection .bodyDiv .leftMenu h3 {
+.clothSection .bodyDiv .leftMenu .leftList {
+  border-bottom: 1px solid #e7e9ec;
+  padding: 1rem 0;
+}
+.clothSection .bodyDiv .leftMenu .leftList h3 {
   font-size: var(--h3FontSize);
+  padding-left: 1rem;
 }
-.clothSection .bodyDiv .leftMenu p {
-  padding-left: 2rem;
+.clothSection .bodyDiv .leftMenu .leftList button {
+  display: block;
+  margin: 1rem 0;
+  padding: 0.5rem 2rem 0;
+  background-color: transparent;
+  font-size: var(--NormalFontSize);
+}
+.clothSection .bodyDiv .leftMenu .leftList .dark {
+  background-color: var(--BlackColor);
+  color: var(--WhiteColor);
 }
 .clothSection .bodyDiv .itemSection {
   display: flex;
