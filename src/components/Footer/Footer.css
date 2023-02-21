@@ -55,6 +55,12 @@
   font-size: var(--h3FontSize);
   padding: 0.5rem 1.5rem;
   border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.footerDiv .storeDiv .store-btn button .icon2 {
+  font-size: 2rem;
 }
 .footerDiv .socialDiv {
   display: flex;
@@ -72,4 +78,113 @@
   position: relative;
   top: 20%;
   left: 20%;
+}
+.footerDiv .policy {
+  padding: 3rem 0 5rem;
+  line-height: 1.5rem;
+  color: var(--TextColor);
+}
+
+@media only screen and (max-width: 768px) {
+  .footerDiv {
+    display: block;
+    padding: 1.5rem;
+    border-top: 1px solid var(--InputColor);
+  }
+  .footerDiv .textLink {
+    font-size: var(--SmallFontSize);
+    gap: 0.5rem;
+  }
+  .footerDiv .help-btn {
+    padding: 0 0 2rem;
+  }
+  .footerDiv .help-btn button {
+    background: transparent;
+    border: 1px solid black;
+    font-size: var(--h2FontSize);
+    padding: 0.5rem 4rem;
+    border-radius: 0.5rem;
+    width: 100%;
+  }
+  .footerDiv .storeDiv {
+    padding: 0 0 2rem;
+    display: block;
+  }
+  .footerDiv .storeDiv h3 {
+    padding: 1rem 0;
+  }
+  .footerDiv .storeDiv .store-btn {
+    display: flex;
+    gap: 1rem;
+  }
+  .footerDiv .storeDiv .store-btn button {
+    font-size: var(--SmallFontSize);
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+  .footerDiv .storeDiv .store-btn button .icon2 {
+    font-size: var(--BiggestFontSize);
+  }
+  .footerDiv .storeDiv .store-btn button .storeText {
+    text-align: left;
+  }
+  .footerDiv .storeDiv .store-btn button .storeText h2 {
+    font-size: var(--NormalFontSize);
+  }
+  .footerDiv .socialDiv {
+    display: flex;
+    gap: 1rem;
+  }
+  .footerDiv .socialDiv .social-btn {
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    border-radius: 100%;
+  }
+  .footerDiv .socialDiv .icon {
+    font-size: 1.5rem;
+    color: var(--WhiteColor);
+    position: relative;
+    top: 20%;
+    left: 20%;
+  }
+  .policy {
+    padding: 2rem 0;
+  }
+}
+@media only screen and (max-width: 580px) {
+  .footerDiv {
+    display: block;
+    padding: 0 1.5rem;
+    border-top: 1px solid var(--InputColor);
+  }
+  .footerDiv .help-btn button {
+    font-size: var(--h3FontSize);
+  }
+  .footerDiv .help-btn .storeDiv .store-btn button .storeText {
+    text-align: left;
+  }
+  .footerDiv .help-btn .storeDiv .store-btn button .storeText p {
+    font-size: var(--SmallestFontSize);
+  }
+  .footerDiv .help-btn .socialDiv {
+    display: flex;
+    gap: 1rem;
+  }
+  .footerDiv .help-btn .socialDiv .social-btn {
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    border-radius: 100%;
+  }
+  .footerDiv .help-btn .socialDiv .icon {
+    font-size: 1.5rem;
+    color: var(--WhiteColor);
+    position: relative;
+    top: 20%;
+    left: 20%;
+  }
+  .footerDiv .policy {
+    padding: 2rem 0;
+  }
 }/*# sourceMappingURL=Footer.css.map */

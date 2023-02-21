@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom';
 import './Navbar.css'
 
@@ -9,18 +9,15 @@ import { BiSearch } from 'react-icons/bi'
 
 const Navbar = () => {
 
-  const [search, setSearch] = useState("")
+  const filter = () => {
+
+  }
 
   return (
     <div className='topSection'>
       <div className="topDiv">
         <div className="searchDiv">
           <BiSearch className='small-icon' />
-          <input 
-          type="text" 
-          placeholder='Search' 
-          onChange={(e) => setSearch(e.target.value)}
-          />
         </div>
 
         <div className="logo">

@@ -1,17 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect} from 'react';
 import './Clothing.css'
 import Navbar from '../Navbar/Navbar';
+import Footer from '../Footer/Footer';
 import data from '../../data/data2.json';
 import { BsCheck } from 'react-icons/bs';
 
 const Clothing = () => {
 
-  const [items, setItems] = useState([]);
+  const [search, setSearch] = useState("")
 
+  const [items, setItems] = useState([]);
   const [toggle, setToggle] = useState(false);
   const [bold, setBold] = useState(null);
   const [strong, setStrong] = useState(null);
-  const [colorClick , setColorClick] = useState(null);
+  const [colorClick, setColorClick] = useState(null);
 
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedGender, setSelectedGender] = useState(null);
@@ -60,9 +62,11 @@ const Clothing = () => {
   }, [selectedBrand, selectedCategory, selectedGender, selectedColor])
 
 
+
+
   const handleToggle = (e) => {
     console.log(e.target.id)
-     setToggle(e.target.id)
+    setToggle(e.target.id)
   }
 
   const handleBold = (e) => {
@@ -109,6 +113,40 @@ const Clothing = () => {
 
 
 
+////sorting by price and alphabet
+  const compare = (a, b, ascendingOrder) => {
+    if (a < b) {
+      return ascendingOrder ? -1 : 1;
+    }
+    if (a > b) {
+      return ascendingOrder ? 1 : -1;
+    }
+    return 0;
+  }
+
+
+  const handleChange = (value) => {
+    if(value == 'none'){
+        setItems([...data])
+    } else {
+      let toType, toAscending
+      switch(value){
+        case 'ascending' : toType = true; toAscending = true; break;
+        case 'descending' : toType = true; toAscending = false; break;
+        case 'high' : toType = false; toAscending = true; break;
+        case 'low' : toType = false; toAscending = false; break;
+      }
+      let current = [...data]
+      current.sort((a, b) => toType ?
+             compare(a.brand, b.brand, toAscending) 
+             : 
+             compare(a.price, b.price, toAscending))
+      setItems([...current])
+    }
+  }
+
+
+
   const applyFilters = () => {
     let updatedList = data;
 
@@ -135,6 +173,7 @@ const Clothing = () => {
         (item) => item.gender === selectedGender
       );
     }
+
     console.log(updatedList)
     setItems(updatedList);
   }
@@ -146,16 +185,25 @@ const Clothing = () => {
     <>
       <Navbar />
       <div className='clothSection'>
+      <div className="search">
+      <input 
+          type="text" 
+          placeholder='Search' 
+          onChange={(e) => {
+            setSearch(e.target.value)
+          }}
+          />
+        </div>
         <div className="topMenu">
-          <h1>Tops</h1>
+          <h1>Clothes</h1>
           <div className="buttonDiv">
-          {
+            {
               types.map((t) =>
                 <button
                   key={t.id}
                   id={t.id}
                   value={t.value}
-                  className={ t.id == toggle ? "dark" : null}
+                  className={t.id == toggle ? "dark" : null}
                   onClick={(e) => {
                     handleSelectedCategory(e);
                     handleToggle(e)
@@ -210,19 +258,19 @@ const Clothing = () => {
             <div className='leftListColor'>
               <h3>Color</h3>
               <div className="colorSection">
-              {
+                {
                   colors.map((c) =>
-                  <div className="colorDiv">
+                    <div className="colorDiv">
                       <button
-                      style={{backgroundColor: c.color}}
-                      className= {c.id == colorClick ? "bold" : null}
-                      key={c.id}
-                      id={c.id}
-                      value={c.value}
-                      onClick={(e) => {
-                        handleSelectedColor(e);
-                        handleColor(e)
-                      }}
+                        style={{ backgroundColor: c.color }}
+                        className={c.id == colorClick ? "bold" : null}
+                        key={c.id}
+                        id={c.id}
+                        value={c.value}
+                        onClick={(e) => {
+                          handleSelectedColor(e);
+                          handleColor(e)
+                        }}
                       >
                         <BsCheck />
                       </button>
@@ -236,37 +284,57 @@ const Clothing = () => {
 
 
           <div className='itemSection'>
-            <div className='itemCount'>
-              Total {items.length}
+            <div className="topSmall">
+              <div className='itemCount'>
+                Total {items.length}
+              </div>
+              <div className="priceDiv">
+                <form action="#">
+                  <label htmlFor="sort"></label>
+                  <select
+                    name="sort"
+                    className='sort-selection'
+                    onChange={(e)=> handleChange(e.target.value)}
+                  > 
+                  <option value="none">Sort items by </option>
+                    <option value="high">Price(lowest)</option>
+                    <option value="low">Price(highest)</option>
+                    <option value="ascending">Alphabetically(A-Z)</option>
+                    <option value="descending">Alphabetically(Z-A)</option>
+                  </select>
+                </form>
+              </div>
             </div>
 
             <div className="itemLists">
               {items.length === 0
                 ? "No items found"
                 :
-                items
-                  // .filter((item) => {
-                  //   if (search == "") {
-                  //     return item
-                  //   } else if (item.brand.toLowerCase().includes(search.toLowerCase()))
-                  // return item
-                  // })
-                  .map((item) =>
-
-                    <div className="itemCard" key={item.id}>
-                      <img src={item.img} alt='clothes' />
-                      <div className="itemText">
-                        <h4>{item.brand}</h4>
-                        <p>{item.description}</p>
-                        <p>{item.color}</p>
-                        <h3><strong>${item.price}</strong></h3>
-                      </div>
+                items.
+                filter((item) => {
+                  if (search == "") {
+                    return item
+                  } else if (item.brand.toLowerCase().includes(search.toLowerCase())) {
+                    return item
+                  }
+                })
+                .map((item) =>
+                  <div className="itemCard" key={item.id}>
+                    <img src={item.img} alt='clothes' />
+                    <div className="itemText">
+                      <h4>{item.brand}</h4>
+                      <p>{item.description}</p>
+                      <p>{item.color}</p>
+                      <h3><strong>${item.price}</strong></h3>
                     </div>
-                  )}
+                  </div>
+                )}
             </div>
           </div>
 
         </div>
+
+        <Footer />
       </div>
     </>
   )

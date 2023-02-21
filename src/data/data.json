@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "img": "https://search.pstatic.net/common/?src=http%3A%2F%2Fshop1.phinf.naver.net%2F20201207_229%2F1607336896727B5Ucn_JPEG%2F68895467L.jpg&type=sc960_832",
+        "img": "https://i.ytimg.com/vi/PQ1NSxXPclk/maxresdefault.jpg",
         "name": "MILLO",
         "description": "Holiday Signature Ball Cap [Green]",
         "price": 50
@@ -9,25 +9,9 @@
 
     {
         "id": 2,
-        "img": "https://search.pstatic.net/sunny/?src=https%3A%2F%2Fimage.msscdn.net%2Fimages%2Fgoods_img%2F20221117%2F2946615%2F2946615_1_500.jpg%3Ft%3D20221117004628&type=sc960_832",
+        "img": "https://static.msscdn.net/static/global/front/promotion/newjeans_lunaryear/assets/KV_2_PC.jpg",
         "name": "TYPE SERVICE",
         "description": "Typeservice Web Cap [Dark Grey]",
         "price": 43
-    },
-
-    {
-        "id": 3,
-        "img": "https://search.pstatic.net/sunny/?src=https%3A%2F%2Fimage.msscdn.net%2Fimages%2Fgoods_img%2F20190823%2F1126930%2F1126930_1_500.jpg&type=sc960_832",
-        "name": "THE COLDEST MOMENT",
-        "description": "TCM bgc cap",
-        "price": 52
-    },
-
-    {
-        "id": 4,
-        "img": "https://search.pstatic.net/sunny/?src=https%3A%2F%2Fimage.msscdn.net%2Fimages%2Fgoods_img%2F20190823%2F1126933%2F1126933_1_500.jpg&type=sc960_832",
-        "name": "TYPE SERVICE",
-        "description": "Typeservice Web Cap [Navy]",
-        "price": 49
     }
 ]

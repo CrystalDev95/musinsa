@@ -28,25 +28,13 @@
   padding: 1rem 3rem 0.5rem;
 }
 .topSection .topDiv .searchDiv {
-  padding: 0.8rem 1rem;
+  padding: 0 1rem;
   float: left;
-  border: 1px rgba(0, 0, 0, 0.281) solid;
-  width: 260px;
-  height: 35px;
-  border-radius: 0.5rem;
   display: flex;
-  gap: 0.5rem;
-  align-items: center;
 }
-.topSection .topDiv .searchDiv:hover {
-  cursor: pointer;
-}
-.topSection .topDiv .searchDiv input {
-  outline: none;
-  border: none;
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--TextColor);
+.topSection .topDiv .searchDiv .small-icon {
+  font-size: var(--h1FontSize) !important;
+  color: var(--BlackColor);
 }
 .topSection .topDiv .logo {
   margin: 0;

@@ -39,66 +39,65 @@
 
 .contentSection {
   position: absolute;
-  top: 15%;
+  top: 18%;
   width: 100vw;
 }
 .contentSection .heroDiv {
-  height: 550px;
-  background-image: url("https://images.pexels.com/photos/2229490/pexels-photo-2229490.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
-  background-repeat: no-repeat;
-  background-size: 100%;
+  margin: 0;
   width: 100vw;
-  position: relative;
 }
-.contentSection .heroDiv .leftArrow,
-.contentSection .heroDiv .rightArrow {
-  border-radius: 100%;
-  background-color: white;
-  height: 2rem;
-  width: 2rem;
-  position: absolute;
-  top: 50%;
+.contentSection .heroDiv .heading {
+  text-align: center;
+  font-size: var(--BiggestFontSize);
 }
-.contentSection .heroDiv .leftArrow:hover,
-.contentSection .heroDiv .rightArrow:hover {
-  cursor: pointer;
+.contentSection .heroDiv .imgSlide {
+  gap: 2rem;
+  height: auto;
+  margin: 0;
+  padding: 0;
 }
-.contentSection .heroDiv .leftArrow .icon,
-.contentSection .heroDiv .rightArrow .icon {
-  position: relative;
-  left: 10%;
-  top: 10%;
+.contentSection .heroDiv .imgSlide .imgCard {
+  display: flex;
+  justify-content: center;
+  width: 220px;
+  height: 550px;
+  padding: 0;
 }
-.contentSection .textDiv {
+.contentSection .heroDiv .imgSlide .imgCard img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 0.5rem;
+}
+.contentSection .headingDiv {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 5rem 0;
+  padding: 5rem 0 0;
   position: relative;
   width: 100vw;
 }
-.contentSection .textDiv h1 {
+.contentSection .headingDiv h1 {
   font-size: 2.5rem;
   font-weight: 900;
-  padding-bottom: 1rem;
+  padding-bottom: 3rem;
   text-align: center;
 }
-.contentSection .textDiv .smallText {
-  font-size: var(--h2FontSize);
-  padding-bottom: 0.5rem;
+.contentSection .headingDiv .smallText {
+  font-size: var(--h1FontSize);
+  line-height: 3rem;
 }
-.contentSection .textDiv .linkDiv .linkText {
+.contentSection .headingDiv .linkDiv .linkText {
   margin: 3rem 5rem;
   float: right;
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
-.contentSection .textDiv .linkDiv .linkText:hover {
+.contentSection .headingDiv .linkDiv .linkText:hover {
   color: var(--BlackColor);
   font-weight: 700;
 }
-.contentSection .textDiv .linkDiv .linkText:hover .icon {
+.contentSection .headingDiv .linkDiv .linkText:hover .icon {
   transform: translateX(20px);
   transition: 0.3s ease;
 }
@@ -115,26 +114,26 @@
   height: 100%;
   width: 100%;
 }
-.contentSection .heroDiv2 .textDiv {
+.contentSection .heroDiv2 .headingDiv2 {
   padding: 0 2rem;
 }
-.contentSection .heroDiv2 .textDiv .textWrapper {
+.contentSection .heroDiv2 .headingDiv2 .textWrapper {
   position: relative;
   top: 30%;
   right: 10%;
   text-align: left;
 }
-.contentSection .heroDiv2 .textDiv .textWrapper h1 {
+.contentSection .heroDiv2 .headingDiv2 .textWrapper h1 {
   font-size: 4rem;
   font-weight: 500;
   text-align: left;
   width: 500px;
 }
-.contentSection .heroDiv2 .textDiv .textWrapper p {
+.contentSection .heroDiv2 .headingDiv2 .textWrapper p {
   font-size: var(--h2FontSize);
   line-height: 2rem;
 }
-.contentSection .heroDiv2 .textDiv .textWrapper .shop-btn {
+.contentSection .heroDiv2 .headingDiv2 .textWrapper .shop-btn {
   padding: 1rem 3rem;
   background: transparent;
   border: 1px solid black;
@@ -245,4 +244,213 @@
   text-align: center;
   margin-top: 0.5rem;
   font-weight: 800;
+}
+
+@media only screen and (max-width: 1100px) {
+  .contentSection {
+    top: 4%;
+  }
+  .contentSection .heroDiv {
+    display: none;
+    height: 0;
+  }
+  .contentSection .headingDiv {
+    display: none;
+  }
+  .contentSection .heroDiv2 {
+    margin: 0;
+    display: block;
+  }
+  .contentSection .heroDiv2 .imgDiv {
+    height: 600px;
+    width: 100vw;
+    margin: 0;
+  }
+  .contentSection .heroDiv2 .headingDiv2 {
+    padding: 0 2rem;
+  }
+  .contentSection .heroDiv2 .headingDiv2 .textWrapper {
+    position: static;
+    text-align: left;
+    padding: 2rem;
+  }
+  .contentSection .heroDiv2 .headingDiv2 .textWrapper h1 {
+    font-size: 2rem;
+    width: 100%;
+    padding-bottom: 1rem;
+  }
+  .contentSection .heroDiv2 .headingDiv2 .textWrapper p {
+    line-height: 2rem;
+  }
+  .contentSection .heroDiv2 .headingDiv2 .textWrapper .shop-btn {
+    width: 100%;
+  }
+  .contentSection .slideDiv {
+    margin: 2rem 0;
+  }
+  .contentSection .slideDiv .heading {
+    padding-left: 2rem;
+    text-align: left;
+    font-size: var(--h1FontSize);
+  }
+  .contentSection .slideDiv .imgSlide {
+    gap: 2rem;
+    height: auto;
+    margin: 0.5rem auto 0;
+    padding: 3rem 4rem;
+  }
+  .contentSection .slideDiv .imgSlide .shop-btn {
+    position: static;
+    width: 100%;
+  }
+  .contentSection .slideDiv .imgSlide .imgCard {
+    display: flex;
+    justify-content: center;
+    width: 220px;
+    height: 300px;
+    padding: 0 1rem;
+  }
+  .contentSection .slideDiv2 {
+    margin: 2rem 0 0;
+    width: 100vw;
+  }
+  .contentSection .slideDiv2 .heading {
+    text-align: left;
+    margin-left: 2rem;
+    font-size: var(--h1FontSize);
+  }
+  .contentSection .slideDiv2 .imgSlide {
+    gap: 2rem;
+    height: auto;
+    margin: 2rem auto 0;
+    padding: 3rem 4rem;
+  }
+  .contentSection .slideDiv2 .imgSlide .shop-btn {
+    width: 100%;
+    position: static;
+  }
+  .contentSection .slideDiv2 .imgSlide .imgCard {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: 400px;
+    padding: 0 1rem;
+  }
+  .contentSection .slideDiv2 .imgSlide .imgCard img {
+    width: 100%;
+    height: 75%;
+    margin-bottom: 0.5rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .contentSection .heroDiv {
+    height: 200px;
+  }
+  .contentSection .heroDiv .leftArrow,
+  .contentSection .heroDiv .rightArrow {
+    display: none;
+  }
+  .contentSection .textDiv {
+    padding: 2rem 1rem;
+  }
+  .contentSection .textDiv h1 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    padding-bottom: 1rem;
+  }
+  .contentSection .textDiv .smallText {
+    font-size: var(--SmallestFontSize);
+    padding-bottom: 0.5rem;
+  }
+  .contentSection .textDiv .linkDiv .linkText {
+    margin: 1.5rem 2rem;
+    font-size: 0.8rem;
+    color: var(--PrimaryColor);
+  }
+  .contentSection .textDiv .linkDiv .linkText .icon {
+    display: none;
+  }
+}
+@media only screen and (max-width: 580px) {
+  .contentSection {
+    top: 10%;
+  }
+  .contentSection .heroDiv2 {
+    margin: 0;
+    display: block;
+  }
+  .contentSection .heroDiv2 .imgDiv {
+    height: 300px;
+  }
+  .contentSection .heroDiv2 .headingDiv2 {
+    padding: 0 1rem;
+  }
+  .contentSection .heroDiv2 .headingDiv2 .textWrapper {
+    position: static;
+    text-align: left;
+    padding: 2rem 1rem 1rem;
+  }
+  .contentSection .heroDiv2 .headingDiv2 .textWrapper h1 {
+    font-size: 2rem;
+  }
+  .contentSection .heroDiv2 .headingDiv2 .textWrapper p {
+    line-height: 1.5rem;
+    font-size: var(--NormalFontSize);
+  }
+  .contentSection .slideDiv {
+    margin: 2rem 0;
+  }
+  .contentSection .slideDiv .heading {
+    padding-left: 2rem;
+    text-align: left;
+    font-size: var(--h1FontSize);
+  }
+  .contentSection .slideDiv .imgSlide {
+    gap: 2rem;
+    height: auto;
+    margin: 0.5rem auto 0;
+    padding: 2rem 4rem 1rem;
+  }
+  .contentSection .slideDiv .imgSlide .shop-btn {
+    margin: 1rem 0 0;
+    padding: 1rem 3rem;
+  }
+  .contentSection .slideDiv .imgSlide .imgCard {
+    display: flex;
+    justify-content: center;
+    width: 220px;
+    height: 300px;
+    padding: 0 1rem;
+  }
+  .contentSection .slideDiv2 {
+    margin: 4rem 0 0;
+    width: 100vw;
+  }
+  .contentSection .slideDiv2 .heading {
+    text-align: left;
+    margin-left: 2rem;
+    font-size: var(--h1FontSize);
+  }
+  .contentSection .slideDiv2 .imgSlide {
+    gap: 2rem;
+    height: auto;
+    margin: 1rem auto 0;
+    padding: 3rem 4rem;
+  }
+  .contentSection .slideDiv2 .imgSlide .shop-btn {
+    margin: 1rem 0 0;
+    padding: 1rem 3rem;
+  }
+  .contentSection .slideDiv2 .imgSlide .imgCard {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: 400px;
+    padding: 0 1rem;
+  }
+  .contentSection .slideDiv2 .imgSlide .imgCard img {
+    width: 100%;
+    height: 75%;
+    margin-bottom: 0.5rem;
+  }
 }/*# sourceMappingURL=Home.css.map */

@@ -43,56 +43,58 @@
 
 .contentSection {
     position: absolute;
-    top: 15%;
+    top: 18%;
     width: 100vw;
 
     .heroDiv {
-        height: 550px;
-        background-image: url('https://images.pexels.com/photos/2229490/pexels-photo-2229490.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
-        background-repeat: no-repeat;
-        background-size: 100%;
+        margin: 0;
         width: 100vw;
-        position: relative;
 
-        .leftArrow,
-        .rightArrow {
-            border-radius: 100%;
-            background-color: white;
-            height: 2rem;
-            width: 2rem;
-            position: absolute;
-            top: 50%;
+        .heading {
+            text-align: center;
+            font-size: var(--BiggestFontSize);
+        }
 
-            &:hover {
-                cursor: pointer;
-            }
+        .imgSlide {
+            gap: 2rem;
+            height: auto;
+            margin: 0;
+            padding: 0;
 
-            .icon {
-                position: relative;
-                left: 10%;
-                top: 10%;
+            .imgCard {
+                display: flex;
+                justify-content: center;
+                width: 220px;
+                height: 550px;
+                padding: 0;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    margin-bottom: .5rem;
+                }
             }
         }
     }
 
-    .textDiv {
+    .headingDiv {
         display: flex;
         flex-direction: column;
         text-align: center;
-        padding: 5rem 0;
+        padding: 5rem 0 0;
         position: relative;
         width: 100vw;
 
         h1 {
             font-size: 2.5rem;
             font-weight: 900;
-            padding-bottom: 1rem;
+            padding-bottom: 3rem;
             text-align: center;
         }
 
         .smallText {
-            font-size: var(--h2FontSize);
-            padding-bottom: .5rem;
+            font-size: var(--h1FontSize);
+            line-height: 3rem;
         }
 
         .linkDiv {
@@ -133,7 +135,7 @@
             }
         }
 
-        .textDiv {
+        .headingDiv2 {
             padding: 0 2rem;
 
             .textWrapper {
@@ -294,4 +296,277 @@
             }
         }
     }
+}
+
+
+
+@media only screen and (max-width: 1100px) {
+    .contentSection {
+        top: 4%;
+
+        .heroDiv {
+            display: none;
+            height: 0;
+        }
+
+        .headingDiv {
+            display: none;
+        }
+
+        .heroDiv2 {
+            margin: 0;
+            display: block;
+
+            .imgDiv {
+                height: 600px;
+                width: 100vw;
+                margin: 0;
+            }
+
+            .headingDiv2 {
+                padding: 0 2rem;
+    
+                .textWrapper {
+                    position:static;
+                    text-align: left;
+                    padding: 2rem;
+    
+                    h1 {
+                        font-size: 2rem;
+                        width: 100%;
+                        padding-bottom: 1rem;
+                    }
+    
+                    p {
+                        line-height: 2rem;
+                    }
+    
+                    .shop-btn {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .slideDiv {
+            margin: 2rem 0;
+    
+            .heading {
+                padding-left: 2rem;
+                text-align: left;
+                font-size: var(--h1FontSize);
+            }
+    
+            .imgSlide {
+                gap: 2rem;
+                height: auto;
+                margin: .5rem auto 0;
+                padding: 3rem 4rem;
+    
+    
+                .shop-btn {
+                    position: static;
+                    width: 100%;
+                }
+    
+                .imgCard {
+                    display: flex;
+                    justify-content: center;
+                    width: 220px;
+                    height: 300px;
+                    padding: 0 1rem;
+                }
+            }
+        }
+
+        .slideDiv2 {
+            margin: 2rem 0 0;
+            width: 100vw;
+    
+            .heading {
+                text-align: left;
+                margin-left: 2rem;
+                font-size: var(--h1FontSize);
+            }
+    
+            .imgSlide {
+                gap: 2rem;
+                height: auto;
+                margin: 2rem auto 0;
+                padding: 3rem 4rem;
+    
+    
+                .shop-btn {
+                    width: 100%;
+                    position: static;
+                }
+    
+                .imgCard {
+                    display: flex;
+                    justify-content: center;
+                    width: auto;
+                    height: 400px;
+                    padding: 0 1rem;
+    
+                    img {
+                        width: 100%;
+                        height: 75%;
+                        margin-bottom: .5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .contentSection {
+        .heroDiv {
+            height: 200px;
+
+            .leftArrow,
+            .rightArrow {
+                display: none;
+            }
+        }
+
+        .textDiv {
+            padding: 2rem 1rem;
+
+            h1 {
+                font-size: 1.2rem;
+                font-weight: 800;
+                padding-bottom: 1rem;
+            }
+
+            .smallText {
+                font-size: var(--SmallestFontSize);
+                padding-bottom: .5rem;
+            }
+
+            .linkDiv {
+                .linkText {
+                    margin: 1.5rem 2rem;
+                    font-size: .8rem;
+                    color: var(--PrimaryColor);
+
+                    .icon {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media only screen and (max-width: 580px) {
+
+    .contentSection {
+        top: 10%;
+
+        .heroDiv2 {
+            margin: 0;
+            display: block;
+
+            .imgDiv {
+                height: 300px;
+            }
+
+            .headingDiv2 {
+                padding: 0 1rem;
+    
+                .textWrapper {
+                    position:static;
+                    text-align: left;
+                    padding: 2rem 1rem 1rem;
+    
+                    h1 {
+                        font-size: 2rem;
+                    }
+    
+                    p {
+                        line-height: 1.5rem;
+                        font-size: var(--NormalFontSize);
+                    }
+                }
+            }
+        }
+
+        .slideDiv {
+            margin: 2rem 0;
+    
+            .heading {
+                padding-left: 2rem;
+                text-align: left;
+                font-size: var(--h1FontSize);
+            }
+    
+            .imgSlide {
+                gap: 2rem;
+                height: auto;
+                margin: .5rem auto 0;
+                padding: 2rem 4rem 1rem;
+    
+    
+                .shop-btn {
+                    margin: 1rem 0 0;
+                    padding: 1rem 3rem;
+                }
+    
+                .imgCard {
+                    display: flex;
+                    justify-content: center;
+                    width: 220px;
+                    height: 300px;
+                    padding: 0 1rem;
+                }
+            }
+        }
+
+        .slideDiv2 {
+            margin: 4rem 0 0;
+            width: 100vw;
+    
+            .heading {
+                text-align: left;
+                margin-left: 2rem;
+                font-size: var(--h1FontSize);
+            }
+    
+            .imgSlide {
+                gap: 2rem;
+                height: auto;
+                margin: 1rem auto 0;
+                padding: 3rem 4rem;
+    
+    
+                .shop-btn {
+                    margin: 1rem 0 0;
+                    padding: 1rem 3rem;
+                }
+    
+                .imgCard {
+                    display: flex;
+                    justify-content: center;
+                    width: auto;
+                    height: 400px;
+                    padding: 0 1rem;
+    
+                    img {
+                        width: 100%;
+                        height: 75%;
+                        margin-bottom: .5rem;
+                    }
+                }
+            }
+        }
+    
+}
+
 }
