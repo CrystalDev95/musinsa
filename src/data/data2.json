@@ -1,4 +1,20 @@
+
+
+
 [
+
+    {
+        "id": 0,
+        "img": "https://image.msscdn.net/images/goods_img/20210106/1737580/1737580_1_500.jpg",
+        "name": "BAY LEAF CREWNECK",
+        "description": "Holiday Signature Ball Cap [Green]",
+        "price": 50,
+        "category": "Shirt",
+        "gender": "Women",
+        "brand": "DRAWFIT",
+        "color": "Black"
+    },
+
     {
         "id": 1,
         "img": "https://search.pstatic.net/common/?src=http%3A%2F%2Fshop1.phinf.naver.net%2F20201207_229%2F1607336896727B5Ucn_JPEG%2F68895467L.jpg&type=sc960_832",
@@ -7,7 +23,8 @@
         "price": 50,
         "category": "Cap",
         "gender": "Women",
-        "brand": "DRAWFIT"
+        "brand": "DRAWFIT",
+        "color": "White"
     },
 
     {
@@ -18,7 +35,8 @@
         "price": 49,
         "category": "Hoodie",
         "gender": "Men",
-        "brand": "TAKEASY"
+        "brand": "TAKEASY",
+        "color": "White"
     },
 
     {
@@ -29,7 +47,8 @@
         "price": 43,
         "category": "Cap",
         "gender": "Men",
-        "brand": "YESEYESEE"
+        "brand": "YESEYESEE",
+        "color": "Black"
     },
 
     {
@@ -40,7 +59,8 @@
         "price": 49,
         "category": "Sweatshirt",
         "gender": "Women",
-        "brand": "GRAVER"
+        "brand": "GRAVER",
+        "color": "Grey"
     },
 
     {
@@ -51,7 +71,8 @@
         "price": 52,
         "category": "Cap",
         "gender": "Men",
-        "brand": "TAKEASY"
+        "brand": "TAKEASY",
+        "color": "Green"
     },
 
     {
@@ -62,7 +83,8 @@
         "price": 49,
         "category": "Cap",
         "gender": "Men",
-        "brand": "LMC"
+        "brand": "LMC",
+        "color": "Red"
     },
 
     {
@@ -73,7 +95,8 @@
         "price": 49,
         "category": "Sweatshirt",
         "gender": "Men",
-        "brand": "LMC"
+        "brand": "LMC",
+        "color": "Purple"
     },
 
     {
@@ -84,7 +107,8 @@
         "price": 49,
         "category": "Sweatshirt",
         "gender": "Women",
-        "brand": "GRAVER"
+        "brand": "GRAVER",
+        "color": "Black"
     },
 
     {
@@ -95,7 +119,8 @@
         "price": 49,
         "category": "Sweatshirt",
         "gender": "Women",
-        "brand": "GRAVER"
+        "brand": "LMC",
+        "color": "White"
     },
 
     {
@@ -106,7 +131,8 @@
         "price": 49,
         "category": "Hoodie",
         "gender": "Women",
-        "brand": "URBANSTOFF"
+        "brand": "URBANSTOFF",
+        "color": "White"
     },
 
     {
@@ -117,61 +143,103 @@
         "price": 49,
         "category": "Hoodie",
         "gender": "Women",
-        "brand": "URBANSTOFF"
+        "brand": "URBANSTOFF",
+        "color": "White"
     },
 
     {
         "id": 12,
-        "img": "https://search.pstatic.net/common/?src=http%3A%2F%2Fshop1.phinf.naver.net%2F20201207_229%2F1607336896727B5Ucn_JPEG%2F68895467L.jpg&type=sc960_832",
+        "img": "https://image.msscdn.net/images/goods_img/20230202/3056891/3056891_16765181292494_320.jpg",
         "name": "PIVVEE",
         "description": "Holiday Signature Ball Cap [Green]",
         "price": 50,
         "category": "Cap",
         "gender": "Women",
-        "brand": "DRAWFIT"
+        "brand": "DRAWFIT",
+        "color": "Pink"
     },
 
     {
         "id": 13,
-        "img": "https://search.pstatic.net/common/?src=http%3A%2F%2Fshop1.phinf.naver.net%2F20201207_229%2F1607336896727B5Ucn_JPEG%2F68895467L.jpg&type=sc960_832",
+        "img": "https://image.msscdn.net/images/goods_img/20230207/3065389/3065389_16757617152182_320.jpg",
         "name": "PIVVEE",
         "description": "Holiday Signature Ball Cap [Green]",
         "price": 50,
         "category": "Shirt",
         "gender": "Women",
-        "brand": "DRAWFIT"
+        "brand": "DRAWFIT",
+        "color": "Pink"
     },
 
     {
         "id": 14,
-        "img": "https://search.pstatic.net/common/?src=http%3A%2F%2Fshop1.phinf.naver.net%2F20201207_229%2F1607336896727B5Ucn_JPEG%2F68895467L.jpg&type=sc960_832",
+        "img": "https://image.msscdn.net/images/goods_img/20230127/3044070/3044070_16765326520061_320.jpg",
         "name": "JOEGUSH",
         "description": "Holiday Signature Ball Cap [Green]",
         "price": 50,
         "category": "Shirt",
         "gender": "Women",
-        "brand": "DRAWFIT"
+        "brand": "DRAWFIT",
+        "color": "Green"
     },
 
     {
         "id": 15,
-        "img": "https://search.pstatic.net/common/?src=http%3A%2F%2Fshop1.phinf.naver.net%2F20201207_229%2F1607336896727B5Ucn_JPEG%2F68895467L.jpg&type=sc960_832",
+        "img": "https://image.msscdn.net/images/goods_img/20230214/3081274/3081274_16764479297630_320.jpg",
         "name": "SUNDAE SCHOOL",
         "description": "Holiday Signature Ball Cap [Green]",
         "price": 50,
         "category": "Shirt",
         "gender": "Women",
-        "brand": "DRAWFIT"
+        "brand": "DRAWFIT",
+        "color": "Black"
     },
 
     {
         "id": 16,
-        "img": "https://search.pstatic.net/common/?src=http%3A%2F%2Fshop1.phinf.naver.net%2F20201207_229%2F1607336896727B5Ucn_JPEG%2F68895467L.jpg&type=sc960_832",
+        "img": "https://image.msscdn.net/images/goods_img/20230207/3064545/3064545_16763419272471_500.jpg",
         "name": "BAY LEAF CREWNECK",
         "description": "Holiday Signature Ball Cap [Green]",
         "price": 50,
         "category": "Shirt",
         "gender": "Women",
-        "brand": "RETRIEVER CLUB"
+        "brand": "RETRIEVER CLUB",
+        "color": "Grey"
+    },
+
+    {
+        "id": 17,
+        "img": "https://image.msscdn.net/images/goods_img/20210415/1899755/1899755_1_500.jpg",
+        "name": "BAY LEAF CREWNECK",
+        "description": "Holiday Signature Ball Cap [Green]",
+        "price": 50,
+        "category": "Shirt",
+        "gender": "Women",
+        "brand": "URBANSTOFF",
+        "color": "Black"
+    },
+
+    {
+        "id": 18,
+        "img": "https://image.msscdn.net/images/goods_img/20210206/1782641/1782641_1_500.jpg",
+        "name": "BAY LEAF CREWNECK",
+        "description": "Holiday Signature Ball Cap [Green]",
+        "price": 50,
+        "category": "Shirt",
+        "gender": "Men",
+        "brand": "LMC",
+        "color": "White"
+    },
+
+    {
+        "id": 19,
+        "img": "https://image.msscdn.net/images/goods_img/20230209/3071084/3071084_16759089032665_500.jpg",
+        "name": "BAY LEAF CREWNECK",
+        "description": "Holiday Signature Ball Cap [Green]",
+        "price": 50,
+        "category": "Shirt",
+        "gender": "Women",
+        "brand": "DRAWFIT",
+        "color": "Black"
     }
 ]

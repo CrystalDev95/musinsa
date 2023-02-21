@@ -2,14 +2,22 @@ import React, { useState, useEffect } from 'react';
 import './Clothing.css'
 import Navbar from '../Navbar/Navbar';
 import data from '../../data/data2.json';
+import { BsCheck } from 'react-icons/bs';
 
 const Clothing = () => {
 
   const [items, setItems] = useState([]);
-  const [color, setColor] = useState(null);
+
+  const [toggle, setToggle] = useState(false);
+  const [bold, setBold] = useState(null);
+  const [strong, setStrong] = useState(null);
+  const [colorClick , setColorClick] = useState(null);
+
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedGender, setSelectedGender] = useState(null);
   const [selectedBrand, setSelectedBrand] = useState(null);
+  const [selectedColor, setSelectedColor] = useState(null);
+
 
 
   const types = [
@@ -17,37 +25,69 @@ const Clothing = () => {
     { id: 22, value: 'Cap' },
     { id: 33, value: 'Sweatshirt' },
     { id: 44, value: 'Hoodie' },
-    { id: 44, value: 'Shirt' }
+    { id: 55, value: 'Sweatshirt' }
   ]
 
 
   const genders = [
-    { id: 55, value: 'Men' },
-    { id: 66, value: 'Women' }
+    { id: 112, value: 'Men' },
+    { id: 113, value: 'Women' }
   ]
 
   const brands = [
-    { value: 'Graver' },
-    { value: 'LMC' },
-    { value: 'Takeasy' }
+    { id: 77, value: 'GRAVER' },
+    { id: 88, value: 'LMC' },
+    { id: 99, value: 'TAKEASY' },
+    { id: 100, value: 'DRAWFIT' },
+    { id: 101, value: 'RETRIEVER CLUB' },
+    { id: 102, value: 'URBANSTOFF' },
   ]
 
+  const colors = [
+    { id: 103, value: 'White', color: '#eceaea' },
+    { id: 104, value: 'Black', color: '#000000' },
+    { id: 105, value: 'Blue', color: '#0000ff' },
+    { id: 106, value: 'Green', color: '#008000' },
+    { id: 107, value: 'Red', color: '#ff0000' },
+    { id: 108, value: 'Pink', color: '#ffc0cb' },
+    { id: 109, value: 'Purple', color: '#800080' },
+    { id: 110, value: 'Grey', color: '#808080' },
+  ]
 
 
   useEffect(() => {
     applyFilters()
-  }, [selectedBrand, selectedCategory, selectedGender])
+  }, [selectedBrand, selectedCategory, selectedGender, selectedColor])
 
+
+  const handleToggle = (e) => {
+    console.log(e.target.id)
+     setToggle(e.target.id)
+  }
+
+  const handleBold = (e) => {
+    setBold(e.target.id);
+  }
+
+  const handleStrong = (e) => {
+    setStrong(e.target.id);
+  }
+
+  const handleColor = (e) => {
+    setColorClick(e.target.id);
+  }
 
 
 
   const handleSelectedCategory = (e) => {
     if (e.target.value === 'All') {
-      setItems(data);
+      setSelectedCategory(null)
+      setToggle(null)
     } else {
       setSelectedCategory(e.target.value)
     }
   }
+
 
   const handleSelectedGender = (e) => {
     console.log(e.target.value)
@@ -61,6 +101,11 @@ const Clothing = () => {
     setSelectedBrand(e.target.value)
   }
 
+  const handleSelectedColor = (e) => {
+    console.log(e.target.value)
+
+    setSelectedColor(e.target.value)
+  }
 
 
 
@@ -76,6 +121,12 @@ const Clothing = () => {
     if (selectedBrand) {
       updatedList = updatedList.filter(
         (item) => item.brand === selectedBrand
+      );
+    }
+
+    if (selectedColor) {
+      updatedList = updatedList.filter(
+        (item) => item.color === selectedColor
       );
     }
 
@@ -98,23 +149,25 @@ const Clothing = () => {
         <div className="topMenu">
           <h1>Tops</h1>
           <div className="buttonDiv">
-            {
+          {
               types.map((t) =>
                 <button
                   key={t.id}
                   id={t.id}
                   value={t.value}
-                  className={color ? "dark" : null}
+                  className={ t.id == toggle ? "dark" : null}
                   onClick={(e) => {
                     handleSelectedCategory(e);
-                  }}>
+                    handleToggle(e)
+                  }} >
                   {t.value}
                 </button>
               )
             }
-
           </div>
         </div>
+
+
 
         <div className="bodyDiv">
           <div className="leftMenu">
@@ -123,11 +176,13 @@ const Clothing = () => {
               {
                 genders.map((g) =>
                   <button
+                    className={g.id == bold ? "bold" : null}
                     key={g.id}
                     id={g.id}
                     value={g.value}
                     onClick={(e) => {
                       handleSelectedGender(e);
+                      handleBold(e);
                     }}
                   >{g.value}</button>
                 )
@@ -139,23 +194,43 @@ const Clothing = () => {
               {
                 brands.map((b) =>
                   <button
+                    className={b.id == strong ? "bold" : null}
                     key={b.id}
                     id={b.id}
                     value={b.value}
                     onClick={(e) => {
                       handleSelectedBrand(e);
+                      handleStrong(e);
                     }}
                   >{b.value}</button>
                 )
               }
             </div>
 
-            <div className='leftList'>
+            <div className='leftListColor'>
               <h3>Color</h3>
-              <button>White</button>
-              <button>Black</button>
-              <button>Blue</button>
-              <button>Green</button>
+              <div className="colorSection">
+              {
+                  colors.map((c) =>
+                  <div className="colorDiv">
+                      <button
+                      style={{backgroundColor: c.color}}
+                      className= {c.id == colorClick ? "bold" : null}
+                      key={c.id}
+                      id={c.id}
+                      value={c.value}
+                      onClick={(e) => {
+                        handleSelectedColor(e);
+                        handleColor(e)
+                      }}
+                      >
+                        <BsCheck />
+                      </button>
+                      <p>{c.value}</p>
+                    </div>
+                  )
+                }
+              </div>
             </div>
           </div>
 
@@ -183,6 +258,7 @@ const Clothing = () => {
                       <div className="itemText">
                         <h4>{item.brand}</h4>
                         <p>{item.description}</p>
+                        <p>{item.color}</p>
                         <h3><strong>${item.price}</strong></h3>
                       </div>
                     </div>

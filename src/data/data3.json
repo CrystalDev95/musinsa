@@ -1,0 +1,98 @@
+[
+
+    {
+        "id": 1,
+        "img": "https://image.musinsa.com/images/style/list/2022090811380900000044942.jpg",
+        "name": "Ivonne",
+        "description": "Women casual style with ivory skirt and black boots",
+        "price": 50,
+        "category": "Shirt",
+        "gender": "Women",
+        "brand": "DRAWFIT",
+        "color": "Black"
+    },
+
+    {
+        "id": 2,
+        "img": "https://image.musinsa.com/images/style/list/2022082510441500000095068.jpg",
+        "name": "Lilly",
+        "description": "Hip style with baggy ripped jeans nad green shirt",
+        "price": 50,
+        "category": "Cap",
+        "gender": "Women",
+        "brand": "DRAWFIT",
+        "color": "White"
+    },
+
+    {
+        "id": 3,
+        "img": "https://image.musinsa.com/images/style/list/2022090707414700000037909.jpg",
+        "name": "MUSINSA",
+        "description": "Holiday Signature Ball Cap [Green]",
+        "price": 50,
+        "category": "Cap",
+        "gender": "Women",
+        "brand": "DRAWFIT",
+        "color": "White"
+    },
+
+    {
+        "id": 4,
+        "img": "https://image.musinsa.com/images/style/list/2023021017244000000010197.jpg",
+        "name": "MUSINSA",
+        "description": "Holiday Signature Ball Cap [Green]",
+        "price": 50,
+        "category": "Cap",
+        "gender": "Women",
+        "brand": "DRAWFIT",
+        "color": "White"
+    },
+
+    {
+        "id": 5,
+        "img": "https://image.musinsa.com/images/style/list/2022082911391000000026434.jpg",
+        "name": "MUSINSA",
+        "description": "Holiday Signature Ball Cap [Green]",
+        "price": 50,
+        "category": "Cap",
+        "gender": "Women",
+        "brand": "DRAWFIT",
+        "color": "White"
+    },
+
+    {
+        "id": 6,
+        "img": "https://image.musinsa.com/images/style/list/2022083112013300000023905.jpg",
+        "name": "MUSINSA",
+        "description": "Holiday Signature Ball Cap [Green]",
+        "price": 50,
+        "category": "Cap",
+        "gender": "Women",
+        "brand": "DRAWFIT",
+        "color": "White"
+    },
+
+    {
+        "id": 7,
+        "img": "https://image.musinsa.com/images/style/list/2022081709345900000082227.jpg",
+        "name": "MUSINSA",
+        "description": "Holiday Signature Ball Cap [Green]",
+        "price": 50,
+        "category": "Cap",
+        "gender": "Women",
+        "brand": "DRAWFIT",
+        "color": "White"
+    },
+
+    {
+        "id": 8,
+        "img": "https://image.musinsa.com/images/style/list/2022091317231000000019786.jpg",
+        "name": "MUSINSA",
+        "description": "Holiday Signature Ball Cap [Green]",
+        "price": 50,
+        "category": "Cap",
+        "gender": "Women",
+        "brand": "DRAWFIT",
+        "color": "White"
+    }
+]

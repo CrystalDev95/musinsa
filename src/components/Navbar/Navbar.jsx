@@ -6,6 +6,7 @@ import { BsPerson, BsHandbag } from 'react-icons/bs'
 import { IoMdHeartEmpty } from 'react-icons/io'
 import { BiSearch } from 'react-icons/bi'
 
+
 const Navbar = () => {
 
   const [search, setSearch] = useState("")
@@ -15,7 +16,11 @@ const Navbar = () => {
       <div className="topDiv">
         <div className="searchDiv">
           <BiSearch className='small-icon' />
-          <input type="text" placeholder='Search' onChange={(e) => {setSearch(e.target.value)}} />
+          <input 
+          type="text" 
+          placeholder='Search' 
+          onChange={(e) => setSearch(e.target.value)}
+          />
         </div>
 
         <div className="logo">

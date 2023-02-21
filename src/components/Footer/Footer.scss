@@ -1,0 +1,86 @@
+:root {
+    --PrimaryColor: hsl(190, 100%, 50%);
+    --HoverColor: #90ecff;
+    --PaleColor: hsl(190, 72%, 70%);
+    --WhiteColor: hsl(0, 0%, 100%);
+    --BlackColor: hsl(0, 0%, 18%);
+    --TextColor: hsl(240, 1%, 48%);
+    --BgColor: hsl(220, 10%, 94%);
+    --GreyText: rgb(190, 190, 190);
+    --InputColor: hsl(330, 12%, 97%);
+
+    --BiggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --NormalFontSize: .938rem;
+    --SmallFontSize: .813rem;
+    --SmallestFontSize: .75rem;
+}
+
+.footerDiv {
+    display: block;
+    padding: 1rem 7rem 4rem;
+    border-top: 1px solid var(--InputColor);
+
+    .textLink {
+        display: flex;
+        color: var(--TextColor);
+        gap: 2rem;
+        padding: 2rem 0;
+    }
+
+    .help-btn {
+        padding: 0 0 2rem;
+
+        button {
+            background: transparent;
+            border: 1px solid black;
+            font-size: var(--h2FontSize);
+            padding: .5rem 4rem;
+            border-radius: .5rem;
+        }
+    }
+
+    .storeDiv {
+        padding: 0 0 2rem;
+        display: block;
+
+        h3 {
+            padding: 1rem 0;
+        }
+
+        .store-btn {
+            display: flex;
+            gap: 1rem;
+
+            button {
+                background: transparent;
+                border: 1px solid var(--GreyText);
+                font-size: var(--h3FontSize);
+                padding: .5rem 1.5rem;
+                border-radius: .5rem;
+            }
+        }
+    }
+
+    .socialDiv {
+        display: flex;
+        gap: 1rem;
+
+        .social-btn {
+            height: 40px;
+            width: 40px;
+            background-color: black;
+            border-radius: 100%;
+        }
+
+        .icon {
+            font-size: 1.5rem;
+            color: var(--WhiteColor);
+            position: relative;
+            top: 20%;
+            left: 20%;
+        }
+    }
+}
