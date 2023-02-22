@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/musinsa/static/css/main.1fc5e6d3.css",
-    "main.js": "/musinsa/static/js/main.058c573a.js",
+    "main.js": "/musinsa/static/js/main.d7d30577.js",
     "index.html": "/musinsa/index.html",
     "main.1fc5e6d3.css.map": "/musinsa/static/css/main.1fc5e6d3.css.map",
-    "main.058c573a.js.map": "/musinsa/static/js/main.058c573a.js.map"
+    "main.d7d30577.js.map": "/musinsa/static/js/main.d7d30577.js.map"
   },
   "entrypoints": [
     "static/css/main.1fc5e6d3.css",
-    "static/js/main.058c573a.js"
+    "static/js/main.d7d30577.js"
   ]
 }
