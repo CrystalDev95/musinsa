@@ -43,6 +43,7 @@ const Clothing = () => {
     { id: 100, value: 'DRAWFIT' },
     { id: 101, value: 'RETRIEVER CLUB' },
     { id: 102, value: 'URBANSTOFF' },
+    { id: 102, value: 'FALLETT' }
   ]
 
   const colors = [

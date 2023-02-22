@@ -36,7 +36,7 @@ const Navbar = () => {
           <li>BRANDS</li>
           <li><Link to="/clothing">CLOTHING</Link></li>
           <li>NEW</li>
-          <li><Link to="/shoes">SHOES</Link></li>
+          <li>SHOES</li>
           <li><Link to="/accessories">ACCESSORIES</Link></li>
           <li>TREND</li>
         </ul>

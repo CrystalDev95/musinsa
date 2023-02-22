@@ -7,9 +7,9 @@
         "id": 0,
         "img": "https://image.msscdn.net/images/goods_img/20210106/1737580/1737580_1_500.jpg",
         "name": "BAY LEAF CREWNECK",
-        "description": "Holiday Signature Ball Cap [Green]",
+        "description": "Holiday Signature Black Hoodie",
         "price": 22,
-        "category": "Shirt",
+        "category": "Hoodie",
         "gender": "Women",
         "brand": "DRAWFIT",
         "color": "Black"
@@ -19,20 +19,20 @@
         "id": 1,
         "img": "https://search.pstatic.net/common/?src=http%3A%2F%2Fshop1.phinf.naver.net%2F20201207_229%2F1607336896727B5Ucn_JPEG%2F68895467L.jpg&type=sc960_832",
         "name": "MUSINSA",
-        "description": "Holiday Signature Ball Cap [Green]",
+        "description": "Dark green beanie with black tag",
         "price": 52,
         "category": "Cap",
         "gender": "Women",
         "brand": "DRAWFIT",
-        "color": "White"
+        "color": "Green"
     },
 
     {
         "id": 11,
         "img": "http://image.auction.co.kr/itemimage/1e/39/8c/1e398c8866.jpg",
         "name": "TYPE SERVICE",
-        "description": "Typeservice Web Cap [Navy]",
-        "price": 49,
+        "description": "3 Typeservice hoodies with Korea logo",
+        "price": 80,
         "category": "Hoodie",
         "gender": "Men",
         "brand": "TAKEASY",
@@ -43,7 +43,7 @@
         "id": 2,
         "img": "https://search.pstatic.net/sunny/?src=https%3A%2F%2Fimage.msscdn.net%2Fimages%2Fgoods_img%2F20190823%2F1126933%2F1126933_1_500.jpg&type=sc960_832",
         "name": "TYPE SERVICE",
-        "description": "Typeservice Web Cap [Dark Grey]",
+        "description": "Typeservice black fabric cap",
         "price": 43,
         "category": "Cap",
         "gender": "Men",
@@ -55,56 +55,56 @@
         "id": 6,
         "img": "https://m.fallett.co.kr/web/product/big/202202/cf7ae273b140a5e25e1557c8e4d39726.jpg",
         "name": "TYPE SERVICE",
-        "description": "Typeservice Web Cap [Navy]",
+        "description": "Fallett black Sweatshirt",
         "price": 49,
         "category": "Sweatshirt",
         "gender": "Women",
-        "brand": "GRAVER",
-        "color": "Grey"
+        "brand": "FALLETT",
+        "color": "Black"
     },
 
     {
         "id": 3,
         "img": "https://search.pstatic.net/sunny/?src=https%3A%2F%2Fimage.msscdn.net%2Fimages%2Fgoods_img%2F20190823%2F1126930%2F1126930_1_500.jpg&type=sc960_832",
         "name": "THE COLDEST MOMENT",
-        "description": "TCM bgc cap",
+        "description": "TCM bgc light blue cap",
         "price": 52,
         "category": "Cap",
         "gender": "Men",
         "brand": "TAKEASY",
-        "color": "Green"
+        "color": "Blue"
     },
 
     {
         "id": 4,
         "img": "https://search.pstatic.net/sunny/?src=https%3A%2F%2Fimage.msscdn.net%2Fimages%2Fgoods_img%2F20221117%2F2946615%2F2946615_1_500.jpg%3Ft%3D20221117004628&type=sc960_832",
         "name": "TYPE SERVICE",
-        "description": "Typeservice Web Cap [Navy]",
+        "description": "Casual Majo logo Cap",
         "price": 33,
         "category": "Cap",
         "gender": "Men",
         "brand": "LMC",
-        "color": "Red"
+        "color": "White"
     },
 
     {
         "id": 5,
         "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP40906wgY54NlyECt6rSGxFA1gL1R1-PiY3ZsIRzQRZLAX48OBXmUFvmhNOmCHQvcSLo&usqp=CAU",
         "name": "TYPE SERVICE",
-        "description": "Typeservice Web Cap [Navy]",
+        "description": "LMC sky blue sweatshirt ",
         "price": 32,
         "category": "Sweatshirt",
         "gender": "Men",
         "brand": "LMC",
-        "color": "Purple"
+        "color": "Blue"
     },
 
     {
         "id": 7,
         "img": "https://www.urbanage.co.kr/shopimages/wolp/0370000000032.jpg?1633069112",
         "name": "TYPE SERVICE",
-        "description": "Typeservice Web Cap [Navy]",
-        "price": 35,
+        "description": "3 different colors urban sweatshirts",
+        "price": 85,
         "category": "Sweatshirt",
         "gender": "Women",
         "brand": "GRAVER",
@@ -115,11 +115,11 @@
         "id": 8,
         "img": "https://m.fallett.co.kr/web/product/medium/202202/edd399b9d6c8f3bc4f6ec6c46d43bd81.jpg",
         "name": "TYPE SERVICE",
-        "description": "Typeservice Web Cap [Navy]",
+        "description": "White sweatshirt with Fallett logo",
         "price": 48,
         "category": "Sweatshirt",
         "gender": "Women",
-        "brand": "LMC",
+        "brand": "FALLETT",
         "color": "White"
     },
 
@@ -127,67 +127,67 @@
         "id": 9,
         "img": "http://img.danawa.com/prod_img/500000/698/438/img/15438698_1.jpg?_v=20211014171632",
         "name": "TYPE SERVICE",
-        "description": "Typeservice Web Cap [Navy]",
+        "description": "Black hoodie with pineapple image",
         "price": 41,
         "category": "Hoodie",
         "gender": "Women",
         "brand": "URBANSTOFF",
-        "color": "White"
+        "color": "Black"
     },
 
     {
         "id": 10,
         "img": "http://img.danawa.com/prod_img/500000/152/598/img/9598152_1.jpg?_v=20200113094326",
         "name": "TYPE SERVICE",
-        "description": "Typeservice Web Cap [Navy]",
+        "description": "Blue hoodie with stylish printing",
         "price": 40,
         "category": "Hoodie",
         "gender": "Women",
         "brand": "URBANSTOFF",
-        "color": "White"
+        "color": "Blue"
     },
 
     {
         "id": 12,
         "img": "https://image.msscdn.net/images/goods_img/20230202/3056891/3056891_16765181292494_320.jpg",
         "name": "PIVVEE",
-        "description": "Holiday Signature Ball Cap [Green]",
+        "description": "Cute White Bear printing hoodie",
         "price": 42,
         "category": "Cap",
         "gender": "Women",
         "brand": "DRAWFIT",
-        "color": "Pink"
+        "color": "White"
     },
 
     {
         "id": 13,
         "img": "https://image.msscdn.net/images/goods_img/20230207/3065389/3065389_16757617152182_320.jpg",
         "name": "PIVVEE",
-        "description": "Holiday Signature Ball Cap [Green]",
+        "description": "Cute blue Urban printing hoodie",
         "price": 45,
-        "category": "Shirt",
+        "category": "Hoodie",
         "gender": "Women",
         "brand": "DRAWFIT",
-        "color": "Pink"
+        "color": "Blue"
     },
 
     {
         "id": 14,
         "img": "https://image.msscdn.net/images/goods_img/20230127/3044070/3044070_16765326520061_320.jpg",
         "name": "JOEGUSH",
-        "description": "Holiday Signature Ball Cap [Green]",
+        "description": "Casual zip sweatshirt",
         "price": 51,
-        "category": "Shirt",
-        "gender": "Women",
+        "category": "Sweatshirt",
+        "gender": "Men",
         "brand": "DRAWFIT",
-        "color": "Green"
+        "color": "Blue"
     },
 
     {
         "id": 15,
         "img": "https://image.msscdn.net/images/goods_img/20230214/3081274/3081274_16764479297630_320.jpg",
         "name": "SUNDAE SCHOOL",
-        "description": "Holiday Signature Ball Cap [Green]",
+        "description": "Crop hoodie with writing",
         "price": 54,
         "category": "Shirt",
         "gender": "Women",
@@ -198,35 +198,35 @@
     {
         "id": 16,
         "img": "https://image.msscdn.net/images/goods_img/20230207/3064545/3064545_16763419272471_500.jpg",
-        "name": "BAY LEAF CREWNECK",
-        "description": "Holiday Signature Ball Cap [Green]",
+        "name": "Navy Strap shirt",
+        "description": "Navy shirt with strap around the neck",
         "price": 55,
         "category": "Shirt",
         "gender": "Women",
         "brand": "RETRIEVER CLUB",
-        "color": "Grey"
+        "color": "Blue"
     },
 
     {
         "id": 17,
         "img": "https://image.msscdn.net/images/goods_img/20210415/1899755/1899755_1_500.jpg",
         "name": "BAY LEAF CREWNECK",
-        "description": "Holiday Signature Ball Cap [Green]",
+        "description": "White shirt with Activity printing",
         "price": 60,
         "category": "Shirt",
-        "gender": "Women",
+        "gender": "Men",
         "brand": "URBANSTOFF",
-        "color": "Black"
+        "color": "White"
     },
 
     {
         "id": 18,
         "img": "https://image.msscdn.net/images/goods_img/20210206/1782641/1782641_1_500.jpg",
-        "name": "BAY LEAF CREWNECK",
-        "description": "Holiday Signature Ball Cap [Green]",
+        "name": "Dog Shirt",
+        "description": "Casual white shirt with dog image",
         "price": 20,
         "category": "Shirt",
-        "gender": "Men",
+        "gender": "Women",
         "brand": "LMC",
         "color": "White"
     },
@@ -235,11 +235,11 @@
         "id": 19,
         "img": "https://image.msscdn.net/images/goods_img/20230209/3071084/3071084_16759089032665_500.jpg",
         "name": "BAY LEAF CREWNECK",
-        "description": "Holiday Signature Ball Cap [Green]",
+        "description": "Casual Women shirt with flower image",
         "price": 30,
         "category": "Shirt",
         "gender": "Women",
         "brand": "DRAWFIT",
-        "color": "Black"
+        "color": "White"
     }
 ]
