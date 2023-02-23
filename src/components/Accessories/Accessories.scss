@@ -19,7 +19,7 @@
 }
 
 
-.clothSection {
+.accSection {
     position: absolute;
     top: 25%;
     width: 100%;
@@ -51,12 +51,12 @@
         }
     }
 
-    .topMenu {
+    .accTopMenu {
         display: flex;
         flex-direction: column;
         padding: 4rem 4rem 2rem;
 
-        .buttonDiv {
+        .accButtonDiv {
             gap: 2rem;
             display: flex;
             padding: 2rem 0;
@@ -81,11 +81,11 @@
 
 
 
-    .bodyDiv {
+    .accBodyDiv {
         display: flex;
         padding: .5rem 1rem 1rem;
 
-        .leftMenu {
+        .accLeftMenu {
             display: block;
             width: 220px;
             position: static;
@@ -93,7 +93,7 @@
             z-index: 0;
             flex-shrink: 0;
 
-            .leftList {
+            .accLeftList {
                 border-bottom: 1px solid #e7e9ec;
                 padding: 1rem 0;
 
@@ -117,7 +117,7 @@
 
             }
 
-            .leftListColor {
+            .accLeftListColor {
                 border-bottom: 1px solid #e7e9ec;
                 padding: 2rem 0;
 
@@ -125,12 +125,12 @@
                     margin-bottom: 1rem;
                 }
 
-                .colorSection {
+                .accColorSection {
                     display: grid;
                     grid-template-columns: repeat(2, 50px);
                     gap: 1rem;
 
-                    .colorDiv {
+                    .accColorDiv {
                         margin: auto;
                         text-align: center;
 
@@ -159,11 +159,11 @@
         }
 
 
-        .itemSection {
+        .accItemSection {
             display: flex;
             flex-direction: column;
 
-            .topSmall {
+            .accTopSmall {
                 display: flex;
                 padding: 0 4rem;
                 justify-content: space-between;
@@ -180,14 +180,14 @@
                 }
             }
 
-            .itemLists {
+            .accItemLists {
                 display: flex;
                 flex-basis: 90%;
                 height: 500px;
                 justify-content: center;
                 flex-wrap: wrap;
 
-                .itemCard {
+                .iaccItemCard {
                     margin: 1rem;
                     width: 260px;
                     height: 400px;
@@ -198,7 +198,7 @@
                         height: 60%;
                     }
 
-                    .itemText {
+                    .accItemText {
                         position: relative;
                         top: 5%;
                         display: flex;
@@ -216,7 +216,7 @@
 }
 
 @media only screen and (max-width: 1024px) {
-    .clothSection {
+    .accSection {
         position: absolute;
         top: 15%;
     }

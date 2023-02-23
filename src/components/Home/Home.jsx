@@ -8,6 +8,14 @@ import data from '../../data/data.json';
 import data2 from '../../data/data2.json';
 import data3 from '../../data/data3.json';
 import Slider from 'react-slick';
+import cap from '../assets/images/cap-w.png'
+import shoes from '../assets/images/shoes.png'
+import bag from '../assets/images/bag.png'
+import hoodies from '../assets/images/hoodies.png'
+import bucket from '../assets/images/bucket.png'
+import pants from '../assets/images/pants.png'
+import jacket from '../assets/images/jacket.png'
+import skirt from '../assets/images/skirt.png'
 
 
 const Home = () => {
@@ -27,7 +35,7 @@ const Home = () => {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          dots: true
+          arrows: false
         }
       },
       {
@@ -35,14 +43,16 @@ const Home = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          initialSlide: 2
+          initialSlide: 2,
+          arrows: false
         }
       },
       {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          arrows: false
         }
       }
     ]
@@ -58,12 +68,18 @@ const Home = () => {
     autoplay: true,
     speed: 2000,
     autoplaySpeed: 5000,
-    cssEase: "linear"
+    cssEase: "linear",
   };
 
   const [items, setItems] = useState([]);
   const [hero, setHero] = useState([]);
   const [items2, setItems2] = useState([]);
+  const [open, setOpen] = useState(false);
+
+
+  const handleOpen = () => {
+
+  }
 
 
   useEffect(() => {
@@ -79,7 +95,7 @@ const Home = () => {
       <Navbar />
       <div className='contentSection'>
 
-      <div className="heroDiv">
+        <div className="heroDiv">
           <div className="imgSlide">
             <Slider {...settings2}>
               {hero.map((p) => (
@@ -105,16 +121,16 @@ const Home = () => {
           </div>
           <div className="headingDiv2">
             <div className="textWrapper">
-            <h1>THE CURATION VOL.1 CLUE IN THE NAME</h1>
-            <p>If you were curious about where the brands get their inspiration
-              from, take this opportunity to pay close attention to the brand names.
-            </p>
-            <Link to="/clothing">
-              <button className='shop-btn'>
-                Shop Now
-              </button>
-            </Link>
-          </div>
+              <h1>THE CURATION VOL.1 CLUE IN THE NAME</h1>
+              <p>If you were curious about where the brands get their inspiration
+                from, take this opportunity to pay close attention to the brand names.
+              </p>
+              <Link to="/clothing">
+                <button className='shop-btn'>
+                  Shop Now
+                </button>
+              </Link>
+            </div>
           </div>
         </section>
 
@@ -138,12 +154,59 @@ const Home = () => {
               </button>
             </Link>
           </div>
+
+          <div className="mobileSection">
+            <div className="mobileContainer">
+              <div className="mobileDiv">
+                <img src={cap} alt="" />
+              </div>
+              <p>Cap</p>
+            </div>
+
+            <div className="mobileContainer">
+              <div className="mobileDiv">
+                <img src={skirt} alt="" />
+              </div>
+              <p>Skirt</p>
+            </div>
+
+            <div className="mobileContainer">
+              <div className="mobileDiv">
+                <img src={bucket} alt="" />
+              </div>
+              <p>Bucket</p>
+            </div>
+
+            <div className="mobileContainer">
+              <div className="mobileDiv">
+                <img src={shoes} alt="" />
+              </div>
+              <p>Shoes</p>
+            </div>
+
+            <div className="mobileContainer">
+              <div className="mobileDiv">
+                <img src={pants} alt="" />
+              </div>
+              <p>Pants</p>
+            </div>
+
+            <div className="mobileContainer">
+              <div className="mobileDiv">
+                <img src={hoodies} alt="" />
+              </div>
+              <p>Hoodies</p>
+            </div>
+
+
+          </div>
         </div>
 
 
 
         <div className="slideDiv2">
           <h1 className='heading'>HOW TO WEAR</h1>
+
           <div className="imgSlide">
             <Slider {...settings}>
               {items2.map((p) => (
@@ -163,7 +226,7 @@ const Home = () => {
           </div>
         </div>
 
-      <Footer />
+        <Footer />
       </div>
     </>
   )

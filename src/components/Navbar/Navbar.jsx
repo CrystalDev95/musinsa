@@ -4,14 +4,12 @@ import './Navbar.css'
 
 import { BsPerson, BsHandbag } from 'react-icons/bs'
 import { IoMdHeartEmpty } from 'react-icons/io'
-import { BiSearch } from 'react-icons/bi'
+import { BiSearch, BiCategory } from 'react-icons/bi'
+import { AiOutlineHome, AiOutlineMessage, AiOutlineHeart } from 'react-icons/ai'
 
 
 const Navbar = () => {
 
-  const filter = () => {
-
-  }
 
   return (
     <div className='topSection'>
@@ -44,6 +42,44 @@ const Navbar = () => {
       <div className="banner">
         <p>Free shipping on orders $200+</p>
       </div>
+
+      <div className="mobileNav">
+            <Link to="/category">
+              <div className="iconDiv">
+                <BiCategory className='icon2' />
+                <p>Category</p>
+              </div>
+            </Link>
+
+            <Link to="clothing">
+              <div className="iconDiv">
+                <AiOutlineMessage className='icon2' />
+                <p>Snap</p>
+              </div>
+            </Link>
+
+            <Link to="/">
+            <div className="iconDiv">
+              <AiOutlineHome className='icon2' />
+              <p>Home</p>
+            </div>
+            </Link>
+
+            <Link to="clothing">
+            <div className="iconDiv">
+              <AiOutlineHeart className='icon2' />
+              <p>Likes</p>
+            </div>
+            </Link>
+
+            <Link to="/category">
+            <div className="iconDiv">
+              <BsPerson className='icon2' />
+              <p>Profile</p>
+            </div>
+            </Link>
+
+          </div>
     </div>
   )
 }

@@ -1,13 +1,16 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import './Clothing.css'
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 import data from '../../data/data2.json';
 import { BsCheck } from 'react-icons/bs';
+import { MdOutlineManageSearch } from 'react-icons/md';
 
 const Clothing = () => {
 
   const [search, setSearch] = useState("")
+
+  const [showLinks, setShowLinks] = useState(false)
 
   const [items, setItems] = useState([]);
   const [toggle, setToggle] = useState(false);
@@ -24,10 +27,9 @@ const Clothing = () => {
 
   const types = [
     { id: 11, value: 'All' },
-    { id: 22, value: 'Cap' },
     { id: 33, value: 'Sweatshirt' },
     { id: 44, value: 'Hoodie' },
-    { id: 55, value: 'Sweatshirt' }
+    { id: 55, value: 'Shirt' }
   ]
 
 
@@ -43,18 +45,18 @@ const Clothing = () => {
     { id: 100, value: 'DRAWFIT' },
     { id: 101, value: 'RETRIEVER CLUB' },
     { id: 102, value: 'URBANSTOFF' },
-    { id: 102, value: 'FALLETT' }
+    { id: 103, value: 'FALLETT' }
   ]
 
   const colors = [
-    { id: 103, value: 'White', color: '#eceaea' },
-    { id: 104, value: 'Black', color: '#000000' },
-    { id: 105, value: 'Blue', color: '#0000ff' },
-    { id: 106, value: 'Green', color: '#008000' },
-    { id: 107, value: 'Red', color: '#ff0000' },
-    { id: 108, value: 'Pink', color: '#ffc0cb' },
-    { id: 109, value: 'Purple', color: '#800080' },
-    { id: 110, value: 'Grey', color: '#808080' },
+    { id: 104, value: 'White', color: '#eceaea' },
+    { id: 105, value: 'Black', color: '#000000' },
+    { id: 106, value: 'Blue', color: '#0000ff' },
+    { id: 107, value: 'Green', color: '#008000' },
+    { id: 108, value: 'Red', color: '#ff0000' },
+    { id: 109, value: 'Pink', color: '#ffc0cb' },
+    { id: 110, value: 'Purple', color: '#800080' },
+    { id: 111, value: 'Grey', color: '#808080' },
   ]
 
 
@@ -114,7 +116,7 @@ const Clothing = () => {
 
 
 
-////sorting by price and alphabet
+  ////sorting by price and alphabet
   const compare = (a, b, ascendingOrder) => {
     if (a < b) {
       return ascendingOrder ? -1 : 1;
@@ -127,21 +129,21 @@ const Clothing = () => {
 
 
   const handleChange = (value) => {
-    if(value == 'none'){
-        setItems([...data])
+    if (value == 'none') {
+      setItems([...data])
     } else {
       let toType, toAscending
-      switch(value){
-        case 'ascending' : toType = true; toAscending = true; break;
-        case 'descending' : toType = true; toAscending = false; break;
-        case 'high' : toType = false; toAscending = true; break;
-        case 'low' : toType = false; toAscending = false; break;
+      switch (value) {
+        case 'ascending': toType = true; toAscending = true; break;
+        case 'descending': toType = true; toAscending = false; break;
+        case 'high': toType = false; toAscending = true; break;
+        case 'low': toType = false; toAscending = false; break;
       }
       let current = [...data]
       current.sort((a, b) => toType ?
-             compare(a.brand, b.brand, toAscending) 
-             : 
-             compare(a.price, b.price, toAscending))
+        compare(a.brand, b.brand, toAscending)
+        :
+        compare(a.price, b.price, toAscending))
       setItems([...current])
     }
   }
@@ -184,27 +186,35 @@ const Clothing = () => {
 
   return (
     <>
-      <Navbar />
+      <div className="navDiv">
+        <Navbar />
+      </div>
       <div className='clothSection'>
-      <div className="search">
-      <input 
-          type="text" 
-          placeholder='Search' 
-          onChange={(e) => {
-            setSearch(e.target.value)
-          }}
+        <div className="searchContainer">
+          <input
+            type="text"
+            placeholder='Search'
+            onChange={(e) => {
+              setSearch(e.target.value)
+            }}
           />
         </div>
         <div className="topMenu">
           <h1>Clothes</h1>
           <div className="buttonDiv">
+            <div
+              className="mobileButton"
+              onClick={() => setShowLinks(!showLinks)}
+            >
+              <MdOutlineManageSearch className='icon' />
+            </div>
             {
               types.map((t) =>
                 <button
                   key={t.id}
                   id={t.id}
                   value={t.value}
-                  className={t.id == toggle ? "dark" : null}
+                  className={t.id == toggle ? "dark" : false}
                   onClick={(e) => {
                     handleSelectedCategory(e);
                     handleToggle(e)
@@ -219,7 +229,11 @@ const Clothing = () => {
 
 
         <div className="bodyDiv">
-          <div className="leftMenu">
+          <div className="leftMenu" id={showLinks ? "hidden" : ""}>
+          <div 
+          className='closeBtn'
+          onClick={() => setShowLinks(false)}
+          >X</div>
             <div className='leftList'>
               <h3>Gender</h3>
               {
@@ -295,9 +309,9 @@ const Clothing = () => {
                   <select
                     name="sort"
                     className='sort-selection'
-                    onChange={(e)=> handleChange(e.target.value)}
-                  > 
-                  <option value="none">Sort items by </option>
+                    onChange={(e) => handleChange(e.target.value)}
+                  >
+                    <option value="none">Sort items by </option>
                     <option value="high">Price(lowest)</option>
                     <option value="low">Price(highest)</option>
                     <option value="ascending">Alphabetically(A-Z)</option>
@@ -312,30 +326,28 @@ const Clothing = () => {
                 ? "No items found"
                 :
                 items.
-                filter((item) => {
-                  if (search == "") {
-                    return item
-                  } else if (item.brand.toLowerCase().includes(search.toLowerCase())) {
-                    return item
-                  }
-                })
-                .map((item) =>
-                  <div className="itemCard" key={item.id}>
-                    <img src={item.img} alt='clothes' />
-                    <div className="itemText">
-                      <h4>{item.brand}</h4>
-                      <p>{item.description}</p>
-                      <p>{item.color}</p>
-                      <h3><strong>${item.price}</strong></h3>
+                  filter((item) => {
+                    if (search == "") {
+                      return item
+                    } else if (item.brand.toLowerCase().includes(search.toLowerCase())) {
+                      return item
+                    }
+                  })
+                  .map((item) =>
+                    <div className="itemCard" key={item.id}>
+                      <img src={item.img} alt='clothes' />
+                      <div className="itemText">
+                        <h4>{item.brand}</h4>
+                        <p>{item.description}</p>
+                        <p>{item.color}</p>
+                        <h3><strong>${item.price}</strong></h3>
+                      </div>
                     </div>
-                  </div>
-                )}
+                  )}
             </div>
           </div>
-
         </div>
-
-        <Footer />
+          <Footer />
       </div>
     </>
   )

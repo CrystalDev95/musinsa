@@ -158,33 +158,41 @@
     padding: 0 1.5rem;
     border-top: 1px solid var(--InputColor);
   }
+  .footerDiv .help-btn {
+    padding: 0 0 1rem;
+  }
   .footerDiv .help-btn button {
-    font-size: var(--h3FontSize);
+    font-size: var(--SmallFontSize);
   }
-  .footerDiv .help-btn .storeDiv .store-btn button .storeText {
-    text-align: left;
+  .footerDiv .storeDiv .store-btn {
+    gap: 0.5rem;
   }
-  .footerDiv .help-btn .storeDiv .store-btn button .storeText p {
-    font-size: var(--SmallestFontSize);
+  .footerDiv .storeDiv .store-btn button {
+    font-size: var(--SmallFontSize);
+    padding: 0.5rem;
+    gap: 0.5rem;
   }
-  .footerDiv .help-btn .socialDiv {
+  .footerDiv .storeDiv .store-btn button .icon2 {
+    font-size: 1.5rem;
+  }
+  .footerDiv .socialDiv {
     display: flex;
     gap: 1rem;
   }
-  .footerDiv .help-btn .socialDiv .social-btn {
-    height: 40px;
-    width: 40px;
-    background-color: black;
-    border-radius: 100%;
+  .footerDiv .socialDiv .social-btn {
+    height: 30px;
+    width: 30px;
   }
-  .footerDiv .help-btn .socialDiv .icon {
-    font-size: 1.5rem;
+  .footerDiv .socialDiv .icon {
+    font-size: 1rem;
     color: var(--WhiteColor);
     position: relative;
-    top: 20%;
-    left: 20%;
+    top: 24%;
+    left: 24%;
   }
   .footerDiv .policy {
     padding: 2rem 0;
+    margin-bottom: 3rem;
+    font-size: var(--SmallestFontSize);
   }
 }/*# sourceMappingURL=Footer.css.map */

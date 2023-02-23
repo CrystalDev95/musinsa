@@ -1,0 +1,65 @@
+[
+  {
+    "id":"1",
+    "img":"https://image.msscdn.net/images/goods_img/20230214/3081205/3081205_16764545857153_500.jpg",
+    "title": "Pants",
+    "link": "/clothing"
+  },
+
+  {
+    "id":"2",
+    "img":"https://image.msscdn.net/images/goods_img/20230125/3039065/3039065_16753218124041_500.jpg",
+    "title": "Jacket",
+    "link": "/clothing"
+  },
+
+  {
+    "id":"3",
+    "img":"https://image.msscdn.net/images/goods_img/20230207/3063473/3063473_16757374875881_500.jpg",
+    "title": "Skirt",
+    "link": "/clothing"
+  },
+
+  {
+    "id":"4",
+    "img":"https://image.msscdn.net/images/goods_img/20190902/1139100/1139100_5_320.jpg",
+    "title": "Knitwear",
+    "link": "/clothing"
+  },
+
+  {
+    "id":"5",
+    "img":"https://image.msscdn.net/images/goods_img/20220822/2732638/2732638_1_320.jpg",
+    "title": "Long Sleeves",
+    "link": "/clothing"
+  },
+
+  {
+    "id":"6",
+    "img":"https://image.msscdn.net/images/goods_img/20220907/2778749/2778749_1_320.jpg",
+    "title": "Bucket Hat",
+    "link": "/clothing"
+  },
+
+  {
+    "id":"7",
+    "img":"https://image.msscdn.net/images/goods_img/20210408/1888316/1888316_1_320.jpg",
+    "title": "Shoes",
+    "link": "/clothing"
+  },
+
+  {
+    "id":"8",
+    "img":"https://image.msscdn.net/images/goods_img/20220215/2359469/2359469_3_320.jpg",
+    "title": "Bags",
+    "link": "/clothing"
+  },
+
+  {
+    "id":"9",
+    "img":"https://image.msscdn.net/images/goods_img/20221124/2959939/2959939_1_320.jpg",
+    "title": "Sunglasses",
+    "link": "/clothing"
+  }
+
+]

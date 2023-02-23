@@ -23,12 +23,11 @@
     position: fixed;
     background-color: white;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
 
     .topDiv {
         display: relative;
         padding: 1rem 3rem 0.5rem;
-
         .searchDiv {
             padding: 0 1rem;
             float: left;
@@ -87,6 +86,11 @@
         color: white;
         padding: .6rem 0;
         font-size: var(--SmallFontSize);
+    }
+
+    .mobileNav {
+        display: none;
+        height: 0;
     }
 }
 
@@ -169,6 +173,108 @@
 
     nav ul {
         display: none !important;
+    }
+}
+
+
+@media only screen and (max-width: 580px) {
+    .topSection {
+        position: fixed;
+        background-color: white;
+        width: 100%;
+        z-index: 2;
+    
+        .topDiv {
+            display: relative;
+            padding: 1rem 3rem;
+    
+            .searchDiv {
+                padding: 0 1rem;
+                float: left;
+                display: flex;
+    
+                .small-icon {
+                    font-size: var(--h1FontSize) !important;
+                    color: var(--BlackColor);
+                }
+            }
+    
+            .logo {
+                margin: 0;
+                position: absolute;
+                left: 50%;
+                top: 30%;
+                transform: translate(-50%, -50%);
+                color: var(--BlackColor);
+    
+                a {
+                    text-decoration: none;
+                    color: var(--BlackColor);
+                }
+            }
+    
+            .iconDiv {
+                display: flex;
+                float: right;
+                gap: 1rem;
+            }
+        }
+    
+    
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 3rem 4rem 1rem;
+    
+            li {
+                font-weight: 600;
+                list-style-type: none;
+                color: var(--BlackColor);
+    
+                a {
+                    &:hover {
+                        color: red;
+                    }
+                }
+            }
+        }
+
+        .mobileNav {
+            width: 100%;
+            position: fixed;
+            height: 60px;
+            background-color: black;
+            bottom: 0;
+            color: var(--WhiteColor);
+            justify-content: space-between;
+            display: flex;
+            z-index: 2;
+            padding: .1rem .5rem;
+    
+            a {
+                color: white;
+            }
+    
+    
+            .iconDiv {
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+                display: block;
+                padding: .5rem;
+                text-align: center;
+    
+                .icon2 {
+                    font-size: 1.5rem;
+                }
+    
+                p {
+                    font-size: var(--SmallFontSize);
+                }
+    
+            }
+        }
     }
 
 }

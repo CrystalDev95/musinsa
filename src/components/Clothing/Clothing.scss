@@ -18,14 +18,23 @@
     --SmallestFontSize: .75rem;
 }
 
+.navDiv {
+    z-index: 100 !important;
+}
+
 
 .clothSection {
     position: absolute;
     top: 25%;
     width: 100%;
-    padding: 0 2rem;
+    padding: 0 1rem;
 
-    .search {
+    .footerDiv {
+        z-index: 3;
+    }
+
+
+    .searchContainer {
         padding: 0.8rem 1rem;
         float: left;
         border: 1px rgba(0, 0, 0, 0.281) solid;
@@ -48,6 +57,7 @@
             font-size: 1rem;
             font-weight: 500;
             color: var(--TextColor);
+            background-color: transparent;
         }
     }
 
@@ -60,6 +70,10 @@
             gap: 2rem;
             display: flex;
             padding: 2rem 0;
+
+            .mobileButton {
+                display: none;
+            }
 
             button {
                 background-color: var(--InputColor);
@@ -93,6 +107,10 @@
             z-index: 0;
             flex-shrink: 0;
 
+            .closeBtn {
+                display: none;
+            }
+
             .leftList {
                 border-bottom: 1px solid #e7e9ec;
                 padding: 1rem 0;
@@ -123,6 +141,8 @@
 
                 h3 {
                     margin-bottom: 1rem;
+                    padding-left: 1rem;
+                    
                 }
 
                 .colorSection {
@@ -165,8 +185,9 @@
 
             .topSmall {
                 display: flex;
-                padding: 0 4rem;
                 justify-content: space-between;
+                padding: 0 9rem;
+
 
                 .priceDiv {
                     select {
@@ -175,26 +196,24 @@
                 }
 
                 .itemCount {
-                    margin: 0 4rem 2rem;
+                    margin: 0;
                     color: var(--TextColor);
                 }
             }
 
             .itemLists {
                 display: flex;
-                flex-basis: 90%;
-                height: 500px;
                 justify-content: center;
                 flex-wrap: wrap;
 
                 .itemCard {
-                    margin: 1rem;
-                    width: 260px;
+                    margin: 2rem 0.5rem;
+                    width: 300px;
                     height: 400px;
                     background-color: var(--WhiteColor);
 
                     img {
-                        width: 95%;
+                        width: 100%;
                         height: 60%;
                     }
 
@@ -215,9 +234,220 @@
     }
 }
 
-@media only screen and (max-width: 1024px) {
+
+////Tablet view 
+@media only screen and (max-width: 1000px) {
     .clothSection {
-        position: absolute;
+        top: 18%;
+        padding: 0 1rem;
+
+
+        .bodyDiv {
+            width: 100vw;
+
+            .leftMenu {
+                width: 180px;
+                margin-right: 1rem;
+            }
+
+
+            .itemSection {
+                margin-left: 1rem;
+
+                .topSmall {
+                    display: flex;
+                    padding: 1rem 0 1rem;
+                    justify-content: space-between;
+
+                    .itemCount {
+                        margin: 0 2rem 2rem;
+                        color: var(--TextColor);
+                    }
+                }
+
+                .itemLists {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    margin: 0 .5rem;
+
+                    .itemCard {
+                        width: 100%;
+                        height: 500px;
+                        background-color: transparent;
+                        padding-bottom: 1rem;
+
+                        img {
+                            width: 100%;
+                            height: 60%;
+                        }
+
+                        .itemText {
+                            top: 5%;
+                            left: 5%;
+                            display: flex;
+                            flex-direction: column;
+                            gap: .2rem;
+
+                            h3 {
+                                padding-top: 0.5rem;
+                            }
+
+                            p {
+                                font-size: var(--SmallFontSize);
+                                width: 200px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+////Mobile view
+@media only screen and (max-width: 580px) {
+
+    .navDiv {
+        z-index: 1000;
+    }
+
+    .clothSection {
         top: 15%;
+        padding: 0;
+
+
+        .searchContainer {
+            display: none;
+
+            input {
+                display: none;
+            }
+        }
+
+        .topMenu {
+            padding: 0 1.5rem;
+
+            h1 {
+                font-size: var(--h1FontSize);
+            }
+
+            .buttonDiv {
+                gap: .8rem;
+                padding: 1.5rem 0;
+                width: 95vw;
+                flex-wrap: wrap;
+
+
+                .mobileButton {
+                    display: flex;
+                    background-color: var(--InputColor);
+                    padding: 0.5rem;
+                    border-radius: .5rem;
+
+                    .icon {
+                        font-size: var(--h2FontSize);
+                        color: var(--TextColor);
+                    }
+                }
+
+                button {
+                    font-size: var(--SmallestFontSize);
+                }
+            }
+        }
+
+
+
+
+        .bodyDiv {
+            display: flex;
+            padding: .5rem .5rem 1rem;
+            
+            .leftMenu {
+                display: none;
+                .leftList {
+                    h3 {
+                        padding-left: 1rem;
+                    }
+                }
+            }
+
+           #hidden {
+                display: block;
+                position: fixed;
+                left: 0;
+                top: 10%;
+                padding-top: 2rem;
+                padding-bottom: 5rem;
+                height: 90%;
+                width: 60%;
+                overflow-y: scroll;
+                background-color: white;
+                z-index: 1;
+
+                .closeBtn {
+                    display: flex;
+                    float: right;
+                    padding: 0 2rem;
+                    cursor: pointer;
+                }
+            }
+
+
+
+
+            .itemSection {
+                .topSmall {
+                    display: flex;
+                    padding: 1rem 0 1rem;
+                    justify-content: space-between;
+
+                    .itemCount {
+                        margin: 0 .5rem 2rem;
+                        color: var(--TextColor);
+                    }
+                }
+
+                .itemLists {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 1rem;
+                    margin: 0 auto;
+
+                    .itemCard {
+                        margin: 0;
+                        width: 100%;
+                        height: 360px;
+                        background-color: transparent;
+                        padding-bottom: 1rem;
+
+                        img {
+                            width: 100%;
+                            height: 60%;
+                        }
+
+                        .itemText {
+                            top: 5%;
+                            left: 5%;
+                            display: flex;
+                            flex-direction: column;
+                            gap: .2rem;
+
+                            h3 {
+                                padding-top: 0.5rem;
+                            }
+
+                            p {
+                                font-size: var(--SmallFontSize);
+                                width: 170px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

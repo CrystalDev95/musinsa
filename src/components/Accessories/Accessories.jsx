@@ -187,7 +187,7 @@ const Accessories = () => {
   return (
     <>
       <Navbar />
-      <div className='clothSection'>
+      <div className='accSection'>
       <div className="search">
       <input 
           type="text" 
@@ -197,9 +197,9 @@ const Accessories = () => {
           }}
           />
         </div>
-        <div className="topMenu">
+        <div className="accTopMenu">
           <h1>Accessories</h1>
-          <div className="buttonDiv">
+          <div className="accButtonDiv">
             {
               types.map((t) =>
                 <button
@@ -220,9 +220,9 @@ const Accessories = () => {
 
 
 
-        <div className="bodyDiv">
-          <div className="leftMenu">
-            <div className='leftList'>
+        <div className="accBodyDiv">
+          <div className="accLeftMenu">
+            <div className='accLeftList'>
               <h3>Gender</h3>
               {
                 genders.map((g) =>
@@ -240,7 +240,7 @@ const Accessories = () => {
               }
             </div>
 
-            <div className='leftList'>
+            <div className='accLeftList'>
               <h3>Brand</h3>
               {
                 brands.map((b) =>
@@ -258,12 +258,12 @@ const Accessories = () => {
               }
             </div>
 
-            <div className='leftListColor'>
+            <div className='accLeftListColor'>
               <h3>Color</h3>
-              <div className="colorSection">
+              <div className="accColorSection">
                 {
                   colors.map((c) =>
-                    <div className="colorDiv">
+                    <div className="accColorDiv">
                       <button
                         style={{ backgroundColor: c.color }}
                         className={c.id == colorClick ? "bold" : null}
@@ -286,12 +286,12 @@ const Accessories = () => {
           </div>
 
 
-          <div className='itemSection'>
-            <div className="topSmall">
-              <div className='itemCount'>
+          <div className='accItemSection'>
+            <div className="accTopSmall">
+              <div className='accItemCount'>
                 Total {items.length}
               </div>
-              <div className="priceDiv">
+              <div className="accPriceDiv">
                 <form action="#">
                   <label htmlFor="sort"></label>
                   <select
@@ -309,7 +309,7 @@ const Accessories = () => {
               </div>
             </div>
 
-            <div className="itemLists">
+            <div className="accItemLists">
               {items.length === 0
                 ? "No items found"
                 :
@@ -322,9 +322,9 @@ const Accessories = () => {
                   }
                 })
                 .map((item) =>
-                  <div className="itemCard" key={item.id}>
+                  <div className="acccItemCard" key={item.id}>
                     <img src={item.img} alt='clothes' />
-                    <div className="itemText">
+                    <div className="accItemText">
                       <h4>{item.brand}</h4>
                       <p>{item.description}</p>
                       <h3><strong>${item.price}</strong></h3>

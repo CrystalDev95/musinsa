@@ -17,13 +17,13 @@
   --SmallestFontSize: .75rem;
 }
 
-.clothSection {
+.accSection {
   position: absolute;
   top: 25%;
   width: 100%;
   padding: 0 2rem;
 }
-.clothSection .search {
+.accSection .search {
   padding: 0.8rem 1rem;
   float: left;
   border: 1px rgba(0, 0, 0, 0.281) solid;
@@ -36,27 +36,27 @@
   position: absolute;
   left: 40%;
 }
-.clothSection .search:hover {
+.accSection .search:hover {
   cursor: pointer;
 }
-.clothSection .search input {
+.accSection .search input {
   outline: none;
   border: none;
   font-size: 1rem;
   font-weight: 500;
   color: var(--TextColor);
 }
-.clothSection .topMenu {
+.accSection .accTopMenu {
   display: flex;
   flex-direction: column;
   padding: 4rem 4rem 2rem;
 }
-.clothSection .topMenu .buttonDiv {
+.accSection .accTopMenu .accButtonDiv {
   gap: 2rem;
   display: flex;
   padding: 2rem 0;
 }
-.clothSection .topMenu .buttonDiv button {
+.accSection .accTopMenu .accButtonDiv button {
   background-color: var(--InputColor);
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
@@ -65,15 +65,15 @@
   cursor: pointer;
   border: none;
 }
-.clothSection .topMenu .buttonDiv .dark {
+.accSection .accTopMenu .accButtonDiv .dark {
   background-color: var(--BlackColor);
   color: var(--WhiteColor);
 }
-.clothSection .bodyDiv {
+.accSection .accBodyDiv {
   display: flex;
   padding: 0.5rem 1rem 1rem;
 }
-.clothSection .bodyDiv .leftMenu {
+.accSection .accBodyDiv .accLeftMenu {
   display: block;
   width: 220px;
   position: static;
@@ -81,42 +81,42 @@
   z-index: 0;
   flex-shrink: 0;
 }
-.clothSection .bodyDiv .leftMenu .leftList {
+.accSection .accBodyDiv .accLeftMenu .accLeftList {
   border-bottom: 1px solid #e7e9ec;
   padding: 1rem 0;
 }
-.clothSection .bodyDiv .leftMenu .leftList h3 {
+.accSection .accBodyDiv .accLeftMenu .accLeftList h3 {
   font-size: var(--h2FontSize);
   padding-left: 1rem;
 }
-.clothSection .bodyDiv .leftMenu .leftList button {
+.accSection .accBodyDiv .accLeftMenu .accLeftList button {
   display: block;
   margin: 2rem 1rem;
   background-color: transparent;
   border-radius: 100%;
   font-size: var(--NormalFontSize);
 }
-.clothSection .bodyDiv .leftMenu .leftList .bold {
+.accSection .accBodyDiv .accLeftMenu .accLeftList .bold {
   font-weight: 900;
   font-size: var(--h3FontSize);
 }
-.clothSection .bodyDiv .leftMenu .leftListColor {
+.accSection .accBodyDiv .accLeftMenu .accLeftListColor {
   border-bottom: 1px solid #e7e9ec;
   padding: 2rem 0;
 }
-.clothSection .bodyDiv .leftMenu .leftListColor h3 {
+.accSection .accBodyDiv .accLeftMenu .accLeftListColor h3 {
   margin-bottom: 1rem;
 }
-.clothSection .bodyDiv .leftMenu .leftListColor .colorSection {
+.accSection .accBodyDiv .accLeftMenu .accLeftListColor .accColorSection {
   display: grid;
   grid-template-columns: repeat(2, 50px);
   gap: 1rem;
 }
-.clothSection .bodyDiv .leftMenu .leftListColor .colorSection .colorDiv {
+.accSection .accBodyDiv .accLeftMenu .accLeftListColor .accColorSection .accColorDiv {
   margin: auto;
   text-align: center;
 }
-.clothSection .bodyDiv .leftMenu .leftListColor .colorSection .colorDiv button {
+.accSection .accBodyDiv .accLeftMenu .accLeftListColor .accColorSection .accColorDiv button {
   display: block;
   margin: 1rem;
   height: 25px;
@@ -125,59 +125,59 @@
   font-size: var(--SmallestFontSize);
   color: transparent;
 }
-.clothSection .bodyDiv .leftMenu .leftListColor .colorSection .colorDiv .bold {
+.accSection .accBodyDiv .accLeftMenu .accLeftListColor .accColorSection .accColorDiv .bold {
   font-size: 1rem;
   color: var(--WhiteColor);
 }
-.clothSection .bodyDiv .leftMenu .leftListColor .colorSection .colorDiv p {
+.accSection .accBodyDiv .accLeftMenu .accLeftListColor .accColorSection .accColorDiv p {
   font-size: var(--SmallFontSize);
 }
-.clothSection .bodyDiv .itemSection {
+.accSection .accBodyDiv .accItemSection {
   display: flex;
   flex-direction: column;
 }
-.clothSection .bodyDiv .itemSection .topSmall {
+.accSection .accBodyDiv .accItemSection .accTopSmall {
   display: flex;
   padding: 0 4rem;
   justify-content: space-between;
 }
-.clothSection .bodyDiv .itemSection .topSmall .priceDiv select {
+.accSection .accBodyDiv .accItemSection .accTopSmall .priceDiv select {
   padding: 0.4rem, 0.5rem;
 }
-.clothSection .bodyDiv .itemSection .topSmall .itemCount {
+.accSection .accBodyDiv .accItemSection .accTopSmall .itemCount {
   margin: 0 4rem 2rem;
   color: var(--TextColor);
 }
-.clothSection .bodyDiv .itemSection .itemLists {
+.accSection .accBodyDiv .accItemSection .accItemLists {
   display: flex;
   flex-basis: 90%;
   height: 500px;
   justify-content: center;
   flex-wrap: wrap;
 }
-.clothSection .bodyDiv .itemSection .itemLists .itemCard {
+.accSection .accBodyDiv .accItemSection .accItemLists .iaccItemCard {
   margin: 1rem;
   width: 260px;
   height: 400px;
   background-color: var(--WhiteColor);
 }
-.clothSection .bodyDiv .itemSection .itemLists .itemCard img {
+.accSection .accBodyDiv .accItemSection .accItemLists .iaccItemCard img {
   width: 95%;
   height: 60%;
 }
-.clothSection .bodyDiv .itemSection .itemLists .itemCard .itemText {
+.accSection .accBodyDiv .accItemSection .accItemLists .iaccItemCard .accItemText {
   position: relative;
   top: 5%;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
-.clothSection .bodyDiv .itemSection .itemLists .itemCard .itemText h3 {
+.accSection .accBodyDiv .accItemSection .accItemLists .iaccItemCard .accItemText h3 {
   padding-top: 1rem;
 }
 
 @media only screen and (max-width: 1024px) {
-  .clothSection {
+  .accSection {
     position: absolute;
     top: 15%;
   }

@@ -1,0 +1,53 @@
+:root {
+    --PrimaryColor: hsl(190, 100%, 50%);
+    --HoverColor: #90ecff;
+    --PaleColor: hsl(190, 72%, 70%);
+    --WhiteColor: hsl(0, 0%, 100%);
+    --BlackColor: hsl(0, 0%, 18%);
+    --TextColor: hsl(240, 1%, 48%);
+    --BgColor: hsl(220, 10%, 94%);
+    --GreyText: rgb(190, 190, 190);
+    --InputColor: hsl(330, 12%, 97%);
+
+    --BiggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --NormalFontSize: .938rem;
+    --SmallFontSize: .813rem;
+    --SmallestFontSize: .75rem;
+}
+
+.categoryDiv {
+    position: absolute;
+    top: 15%;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .itemSection {
+        margin: 1rem;
+        border-radius: 10%;
+        text-align: center;
+
+        .itemDiv {
+            width: 80px;
+            height: 80px;
+            border: 1px solid var(--InputColor);
+            box-shadow: 2px 2px 2px var(--InputColor);
+
+            img {
+                border-radius: 10%;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        p {
+            font-size: var(--SmallestFontSize);
+            line-height: 2rem;
+        }
+    }
+
+}

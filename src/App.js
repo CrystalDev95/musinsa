@@ -5,7 +5,7 @@ import './App.css';
 import Home from './components/Home/Home'
 import Clothing from './components/Clothing/Clothing'
 import Accessories from './components/Accessories/Accessories'
-import Shoes from './components/Shoes/Shoes'
+import Category from './components/Category/Category'
 
 
 function App() {
@@ -15,8 +15,8 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/clothing" element={<Clothing />} />
-        <Route path="/shoes" element={<Shoes />} />
         <Route path="/accessories" element={<Accessories />} />
+        <Route path="/category" element={<Category />} />
       </Routes>
     </>
   )

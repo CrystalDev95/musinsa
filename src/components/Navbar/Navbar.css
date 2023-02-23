@@ -21,7 +21,7 @@
   position: fixed;
   background-color: white;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
 }
 .topSection .topDiv {
   display: relative;
@@ -73,6 +73,10 @@
   color: white;
   padding: 0.6rem 0;
   font-size: var(--SmallFontSize);
+}
+.topSection .mobileNav {
+  display: none;
+  height: 0;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -126,5 +130,86 @@
   }
   nav ul {
     display: none !important;
+  }
+}
+@media only screen and (max-width: 580px) {
+  .topSection {
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    z-index: 2;
+  }
+  .topSection .topDiv {
+    display: relative;
+    padding: 1rem 3rem;
+  }
+  .topSection .topDiv .searchDiv {
+    padding: 0 1rem;
+    float: left;
+    display: flex;
+  }
+  .topSection .topDiv .searchDiv .small-icon {
+    font-size: var(--h1FontSize) !important;
+    color: var(--BlackColor);
+  }
+  .topSection .topDiv .logo {
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    color: var(--BlackColor);
+  }
+  .topSection .topDiv .logo a {
+    text-decoration: none;
+    color: var(--BlackColor);
+  }
+  .topSection .topDiv .iconDiv {
+    display: flex;
+    float: right;
+    gap: 1rem;
+  }
+  .topSection nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin: 3rem 4rem 1rem;
+  }
+  .topSection nav ul li {
+    font-weight: 600;
+    list-style-type: none;
+    color: var(--BlackColor);
+  }
+  .topSection nav ul li a:hover {
+    color: red;
+  }
+  .topSection .mobileNav {
+    width: 100%;
+    position: fixed;
+    height: 60px;
+    background-color: black;
+    bottom: 0;
+    color: var(--WhiteColor);
+    justify-content: space-between;
+    display: flex;
+    z-index: 2;
+    padding: 0.1rem 0.5rem;
+  }
+  .topSection .mobileNav a {
+    color: white;
+  }
+  .topSection .mobileNav .iconDiv {
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: block;
+    padding: 0.5rem;
+    text-align: center;
+  }
+  .topSection .mobileNav .iconDiv .icon2 {
+    font-size: 1.5rem;
+  }
+  .topSection .mobileNav .iconDiv p {
+    font-size: var(--SmallFontSize);
   }
 }/*# sourceMappingURL=Navbar.css.map */
