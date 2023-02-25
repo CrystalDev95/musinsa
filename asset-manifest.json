@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/musinsa/static/css/main.8e942b0d.css",
-    "main.js": "/musinsa/static/js/main.cf2ce79d.js",
+    "main.css": "/musinsa/static/css/main.91a3cd54.css",
+    "main.js": "/musinsa/static/js/main.5aa2441f.js",
     "static/media/shoes.png": "/musinsa/static/media/shoes.db7be1f7201b60148f9f.png",
     "static/media/cap-w.png": "/musinsa/static/media/cap-w.cd47c3b83f26f282d016.png",
     "static/media/hoodies.png": "/musinsa/static/media/hoodies.4bb8df98eb536e1c48fa.png",
@@ -12,11 +12,11 @@
     "static/media/pants.png": "/musinsa/static/media/pants.bc0e290ae2faad507c08.png",
     "static/media/skirt.png": "/musinsa/static/media/skirt.90b0f720727317c790a0.png",
     "index.html": "/musinsa/index.html",
-    "main.8e942b0d.css.map": "/musinsa/static/css/main.8e942b0d.css.map",
-    "main.cf2ce79d.js.map": "/musinsa/static/js/main.cf2ce79d.js.map"
+    "main.91a3cd54.css.map": "/musinsa/static/css/main.91a3cd54.css.map",
+    "main.5aa2441f.js.map": "/musinsa/static/js/main.5aa2441f.js.map"
   },
   "entrypoints": [
-    "static/css/main.8e942b0d.css",
-    "static/js/main.cf2ce79d.js"
+    "static/css/main.91a3cd54.css",
+    "static/js/main.5aa2441f.js"
   ]
 }
