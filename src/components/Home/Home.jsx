@@ -8,14 +8,7 @@ import data from '../../data/data.json';
 import data2 from '../../data/data2.json';
 import data3 from '../../data/data3.json';
 import Slider from 'react-slick';
-import cap from '../assets/images/cap-w.png'
-import shoes from '../assets/images/shoes.png'
-import bag from '../assets/images/bag.png'
-import hoodies from '../assets/images/hoodies.png'
-import bucket from '../assets/images/bucket.png'
-import pants from '../assets/images/pants.png'
-import jacket from '../assets/images/jacket.png'
-import skirt from '../assets/images/skirt.png'
+import categoryData from '../../data/category.json'
 
 
 const Home = () => {
@@ -48,7 +41,7 @@ const Home = () => {
         }
       },
       {
-        breakpoint: 480,
+        breakpoint: 580,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -66,26 +59,24 @@ const Home = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 2000,
-    autoplaySpeed: 5000,
-    cssEase: "linear",
+    speed: 1000,
+    autoplaySpeed: 4000,
+    cssEase: "linear"
   };
 
   const [items, setItems] = useState([]);
   const [hero, setHero] = useState([]);
   const [items2, setItems2] = useState([]);
-  const [open, setOpen] = useState(false);
+  const [category, setCategory] = useState([]);
 
 
-  const handleOpen = () => {
-
-  }
 
 
   useEffect(() => {
     setHero(data)
     setItems(data2)
     setItems2(data3)
+    setCategory(categoryData)
   }, [])
 
 
@@ -154,53 +145,25 @@ const Home = () => {
               </button>
             </Link>
           </div>
-
-          <div className="mobileSection">
-            <div className="mobileContainer">
-              <div className="mobileDiv">
-                <img src={cap} alt="" />
-              </div>
-              <p>Cap</p>
-            </div>
-
-            <div className="mobileContainer">
-              <div className="mobileDiv">
-                <img src={skirt} alt="" />
-              </div>
-              <p>Skirt</p>
-            </div>
-
-            <div className="mobileContainer">
-              <div className="mobileDiv">
-                <img src={bucket} alt="" />
-              </div>
-              <p>Bucket</p>
-            </div>
-
-            <div className="mobileContainer">
-              <div className="mobileDiv">
-                <img src={shoes} alt="" />
-              </div>
-              <p>Shoes</p>
-            </div>
-
-            <div className="mobileContainer">
-              <div className="mobileDiv">
-                <img src={pants} alt="" />
-              </div>
-              <p>Pants</p>
-            </div>
-
-            <div className="mobileContainer">
-              <div className="mobileDiv">
-                <img src={hoodies} alt="" />
-              </div>
-              <p>Hoodies</p>
-            </div>
-
-
           </div>
-        </div>
+
+          <div className="category__Section">
+         <h2>Category</h2>
+          <div className="category__Wrap">
+            {
+              category.map((item) =>
+                <Link to={item.link}>
+                  <div className="category__Div" key={item.id}>
+                    <div className="category__Container">
+                      <img src={item.img} alt="" />
+                    </div>
+                    <p>{item.title}</p>
+                  </div>
+                </Link>
+              )
+            }
+          </div>
+          </div>
 
 
 
@@ -223,6 +186,29 @@ const Home = () => {
                 Shop Now
               </button>
             </Link>
+          </div>
+        </div>
+
+        <div className="popular">
+          <h2>Popular Items</h2>
+          <div className="popularSection">
+            {
+              items.slice(7, 13)
+                .map((item) =>
+                  <div className="popularContainer" key={item.id}>
+                    <div className="popularDiv">
+                      <img src={item.img} alt={item.name} />
+                    </div>
+                    <p className='name'>{item.name}</p>
+                    <p className='price'>${item.price}</p>
+                  </div>
+                )
+            }
+          </div>
+          <div className="popularBtn">
+            <div className="button">
+              View more items
+            </div>
           </div>
         </div>
 

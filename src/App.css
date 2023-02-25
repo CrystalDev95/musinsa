@@ -44,4 +44,9 @@ li {
 button {
   border: none;
   cursor: pointer;
+  color: black;
+}
+
+select {
+  color: black;
 }

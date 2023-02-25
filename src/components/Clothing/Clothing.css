@@ -25,7 +25,7 @@
   position: absolute;
   top: 25%;
   width: 100%;
-  padding: 0 1rem;
+  padding: 0 auto;
 }
 .clothSection .footerDiv {
   z-index: 3;
@@ -192,7 +192,7 @@
 @media only screen and (max-width: 1000px) {
   .clothSection {
     top: 18%;
-    padding: 0 1rem;
+    padding: 0 auto;
   }
   .clothSection .bodyDiv {
     width: 100vw;
@@ -217,16 +217,17 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: 0 0.5rem;
+    gap: 1rem;
   }
   .clothSection .bodyDiv .itemSection .itemLists .itemCard {
     width: 100%;
-    height: 500px;
+    height: 380px;
     background-color: transparent;
     padding-bottom: 1rem;
   }
   .clothSection .bodyDiv .itemSection .itemLists .itemCard img {
     width: 100%;
-    height: 60%;
+    height: 70%;
   }
   .clothSection .bodyDiv .itemSection .itemLists .itemCard .itemText {
     top: 5%;
@@ -284,7 +285,7 @@
   }
   .clothSection .bodyDiv {
     display: flex;
-    padding: 0.5rem 0.5rem 1rem;
+    padding: 0.5rem 0 1rem;
   }
   .clothSection .bodyDiv .leftMenu {
     display: none;
@@ -311,9 +312,13 @@
     padding: 0 2rem;
     cursor: pointer;
   }
+  .clothSection .bodyDiv .itemSection {
+    justify-content: center;
+    margin: 0 auto;
+  }
   .clothSection .bodyDiv .itemSection .topSmall {
     display: flex;
-    padding: 1rem 0 1rem;
+    padding: 1rem;
     justify-content: space-between;
   }
   .clothSection .bodyDiv .itemSection .topSmall .itemCount {
@@ -323,8 +328,7 @@
   .clothSection .bodyDiv .itemSection .itemLists {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    margin: 0 auto;
+    gap: 0.5rem;
   }
   .clothSection .bodyDiv .itemSection .itemLists .itemCard {
     margin: 0;

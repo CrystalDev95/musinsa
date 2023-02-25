@@ -5,6 +5,7 @@ import Footer from '../Footer/Footer';
 import data from '../../data/data2.json';
 import { BsCheck } from 'react-icons/bs';
 import { MdOutlineManageSearch } from 'react-icons/md';
+import { AiOutlineCloseCircle } from 'react-icons/ai';
 
 const Clothing = () => {
 
@@ -233,7 +234,7 @@ const Clothing = () => {
           <div 
           className='closeBtn'
           onClick={() => setShowLinks(false)}
-          >X</div>
+          ><AiOutlineCloseCircle className='icon' /></div>
             <div className='leftList'>
               <h3>Gender</h3>
               {
@@ -339,7 +340,7 @@ const Clothing = () => {
                       <div className="itemText">
                         <h4>{item.brand}</h4>
                         <p>{item.description}</p>
-                        <p>{item.color}</p>
+                        <p>[{item.color}]</p>
                         <h3><strong>${item.price}</strong></h3>
                       </div>
                     </div>
