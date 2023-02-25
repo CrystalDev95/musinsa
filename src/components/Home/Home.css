@@ -201,7 +201,7 @@
 .contentSection .slideDiv .mobileSection {
   display: none;
 }
-.contentSection .category {
+.contentSection .category__Section {
   display: none;
 }
 .contentSection .slideDiv2 {
@@ -469,6 +469,7 @@
   }
   .contentSection .popular {
     display: block;
+    margin-bottom: 2rem;
   }
   .contentSection .popular h2 {
     font-size: var(--h2FontSize);

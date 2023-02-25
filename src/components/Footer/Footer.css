@@ -157,6 +157,7 @@
     display: block;
     padding: 0 1.5rem;
     border-top: 1px solid var(--InputColor);
+    margin-top: 2rem;
   }
   .footerDiv .help-btn {
     padding: 0 0 1rem;

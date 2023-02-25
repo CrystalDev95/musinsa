@@ -7,6 +7,7 @@ import Footer from '../Footer/Footer'
 import data from '../../data/data.json';
 import data2 from '../../data/data2.json';
 import data3 from '../../data/data3.json';
+import accessory from '../../data/accessories.json';
 import Slider from 'react-slick';
 import categoryData from '../../data/category.json'
 
@@ -15,7 +16,7 @@ const Home = () => {
 
   const settings = {
     dots: false,
-    infinite: false,
+    infinite: true,
     speed: 500,
     arrows: true,
     slidesToShow: 4,
@@ -68,6 +69,7 @@ const Home = () => {
   const [hero, setHero] = useState([]);
   const [items2, setItems2] = useState([]);
   const [category, setCategory] = useState([]);
+  const [accessoryData, setAccessoryData] = useState([]);
 
 
 
@@ -77,6 +79,7 @@ const Home = () => {
     setItems(data2)
     setItems2(data3)
     setCategory(categoryData)
+    setAccessoryData(accessory)
   }, [])
 
 
@@ -202,6 +205,38 @@ const Home = () => {
                     <p className='name'>{item.name}</p>
                     <p className='price'>${item.price}</p>
                   </div>
+                )
+            }
+          </div>
+          <div className="popularBtn">
+            <div className="button">
+              View more items
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div className="popular">
+          <h2>Bucket and Baseball Caps</h2>
+          <div className="popularSection">
+            {
+              accessoryData.filter((item) => {
+                if (item.category == 'Cap') 
+                  return item
+              })
+              .slice(1, 7)
+                .map((item) =>
+                <Link to={item.link}>
+                  <div className="popularContainer" key={item.id}>
+                    <div className="popularDiv">
+                      <img src={item.img} alt={item.name} />
+                    </div>
+                    <p className='name'>{item.name}</p>
+                    <p className='price'>${item.price}</p>
+                  </div>
+                  </Link>
                 )
             }
           </div>
