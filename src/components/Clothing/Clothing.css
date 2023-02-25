@@ -107,7 +107,6 @@
   display: block;
   margin: 2rem 1rem;
   background-color: transparent;
-  border-radius: 100%;
   font-size: var(--NormalFontSize);
 }
 .clothSection .bodyDiv .leftMenu .leftList .bold {

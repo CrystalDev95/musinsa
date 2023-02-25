@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom';
 import './Navbar.css'
 
@@ -9,6 +9,31 @@ import { AiOutlineHome, AiOutlineMessage, AiOutlineHeart } from 'react-icons/ai'
 
 
 const Navbar = () => {
+
+  const [show, setShow] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const controlNavbar = () => {
+    if (typeof window !== 'undefined') { 
+      if (window.scrollY < lastScrollY) {
+        setShow(false); 
+      } else { 
+        setShow(true);  
+      }
+
+      setLastScrollY(window.scrollY); 
+    }
+  };
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', controlNavbar);
+
+      return () => {
+        window.removeEventListener('scroll', controlNavbar);
+      };
+    }
+  }, [lastScrollY]);
 
 
   return (
@@ -43,7 +68,7 @@ const Navbar = () => {
         <p>Free shipping on orders $200+</p>
       </div>
 
-      <div className="mobileNav">
+      <div className={`mobileNav ${show && 'hidden'}`}>
             <Link to="/category">
               <div className="iconDiv">
                 <BiCategory className='icon2' />

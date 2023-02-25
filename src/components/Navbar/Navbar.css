@@ -186,14 +186,14 @@
   .topSection .mobileNav {
     width: 100%;
     position: fixed;
-    height: 60px;
+    height: 70px;
     background-color: black;
     bottom: 0;
     color: var(--WhiteColor);
     justify-content: space-between;
     display: flex;
     z-index: 2;
-    padding: 0.1rem 0.5rem;
+    padding: 0.2rem 0.5rem;
   }
   .topSection .mobileNav a {
     color: white;
@@ -211,5 +211,15 @@
   }
   .topSection .mobileNav .iconDiv p {
     font-size: var(--SmallFontSize);
+  }
+  .topSection .hidden {
+    height: 4rem;
+    width: 100%;
+    z-index: 40;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.08);
+    position: fixed;
+    top: -80px;
+    transition: 0.3s linear;
   }
 }/*# sourceMappingURL=Navbar.css.map */
