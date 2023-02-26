@@ -1,22 +1,16 @@
 {
   "files": {
-    "main.css": "/musinsa/static/css/main.dd8d496e.css",
-    "main.js": "/musinsa/static/js/main.5bf7ea52.js",
-    "static/media/shoes.png": "/musinsa/static/media/shoes.db7be1f7201b60148f9f.png",
+    "main.css": "/musinsa/static/css/main.6242e492.css",
+    "main.js": "/musinsa/static/js/main.3391f115.js",
     "static/media/cap-w.png": "/musinsa/static/media/cap-w.cd47c3b83f26f282d016.png",
-    "static/media/hoodies.png": "/musinsa/static/media/hoodies.4bb8df98eb536e1c48fa.png",
-    "static/media/jacket.png": "/musinsa/static/media/jacket.5cd70f5cdb09c7f9ee1e.png",
-    "static/media/bucket.png": "/musinsa/static/media/bucket.62ff258a44c8f52df85d.png",
-    "static/media/white-top.png": "/musinsa/static/media/white-top.a437d5bc0d31373d1058.png",
-    "static/media/bag.png": "/musinsa/static/media/bag.440f36a4f8c86514fd75.png",
-    "static/media/pants.png": "/musinsa/static/media/pants.bc0e290ae2faad507c08.png",
-    "static/media/skirt.png": "/musinsa/static/media/skirt.90b0f720727317c790a0.png",
+    "static/media/cap-b.png": "/musinsa/static/media/cap-b.10dbc90d867eb8333848.png",
+    "static/media/cap-v.png": "/musinsa/static/media/cap-v.81dbd5177252005f136e.png",
     "index.html": "/musinsa/index.html",
-    "main.dd8d496e.css.map": "/musinsa/static/css/main.dd8d496e.css.map",
-    "main.5bf7ea52.js.map": "/musinsa/static/js/main.5bf7ea52.js.map"
+    "main.6242e492.css.map": "/musinsa/static/css/main.6242e492.css.map",
+    "main.3391f115.js.map": "/musinsa/static/js/main.3391f115.js.map"
   },
   "entrypoints": [
-    "static/css/main.dd8d496e.css",
-    "static/js/main.5bf7ea52.js"
+    "static/css/main.6242e492.css",
+    "static/js/main.3391f115.js"
   ]
 }
