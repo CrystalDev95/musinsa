@@ -38,21 +38,21 @@
     "id":"6",
     "img":"https://image.msscdn.net/images/goods_img/20220907/2778749/2778749_1_320.jpg",
     "title": "Bucket Hat",
-    "link": "/clothing"
+    "link": "/accessories"
   },
 
   {
     "id":"7",
     "img":"https://image.msscdn.net/images/goods_img/20210408/1888316/1888316_1_320.jpg",
     "title": "Shoes",
-    "link": "/clothing"
+    "link": "/accessories"
   },
 
   {
     "id":"8",
     "img":"https://image.msscdn.net/images/goods_img/20220215/2359469/2359469_3_320.jpg",
     "title": "Bags",
-    "link": "/clothing"
+    "link": "/accessories"
   }
 
 ]

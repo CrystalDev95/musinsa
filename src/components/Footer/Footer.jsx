@@ -57,7 +57,6 @@ const Footer = () => {
         MUSINSA Co.,Ltd may not be the direct seller but only an intermediary for some products. In this case, MUSINSA has limited liability for products, information, and transactions. Please check the product details page of each product.
 
       </div>
-
     </div>
   )
 }

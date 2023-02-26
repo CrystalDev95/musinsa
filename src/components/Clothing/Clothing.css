@@ -21,16 +21,13 @@
   z-index: 100 !important;
 }
 
-.clothSection {
+.cloth__Section {
   position: absolute;
   top: 25%;
   width: 100%;
   padding: 0 auto;
 }
-.clothSection .footerDiv {
-  z-index: 3;
-}
-.clothSection .searchContainer {
+.cloth__Section .search__Container {
   padding: 0.8rem 1rem;
   float: left;
   border: 1px rgba(0, 0, 0, 0.281) solid;
@@ -43,10 +40,10 @@
   position: absolute;
   left: 40%;
 }
-.clothSection .searchContainer:hover {
+.cloth__Section .search__Container:hover {
   cursor: pointer;
 }
-.clothSection .searchContainer input {
+.cloth__Section .search__Container input {
   outline: none;
   border: none;
   font-size: 1rem;
@@ -54,20 +51,20 @@
   color: var(--TextColor);
   background-color: transparent;
 }
-.clothSection .topMenu {
+.cloth__Section .topMenu {
   display: flex;
   flex-direction: column;
   padding: 4rem 4rem 2rem;
 }
-.clothSection .topMenu .buttonDiv {
+.cloth__Section .topMenu .buttonDiv {
   gap: 2rem;
   display: flex;
   padding: 2rem 0;
 }
-.clothSection .topMenu .buttonDiv .mobileButton {
+.cloth__Section .topMenu .buttonDiv .mobileButton {
   display: none;
 }
-.clothSection .topMenu .buttonDiv button {
+.cloth__Section .topMenu .buttonDiv button {
   background-color: var(--InputColor);
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
@@ -76,15 +73,15 @@
   cursor: pointer;
   border: none;
 }
-.clothSection .topMenu .buttonDiv .dark {
+.cloth__Section .topMenu .buttonDiv .dark {
   background-color: var(--BlackColor);
   color: var(--WhiteColor);
 }
-.clothSection .bodyDiv {
+.cloth__Section .bodyDiv {
   display: flex;
   padding: 0.5rem 1rem 1rem;
 }
-.clothSection .bodyDiv .leftMenu {
+.cloth__Section .bodyDiv .leftMenu {
   display: block;
   width: 220px;
   position: static;
@@ -92,45 +89,45 @@
   z-index: 0;
   flex-shrink: 0;
 }
-.clothSection .bodyDiv .leftMenu .closeBtn {
+.cloth__Section .bodyDiv .leftMenu .closeBtn {
   display: none;
 }
-.clothSection .bodyDiv .leftMenu .leftList {
+.cloth__Section .bodyDiv .leftMenu .leftList {
   border-bottom: 1px solid #e7e9ec;
   padding: 1rem 0;
 }
-.clothSection .bodyDiv .leftMenu .leftList h3 {
+.cloth__Section .bodyDiv .leftMenu .leftList h3 {
   font-size: var(--h2FontSize);
   padding-left: 1rem;
 }
-.clothSection .bodyDiv .leftMenu .leftList button {
+.cloth__Section .bodyDiv .leftMenu .leftList button {
   display: block;
   margin: 2rem 1rem;
   background-color: transparent;
   font-size: var(--NormalFontSize);
 }
-.clothSection .bodyDiv .leftMenu .leftList .bold {
+.cloth__Section .bodyDiv .leftMenu .leftList .bold {
   font-weight: 900;
   font-size: var(--h3FontSize);
 }
-.clothSection .bodyDiv .leftMenu .leftListColor {
+.cloth__Section .bodyDiv .leftMenu .leftListColor {
   border-bottom: 1px solid #e7e9ec;
   padding: 2rem 0;
 }
-.clothSection .bodyDiv .leftMenu .leftListColor h3 {
+.cloth__Section .bodyDiv .leftMenu .leftListColor h3 {
   margin-bottom: 1rem;
   padding-left: 1rem;
 }
-.clothSection .bodyDiv .leftMenu .leftListColor .colorSection {
+.cloth__Section .bodyDiv .leftMenu .leftListColor .colorSection {
   display: grid;
   grid-template-columns: repeat(2, 50px);
   gap: 1rem;
 }
-.clothSection .bodyDiv .leftMenu .leftListColor .colorSection .colorDiv {
+.cloth__Section .bodyDiv .leftMenu .leftListColor .colorSection .colorDiv {
   margin: auto;
   text-align: center;
 }
-.clothSection .bodyDiv .leftMenu .leftListColor .colorSection .colorDiv button {
+.cloth__Section .bodyDiv .leftMenu .leftListColor .colorSection .colorDiv button {
   display: block;
   margin: 1rem;
   height: 25px;
@@ -139,106 +136,106 @@
   font-size: var(--SmallestFontSize);
   color: transparent;
 }
-.clothSection .bodyDiv .leftMenu .leftListColor .colorSection .colorDiv .bold {
+.cloth__Section .bodyDiv .leftMenu .leftListColor .colorSection .colorDiv .bold {
   font-size: 1rem;
   color: var(--WhiteColor);
 }
-.clothSection .bodyDiv .leftMenu .leftListColor .colorSection .colorDiv p {
+.cloth__Section .bodyDiv .leftMenu .leftListColor .colorSection .colorDiv p {
   font-size: var(--SmallFontSize);
 }
-.clothSection .bodyDiv .itemSection {
+.cloth__Section .bodyDiv .itemSection {
   display: flex;
   flex-direction: column;
 }
-.clothSection .bodyDiv .itemSection .topSmall {
+.cloth__Section .bodyDiv .itemSection .topSmall {
   display: flex;
   justify-content: space-between;
   padding: 0 9rem;
 }
-.clothSection .bodyDiv .itemSection .topSmall .priceDiv select {
+.cloth__Section .bodyDiv .itemSection .topSmall .priceDiv select {
   padding: 0.4rem, 0.5rem;
 }
-.clothSection .bodyDiv .itemSection .topSmall .itemCount {
+.cloth__Section .bodyDiv .itemSection .topSmall .itemCount {
   margin: 0;
   color: var(--TextColor);
 }
-.clothSection .bodyDiv .itemSection .itemLists {
+.cloth__Section .bodyDiv .itemSection .itemLists {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-.clothSection .bodyDiv .itemSection .itemLists .itemCard {
+.cloth__Section .bodyDiv .itemSection .itemLists .itemCard {
   margin: 2rem 0.5rem;
   width: 300px;
   height: 400px;
   background-color: var(--WhiteColor);
 }
-.clothSection .bodyDiv .itemSection .itemLists .itemCard img {
+.cloth__Section .bodyDiv .itemSection .itemLists .itemCard img {
   width: 100%;
   height: 60%;
 }
-.clothSection .bodyDiv .itemSection .itemLists .itemCard .itemText {
+.cloth__Section .bodyDiv .itemSection .itemLists .itemCard .itemText {
   position: relative;
   top: 5%;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
-.clothSection .bodyDiv .itemSection .itemLists .itemCard .itemText h3 {
+.cloth__Section .bodyDiv .itemSection .itemLists .itemCard .itemText h3 {
   padding-top: 1rem;
 }
 
 @media only screen and (max-width: 1000px) {
-  .clothSection {
+  .cloth__Section {
     top: 18%;
     padding: 0 auto;
   }
-  .clothSection .bodyDiv {
+  .cloth__Section .bodyDiv {
     width: 100vw;
   }
-  .clothSection .bodyDiv .leftMenu {
+  .cloth__Section .bodyDiv .leftMenu {
     width: 180px;
     margin-right: 1rem;
   }
-  .clothSection .bodyDiv .itemSection {
+  .cloth__Section .bodyDiv .itemSection {
     margin-left: 1rem;
   }
-  .clothSection .bodyDiv .itemSection .topSmall {
+  .cloth__Section .bodyDiv .itemSection .topSmall {
     display: flex;
     padding: 1rem 0 1rem;
     justify-content: space-between;
   }
-  .clothSection .bodyDiv .itemSection .topSmall .itemCount {
+  .cloth__Section .bodyDiv .itemSection .topSmall .itemCount {
     margin: 0 2rem 2rem;
     color: var(--TextColor);
   }
-  .clothSection .bodyDiv .itemSection .itemLists {
+  .cloth__Section .bodyDiv .itemSection .itemLists {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: 0 0.5rem;
     gap: 1rem;
   }
-  .clothSection .bodyDiv .itemSection .itemLists .itemCard {
+  .cloth__Section .bodyDiv .itemSection .itemLists .itemCard {
     width: 100%;
     height: 380px;
     background-color: transparent;
     padding-bottom: 1rem;
   }
-  .clothSection .bodyDiv .itemSection .itemLists .itemCard img {
+  .cloth__Section .bodyDiv .itemSection .itemLists .itemCard img {
     width: 100%;
     height: 70%;
   }
-  .clothSection .bodyDiv .itemSection .itemLists .itemCard .itemText {
+  .cloth__Section .bodyDiv .itemSection .itemLists .itemCard .itemText {
     top: 5%;
     left: 5%;
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
   }
-  .clothSection .bodyDiv .itemSection .itemLists .itemCard .itemText h3 {
+  .cloth__Section .bodyDiv .itemSection .itemLists .itemCard .itemText h3 {
     padding-top: 0.5rem;
   }
-  .clothSection .bodyDiv .itemSection .itemLists .itemCard .itemText p {
+  .cloth__Section .bodyDiv .itemSection .itemLists .itemCard .itemText p {
     font-size: var(--SmallFontSize);
     width: 200px;
   }
@@ -247,52 +244,52 @@
   .navDiv {
     z-index: 1000;
   }
-  .clothSection {
+  .cloth__Section {
     top: 15%;
     padding: 0;
   }
-  .clothSection .searchContainer {
+  .cloth__Section .search__Container {
     display: none;
   }
-  .clothSection .searchContainer input {
+  .cloth__Section .search__Container input {
     display: none;
   }
-  .clothSection .topMenu {
+  .cloth__Section .topMenu {
     padding: 0 1.5rem;
   }
-  .clothSection .topMenu h1 {
+  .cloth__Section .topMenu h1 {
     font-size: var(--h1FontSize);
   }
-  .clothSection .topMenu .buttonDiv {
+  .cloth__Section .topMenu .buttonDiv {
     gap: 0.8rem;
     padding: 1.5rem 0;
     width: 95vw;
     flex-wrap: wrap;
   }
-  .clothSection .topMenu .buttonDiv .mobileButton {
+  .cloth__Section .topMenu .buttonDiv .mobileButton {
     display: flex;
     background-color: var(--InputColor);
     padding: 0.5rem;
     border-radius: 0.5rem;
   }
-  .clothSection .topMenu .buttonDiv .mobileButton .icon {
+  .cloth__Section .topMenu .buttonDiv .mobileButton .icon {
     font-size: var(--h2FontSize);
     color: var(--TextColor);
   }
-  .clothSection .topMenu .buttonDiv button {
+  .cloth__Section .topMenu .buttonDiv button {
     font-size: var(--SmallestFontSize);
   }
-  .clothSection .bodyDiv {
+  .cloth__Section .bodyDiv {
     display: flex;
     padding: 0.5rem 0 1rem;
   }
-  .clothSection .bodyDiv .leftMenu {
+  .cloth__Section .bodyDiv .leftMenu {
     display: none;
   }
-  .clothSection .bodyDiv .leftMenu .leftList h3 {
+  .cloth__Section .bodyDiv .leftMenu .leftList h3 {
     padding-left: 1rem;
   }
-  .clothSection .bodyDiv #hidden {
+  .cloth__Section .bodyDiv #hidden {
     display: block;
     position: fixed;
     left: 0;
@@ -305,52 +302,52 @@
     background-color: white;
     z-index: 1;
   }
-  .clothSection .bodyDiv #hidden .closeBtn {
+  .cloth__Section .bodyDiv #hidden .closeBtn {
     display: flex;
     float: right;
     padding: 0 2rem;
     cursor: pointer;
   }
-  .clothSection .bodyDiv .itemSection {
+  .cloth__Section .bodyDiv .itemSection {
     justify-content: center;
     margin: 0 auto;
   }
-  .clothSection .bodyDiv .itemSection .topSmall {
+  .cloth__Section .bodyDiv .itemSection .topSmall {
     display: flex;
     padding: 1rem;
     justify-content: space-between;
   }
-  .clothSection .bodyDiv .itemSection .topSmall .itemCount {
+  .cloth__Section .bodyDiv .itemSection .topSmall .itemCount {
     margin: 0 0.5rem 2rem;
     color: var(--TextColor);
   }
-  .clothSection .bodyDiv .itemSection .itemLists {
+  .cloth__Section .bodyDiv .itemSection .itemLists {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
   }
-  .clothSection .bodyDiv .itemSection .itemLists .itemCard {
+  .cloth__Section .bodyDiv .itemSection .itemLists .itemCard {
     margin: 0;
     width: 100%;
     height: 360px;
     background-color: transparent;
     padding-bottom: 1rem;
   }
-  .clothSection .bodyDiv .itemSection .itemLists .itemCard img {
+  .cloth__Section .bodyDiv .itemSection .itemLists .itemCard img {
     width: 100%;
     height: 60%;
   }
-  .clothSection .bodyDiv .itemSection .itemLists .itemCard .itemText {
+  .cloth__Section .bodyDiv .itemSection .itemLists .itemCard .itemText {
     top: 5%;
     left: 5%;
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
   }
-  .clothSection .bodyDiv .itemSection .itemLists .itemCard .itemText h3 {
+  .cloth__Section .bodyDiv .itemSection .itemLists .itemCard .itemText h3 {
     padding-top: 0.5rem;
   }
-  .clothSection .bodyDiv .itemSection .itemLists .itemCard .itemText p {
+  .cloth__Section .bodyDiv .itemSection .itemLists .itemCard .itemText p {
     font-size: var(--SmallFontSize);
     width: 170px;
   }

@@ -190,8 +190,8 @@ const Clothing = () => {
       <div className="navDiv">
         <Navbar />
       </div>
-      <div className='clothSection'>
-        <div className="searchContainer">
+      <div className='cloth__Section'>
+        <div className="search__Container">
           <input
             type="text"
             placeholder='Search'
@@ -233,7 +233,7 @@ const Clothing = () => {
           <div className="leftMenu" id={showLinks ? "hidden" : ""}>
           <div 
           className='closeBtn'
-          onClick={() => setShowLinks(false)}
+          onClick={() => setShowLinks(!showLinks)}
           ><AiOutlineCloseCircle className='icon' /></div>
             <div className='leftList'>
               <h3>Gender</h3>

@@ -19,13 +19,19 @@
 }
 
 
-.accSection {
+.navDiv {
+    z-index: 100 !important;
+}
+
+
+.access__Section {
     position: absolute;
     top: 25%;
     width: 100%;
-    padding: 0 2rem;
+    padding: 0 auto;
 
-    .search {
+
+    .search__Container {
         padding: 0.8rem 1rem;
         float: left;
         border: 1px rgba(0, 0, 0, 0.281) solid;
@@ -48,18 +54,23 @@
             font-size: 1rem;
             font-weight: 500;
             color: var(--TextColor);
+            background-color: transparent;
         }
     }
 
-    .accTopMenu {
+    .access__topMenu {
         display: flex;
         flex-direction: column;
         padding: 4rem 4rem 2rem;
 
-        .accButtonDiv {
+        .access__buttonDiv {
             gap: 2rem;
             display: flex;
             padding: 2rem 0;
+
+            .access__mobileButton {
+                display: none;
+            }
 
             button {
                 background-color: var(--InputColor);
@@ -81,11 +92,11 @@
 
 
 
-    .accBodyDiv {
+    .access__bodyDiv {
         display: flex;
         padding: .5rem 1rem 1rem;
 
-        .accLeftMenu {
+        .access__leftMenu {
             display: block;
             width: 220px;
             position: static;
@@ -93,7 +104,11 @@
             z-index: 0;
             flex-shrink: 0;
 
-            .accLeftList {
+            .closeBtn {
+                display: none;
+            }
+
+            .access__leftList {
                 border-bottom: 1px solid #e7e9ec;
                 padding: 1rem 0;
 
@@ -106,7 +121,6 @@
                     display: block;
                     margin: 2rem 1rem;
                     background-color: transparent;
-                    border-radius: 100%;
                     font-size: var(--NormalFontSize);
                 }
 
@@ -117,20 +131,22 @@
 
             }
 
-            .accLeftListColor {
+            .access__leftListColor {
                 border-bottom: 1px solid #e7e9ec;
                 padding: 2rem 0;
 
                 h3 {
                     margin-bottom: 1rem;
+                    padding-left: 1rem;
+
                 }
 
-                .accColorSection {
+                .access__colorSection {
                     display: grid;
                     grid-template-columns: repeat(2, 50px);
                     gap: 1rem;
 
-                    .accColorDiv {
+                    .access__colorDiv {
                         margin: auto;
                         text-align: center;
 
@@ -159,46 +175,45 @@
         }
 
 
-        .accItemSection {
+        .access__itemSection {
             display: flex;
             flex-direction: column;
 
-            .accTopSmall {
+            .access__topSmall {
                 display: flex;
-                padding: 0 4rem;
                 justify-content: space-between;
+                padding: 0 9rem;
 
-                .priceDiv {
+
+                .access__priceDiv {
                     select {
                         padding: .4rem, .5rem;
                     }
                 }
 
-                .itemCount {
-                    margin: 0 4rem 2rem;
+                .access__itemCount {
+                    margin: 0;
                     color: var(--TextColor);
                 }
             }
 
-            .accItemLists {
+            .access__itemLists {
                 display: flex;
-                flex-basis: 90%;
-                height: 500px;
                 justify-content: center;
                 flex-wrap: wrap;
 
-                .iaccItemCard {
-                    margin: 1rem;
-                    width: 260px;
+                .access__itemCard {
+                    margin: 2rem 0.5rem;
+                    width: 300px;
                     height: 400px;
                     background-color: var(--WhiteColor);
 
                     img {
-                        width: 95%;
+                        width: 100%;
                         height: 60%;
                     }
 
-                    .accItemText {
+                    .access__itemText {
                         position: relative;
                         top: 5%;
                         display: flex;
@@ -215,9 +230,222 @@
     }
 }
 
-@media only screen and (max-width: 1024px) {
-    .accSection {
-        position: absolute;
+
+////Tablet view 
+@media only screen and (max-width: 1000px) {
+    .access__Section {
+        top: 18%;
+        padding: 0 auto;
+
+
+        .access__bodyDiv {
+            width: 100vw;
+
+            .access__leftMenu {
+                width: 180px;
+                margin-right: 1rem;
+            }
+
+
+            .access__itemSection {
+                margin-left: 1rem;
+
+                .access__topSmall {
+                    display: flex;
+                    padding: 1rem 0 1rem;
+                    justify-content: space-between;
+
+                    .access__itemCount {
+                        margin: 0 2rem 2rem;
+                        color: var(--TextColor);
+                    }
+                }
+
+                .access__itemLists {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    margin: 0 .5rem;
+                    gap: 1rem;
+
+                    .access__itemCard {
+                        width: 100%;
+                        height: 380px;
+                        background-color: transparent;
+                        padding-bottom: 1rem;
+
+                        img {
+                            width: 100%;
+                            height: 70%;
+                        }
+
+                        .access__itemText {
+                            top: 5%;
+                            left: 5%;
+                            display: flex;
+                            flex-direction: column;
+                            gap: .2rem;
+
+                            h3 {
+                                padding-top: 0.5rem;
+                            }
+
+                            p {
+                                font-size: var(--SmallFontSize);
+                                width: 200px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+////Mobile view
+@media only screen and (max-width: 580px) {
+
+    .navDiv {
+        z-index: 1000;
+    }
+
+    .access__Section {
         top: 15%;
+        padding: 0;
+
+        .search__Container {
+            display: none;
+
+            input {
+                display: none;
+            }
+        }
+
+        .access__topMenu {
+            padding: 0 1.5rem;
+
+            h1 {
+                font-size: var(--h1FontSize);
+            }
+
+            .access__buttonDiv {
+                gap: .8rem;
+                padding: 1.5rem 0;
+                width: 95vw;
+                flex-wrap: wrap;
+
+
+                .access__mobileButton {
+                    display: flex;
+                    background-color: var(--InputColor);
+                    padding: 0.5rem;
+                    border-radius: .5rem;
+
+                    .icon {
+                        font-size: var(--h2FontSize);
+                        color: var(--TextColor);
+                    }
+                }
+
+                button {
+                    font-size: var(--SmallestFontSize);
+                }
+            }
+        }
+
+
+
+
+        .access__bodyDiv {
+            display: flex;
+            padding: .5rem 0 1rem;
+
+            .access__leftMenu {
+                display: none;
+
+                .access__leftList {
+                    h3 {
+                        padding-left: 1rem;
+                    }
+                }
+            }
+
+            #hidden {
+                display: block;
+                position: fixed;
+                left: 0;
+                top: 10%;
+                padding-top: 2rem;
+                padding-bottom: 5rem;
+                height: 90%;
+                width: 60%;
+                overflow-y: scroll;
+                background-color: white;
+                z-index: 1;
+
+                .closeBtn {
+                    display: flex;
+                    float: right;
+                    padding: 0 2rem;
+                    cursor: pointer;
+                }
+            }
+
+
+
+
+            .access__itemSection {
+                justify-content: center;
+                margin: 0 auto;
+
+                .access__topSmall {
+                    display: flex;
+                    padding: 1rem;
+                    justify-content: space-between;
+
+                    .access__itemCount {
+                        margin: 0 .5rem 2rem;
+                        color: var(--TextColor);
+                    }
+                }
+
+                .access__itemLists {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: .5rem;
+
+                    .access__itemCard {
+                        margin: 0;
+                        width: 100%;
+                        height: 360px;
+                        background-color: transparent;
+                        padding-bottom: 1rem;
+
+                        img {
+                            width: 100%;
+                            height: 60%;
+                        }
+
+                        .access__itemText {
+                            top: 5%;
+                            left: 5%;
+                            display: flex;
+                            flex-direction: column;
+                            gap: .2rem;
+
+                            h3 {
+                                padding-top: 0.5rem;
+                            }
+
+                            p {
+                                font-size: var(--SmallFontSize);
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

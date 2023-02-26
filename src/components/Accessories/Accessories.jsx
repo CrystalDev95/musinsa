@@ -1,13 +1,16 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import './Accessories.css'
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 import data from '../../data/accessories.json';
 import { BsCheck } from 'react-icons/bs';
+import { MdOutlineManageSearch } from 'react-icons/md';
+import { AiOutlineCloseCircle } from 'react-icons/ai';
 
 const Accessories = () => {
 
-  const [search, setSearch] = useState("")
+  const [search, setSearch] = useState("");
+  const [showLinks, setShowLinks] = useState(false);
 
   const [items, setItems] = useState([]);
   const [toggle, setToggle] = useState(false);
@@ -44,8 +47,8 @@ const Accessories = () => {
     { id: 100, value: 'DRAWFIT' },
     { id: 101, value: 'RETRIEVER CLUB' },
     { id: 102, value: 'URBANSTOFF' },
-    { id: 102, value: 'FALLETT' },
-    { id: 102, value: 'HOTEL-SAINT-TROPEZ' },
+    { id: 113, value: 'FALLETT' },
+    { id: 114, value: 'HOTEL-SAINT-TROPEZ' },
   ]
 
   const colors = [
@@ -186,27 +189,35 @@ const Accessories = () => {
 
   return (
     <>
-      <Navbar />
-      <div className='accSection'>
-      <div className="search">
-      <input 
-          type="text" 
-          placeholder='Search' 
-          onChange={(e) => {
-            setSearch(e.target.value)
-          }}
+      <div className="navDiv">
+        <Navbar />
+      </div>
+      <div className='access__Section'>
+        <div className="search__Container">
+          <input
+            type="text"
+            placeholder='Search'
+            onChange={(e) => {
+              setSearch(e.target.value)
+            }}
           />
         </div>
-        <div className="accTopMenu">
+        <div className="access__topMenu">
           <h1>Accessories</h1>
-          <div className="accButtonDiv">
+          <div className="access__buttonDiv">
+            <div
+              className="access__mobileButton"
+              onClick={() => setShowLinks(!showLinks)}
+            >
+              <MdOutlineManageSearch className='icon' />
+            </div>
             {
               types.map((t) =>
                 <button
                   key={t.id}
                   id={t.id}
                   value={t.value}
-                  className={t.id == toggle ? "dark" : null}
+                  className={t.id == toggle ? "dark" : false}
                   onClick={(e) => {
                     handleSelectedCategory(e);
                     handleToggle(e)
@@ -220,9 +231,13 @@ const Accessories = () => {
 
 
 
-        <div className="accBodyDiv">
-          <div className="accLeftMenu">
-            <div className='accLeftList'>
+        <div className="access__bodyDiv">
+          <div className="access__leftMenu" id={showLinks ? "hidden" : ""}>
+          <div 
+          className='closeBtn'
+          onClick={() => setShowLinks(!showLinks)}
+          ><AiOutlineCloseCircle className='icon' /></div>
+            <div className='access__leftList'>
               <h3>Gender</h3>
               {
                 genders.map((g) =>
@@ -240,7 +255,7 @@ const Accessories = () => {
               }
             </div>
 
-            <div className='accLeftList'>
+            <div className='access__leftList'>
               <h3>Brand</h3>
               {
                 brands.map((b) =>
@@ -258,12 +273,12 @@ const Accessories = () => {
               }
             </div>
 
-            <div className='accLeftListColor'>
+            <div className='access__leftListColor'>
               <h3>Color</h3>
-              <div className="accColorSection">
+              <div className="access__colorSection">
                 {
                   colors.map((c) =>
-                    <div className="accColorDiv">
+                    <div className="access__colorDiv">
                       <button
                         style={{ backgroundColor: c.color }}
                         className={c.id == colorClick ? "bold" : null}
@@ -286,20 +301,20 @@ const Accessories = () => {
           </div>
 
 
-          <div className='accItemSection'>
-            <div className="accTopSmall">
-              <div className='accItemCount'>
+          <div className='access__itemSection'>
+            <div className="access__topSmall">
+              <div className='access__itemCount'>
                 Total {items.length}
               </div>
-              <div className="accPriceDiv">
+              <div className="access__priceDiv">
                 <form action="#">
                   <label htmlFor="sort"></label>
                   <select
                     name="sort"
                     className='sort-selection'
-                    onChange={(e)=> handleChange(e.target.value)}
-                  > 
-                  <option value="none">Sort items by </option>
+                    onChange={(e) => handleChange(e.target.value)}
+                  >
+                    <option value="none">Sort items by </option>
                     <option value="high">Price(lowest)</option>
                     <option value="low">Price(highest)</option>
                     <option value="ascending">Alphabetically(A-Z)</option>
@@ -309,34 +324,33 @@ const Accessories = () => {
               </div>
             </div>
 
-            <div className="accItemLists">
+            <div className="access__itemLists">
               {items.length === 0
                 ? "No items found"
                 :
                 items.
-                filter((item) => {
-                  if (search == "") {
-                    return item
-                  } else if (item.brand.toLowerCase().includes(search.toLowerCase())) {
-                    return item
-                  }
-                })
-                .map((item) =>
-                  <div className="acccItemCard" key={item.id}>
-                    <img src={item.img} alt='clothes' />
-                    <div className="accItemText">
-                      <h4>{item.brand}</h4>
-                      <p>{item.description}</p>
-                      <h3><strong>${item.price}</strong></h3>
+                  filter((item) => {
+                    if (search == "") {
+                      return item
+                    } else if (item.brand.toLowerCase().includes(search.toLowerCase())) {
+                      return item
+                    }
+                  })
+                  .map((item) =>
+                    <div className="access__itemCard" key={item.id}>
+                      <img src={item.img} alt='clothes' />
+                      <div className="access__itemText">
+                        <h4>{item.brand}</h4>
+                        <p>{item.description}</p>
+                        <p>[{item.color}]</p>
+                        <h3><strong>${item.price}</strong></h3>
+                      </div>
                     </div>
-                  </div>
-                )}
+                  )}
             </div>
           </div>
-
         </div>
-
-        <Footer />
+          <Footer />
       </div>
     </>
   )

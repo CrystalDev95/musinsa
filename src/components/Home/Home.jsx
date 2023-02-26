@@ -10,6 +10,9 @@ import data3 from '../../data/data3.json';
 import accessory from '../../data/accessories.json';
 import Slider from 'react-slick';
 import categoryData from '../../data/category.json'
+import cap1 from '../assets/images/cap-b.png';
+import cap2 from '../assets/images/cap-v.png';
+import cap3 from '../assets/images/cap-w.png';
 
 
 const Home = () => {
@@ -152,7 +155,7 @@ const Home = () => {
 
           <div className="category__Section">
          <h2>Category</h2>
-          <div className="category__Wrap">
+          <div className="category__Wrap grid4">
             {
               category.map((item) =>
                 <Link to={item.link}>
@@ -194,7 +197,7 @@ const Home = () => {
 
         <div className="popular">
           <h2>Popular Items</h2>
-          <div className="popularSection">
+          <div className="popularSection grid3">
             {
               items.slice(7, 13)
                 .map((item) =>
@@ -208,11 +211,13 @@ const Home = () => {
                 )
             }
           </div>
+          <Link to="/clothing">
           <div className="popularBtn">
             <div className="button">
               View more items
             </div>
           </div>
+          </Link>
         </div>
 
 
@@ -220,7 +225,7 @@ const Home = () => {
 
         <div className="popular">
           <h2>Bucket and Baseball Caps</h2>
-          <div className="popularSection">
+          <div className="popularSection grid3">
             {
               accessoryData.filter((item) => {
                 if (item.category == 'Cap') 
@@ -240,10 +245,56 @@ const Home = () => {
                 )
             }
           </div>
+          <Link to="/accessories">
           <div className="popularBtn">
             <div className="button">
               View more items
             </div>
+          </div>
+          </Link>
+        </div>
+
+        <div className="celeb__Section">
+          <div className="celeb__Main">
+            <img src="https://image.musinsa.com/mfile_s01/cms-files/6266132da00f08.43872388.jpg" alt="" />
+          </div>
+          <div className="celeb__Text">
+          <h2>Goeun Kim showing Musinsa style</h2>
+          <p>23 SPRING New clothes | 5% Discount</p>
+          </div>
+
+          <div className="celeb grid3">
+
+            <div className="celeb__Container">
+            <div className="celeb__Div">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW1GudrCDgSpvHpKx5pkguDigKRy7qLxZx5w&usqp=CAU" alt="" />
+            </div>
+            <p className='name'>Mardi blue print top</p>
+            <p className='price'>$70</p>
+            </div>
+
+            <div className="celeb__Container">
+            <div className="celeb__Div">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAVrbUkuK2aoASSViiMtxBScguYGM4NJIJll1CjE3KPUTzZw9WWJxZVJjMUC49EttlWr8&usqp=CAU" alt="" />
+            </div>
+            <p className='name'>Mardi green print top</p>
+            <p className='price'>$85</p>
+            </div>
+
+            <div className="celeb__Container">
+            <div className="celeb__Div">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE_k52mTqNEFQG57VRVuIDUTtpkvmeWQ0zNQ&usqp=CAU" alt="" />
+            </div>
+            <p className='name'>Mardi black top</p>
+            <p className='price'>$90</p>
+            </div>
+          </div>
+
+
+          <div className="view__Btn">
+            <button>
+              View more items
+            </button>
           </div>
         </div>
 

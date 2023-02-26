@@ -23,18 +23,14 @@
 }
 
 
-.clothSection {
+.cloth__Section {
     position: absolute;
     top: 25%;
     width: 100%;
     padding: 0 auto;
 
-    .footerDiv {
-        z-index: 3;
-    }
 
-
-    .searchContainer {
+    .search__Container {
         padding: 0.8rem 1rem;
         float: left;
         border: 1px rgba(0, 0, 0, 0.281) solid;
@@ -236,7 +232,7 @@
 
 ////Tablet view 
 @media only screen and (max-width: 1000px) {
-    .clothSection {
+    .cloth__Section {
         top: 18%;
         padding: 0 auto;
 
@@ -314,11 +310,11 @@
         z-index: 1000;
     }
 
-    .clothSection {
+    .cloth__Section {
         top: 15%;
         padding: 0;
 
-        .searchContainer {
+        .search__Container {
             display: none;
 
             input {

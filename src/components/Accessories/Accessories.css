@@ -17,13 +17,17 @@
   --SmallestFontSize: .75rem;
 }
 
-.accSection {
+.navDiv {
+  z-index: 100 !important;
+}
+
+.access__Section {
   position: absolute;
   top: 25%;
   width: 100%;
-  padding: 0 2rem;
+  padding: 0 auto;
 }
-.accSection .search {
+.access__Section .search__Container {
   padding: 0.8rem 1rem;
   float: left;
   border: 1px rgba(0, 0, 0, 0.281) solid;
@@ -36,27 +40,31 @@
   position: absolute;
   left: 40%;
 }
-.accSection .search:hover {
+.access__Section .search__Container:hover {
   cursor: pointer;
 }
-.accSection .search input {
+.access__Section .search__Container input {
   outline: none;
   border: none;
   font-size: 1rem;
   font-weight: 500;
   color: var(--TextColor);
+  background-color: transparent;
 }
-.accSection .accTopMenu {
+.access__Section .access__topMenu {
   display: flex;
   flex-direction: column;
   padding: 4rem 4rem 2rem;
 }
-.accSection .accTopMenu .accButtonDiv {
+.access__Section .access__topMenu .access__buttonDiv {
   gap: 2rem;
   display: flex;
   padding: 2rem 0;
 }
-.accSection .accTopMenu .accButtonDiv button {
+.access__Section .access__topMenu .access__buttonDiv .access__mobileButton {
+  display: none;
+}
+.access__Section .access__topMenu .access__buttonDiv button {
   background-color: var(--InputColor);
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
@@ -65,15 +73,15 @@
   cursor: pointer;
   border: none;
 }
-.accSection .accTopMenu .accButtonDiv .dark {
+.access__Section .access__topMenu .access__buttonDiv .dark {
   background-color: var(--BlackColor);
   color: var(--WhiteColor);
 }
-.accSection .accBodyDiv {
+.access__Section .access__bodyDiv {
   display: flex;
   padding: 0.5rem 1rem 1rem;
 }
-.accSection .accBodyDiv .accLeftMenu {
+.access__Section .access__bodyDiv .access__leftMenu {
   display: block;
   width: 220px;
   position: static;
@@ -81,42 +89,45 @@
   z-index: 0;
   flex-shrink: 0;
 }
-.accSection .accBodyDiv .accLeftMenu .accLeftList {
+.access__Section .access__bodyDiv .access__leftMenu .closeBtn {
+  display: none;
+}
+.access__Section .access__bodyDiv .access__leftMenu .access__leftList {
   border-bottom: 1px solid #e7e9ec;
   padding: 1rem 0;
 }
-.accSection .accBodyDiv .accLeftMenu .accLeftList h3 {
+.access__Section .access__bodyDiv .access__leftMenu .access__leftList h3 {
   font-size: var(--h2FontSize);
   padding-left: 1rem;
 }
-.accSection .accBodyDiv .accLeftMenu .accLeftList button {
+.access__Section .access__bodyDiv .access__leftMenu .access__leftList button {
   display: block;
   margin: 2rem 1rem;
   background-color: transparent;
-  border-radius: 100%;
   font-size: var(--NormalFontSize);
 }
-.accSection .accBodyDiv .accLeftMenu .accLeftList .bold {
+.access__Section .access__bodyDiv .access__leftMenu .access__leftList .bold {
   font-weight: 900;
   font-size: var(--h3FontSize);
 }
-.accSection .accBodyDiv .accLeftMenu .accLeftListColor {
+.access__Section .access__bodyDiv .access__leftMenu .access__leftListColor {
   border-bottom: 1px solid #e7e9ec;
   padding: 2rem 0;
 }
-.accSection .accBodyDiv .accLeftMenu .accLeftListColor h3 {
+.access__Section .access__bodyDiv .access__leftMenu .access__leftListColor h3 {
   margin-bottom: 1rem;
+  padding-left: 1rem;
 }
-.accSection .accBodyDiv .accLeftMenu .accLeftListColor .accColorSection {
+.access__Section .access__bodyDiv .access__leftMenu .access__leftListColor .access__colorSection {
   display: grid;
   grid-template-columns: repeat(2, 50px);
   gap: 1rem;
 }
-.accSection .accBodyDiv .accLeftMenu .accLeftListColor .accColorSection .accColorDiv {
+.access__Section .access__bodyDiv .access__leftMenu .access__leftListColor .access__colorSection .access__colorDiv {
   margin: auto;
   text-align: center;
 }
-.accSection .accBodyDiv .accLeftMenu .accLeftListColor .accColorSection .accColorDiv button {
+.access__Section .access__bodyDiv .access__leftMenu .access__leftListColor .access__colorSection .access__colorDiv button {
   display: block;
   margin: 1rem;
   height: 25px;
@@ -125,60 +136,218 @@
   font-size: var(--SmallestFontSize);
   color: transparent;
 }
-.accSection .accBodyDiv .accLeftMenu .accLeftListColor .accColorSection .accColorDiv .bold {
+.access__Section .access__bodyDiv .access__leftMenu .access__leftListColor .access__colorSection .access__colorDiv .bold {
   font-size: 1rem;
   color: var(--WhiteColor);
 }
-.accSection .accBodyDiv .accLeftMenu .accLeftListColor .accColorSection .accColorDiv p {
+.access__Section .access__bodyDiv .access__leftMenu .access__leftListColor .access__colorSection .access__colorDiv p {
   font-size: var(--SmallFontSize);
 }
-.accSection .accBodyDiv .accItemSection {
+.access__Section .access__bodyDiv .access__itemSection {
   display: flex;
   flex-direction: column;
 }
-.accSection .accBodyDiv .accItemSection .accTopSmall {
+.access__Section .access__bodyDiv .access__itemSection .access__topSmall {
   display: flex;
-  padding: 0 4rem;
   justify-content: space-between;
+  padding: 0 9rem;
 }
-.accSection .accBodyDiv .accItemSection .accTopSmall .priceDiv select {
+.access__Section .access__bodyDiv .access__itemSection .access__topSmall .access__priceDiv select {
   padding: 0.4rem, 0.5rem;
 }
-.accSection .accBodyDiv .accItemSection .accTopSmall .itemCount {
-  margin: 0 4rem 2rem;
+.access__Section .access__bodyDiv .access__itemSection .access__topSmall .access__itemCount {
+  margin: 0;
   color: var(--TextColor);
 }
-.accSection .accBodyDiv .accItemSection .accItemLists {
+.access__Section .access__bodyDiv .access__itemSection .access__itemLists {
   display: flex;
-  flex-basis: 90%;
-  height: 500px;
   justify-content: center;
   flex-wrap: wrap;
 }
-.accSection .accBodyDiv .accItemSection .accItemLists .iaccItemCard {
-  margin: 1rem;
-  width: 260px;
+.access__Section .access__bodyDiv .access__itemSection .access__itemLists .access__itemCard {
+  margin: 2rem 0.5rem;
+  width: 300px;
   height: 400px;
   background-color: var(--WhiteColor);
 }
-.accSection .accBodyDiv .accItemSection .accItemLists .iaccItemCard img {
-  width: 95%;
+.access__Section .access__bodyDiv .access__itemSection .access__itemLists .access__itemCard img {
+  width: 100%;
   height: 60%;
 }
-.accSection .accBodyDiv .accItemSection .accItemLists .iaccItemCard .accItemText {
+.access__Section .access__bodyDiv .access__itemSection .access__itemLists .access__itemCard .access__itemText {
   position: relative;
   top: 5%;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
-.accSection .accBodyDiv .accItemSection .accItemLists .iaccItemCard .accItemText h3 {
+.access__Section .access__bodyDiv .access__itemSection .access__itemLists .access__itemCard .access__itemText h3 {
   padding-top: 1rem;
 }
 
-@media only screen and (max-width: 1024px) {
-  .accSection {
-    position: absolute;
+@media only screen and (max-width: 1000px) {
+  .access__Section {
+    top: 18%;
+    padding: 0 auto;
+  }
+  .access__Section .access__bodyDiv {
+    width: 100vw;
+  }
+  .access__Section .access__bodyDiv .access__leftMenu {
+    width: 180px;
+    margin-right: 1rem;
+  }
+  .access__Section .access__bodyDiv .access__itemSection {
+    margin-left: 1rem;
+  }
+  .access__Section .access__bodyDiv .access__itemSection .access__topSmall {
+    display: flex;
+    padding: 1rem 0 1rem;
+    justify-content: space-between;
+  }
+  .access__Section .access__bodyDiv .access__itemSection .access__topSmall .access__itemCount {
+    margin: 0 2rem 2rem;
+    color: var(--TextColor);
+  }
+  .access__Section .access__bodyDiv .access__itemSection .access__itemLists {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 0.5rem;
+    gap: 1rem;
+  }
+  .access__Section .access__bodyDiv .access__itemSection .access__itemLists .access__itemCard {
+    width: 100%;
+    height: 380px;
+    background-color: transparent;
+    padding-bottom: 1rem;
+  }
+  .access__Section .access__bodyDiv .access__itemSection .access__itemLists .access__itemCard img {
+    width: 100%;
+    height: 70%;
+  }
+  .access__Section .access__bodyDiv .access__itemSection .access__itemLists .access__itemCard .access__itemText {
+    top: 5%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .access__Section .access__bodyDiv .access__itemSection .access__itemLists .access__itemCard .access__itemText h3 {
+    padding-top: 0.5rem;
+  }
+  .access__Section .access__bodyDiv .access__itemSection .access__itemLists .access__itemCard .access__itemText p {
+    font-size: var(--SmallFontSize);
+    width: 200px;
+  }
+}
+@media only screen and (max-width: 580px) {
+  .navDiv {
+    z-index: 1000;
+  }
+  .access__Section {
     top: 15%;
+    padding: 0;
+  }
+  .access__Section .search__Container {
+    display: none;
+  }
+  .access__Section .search__Container input {
+    display: none;
+  }
+  .access__Section .access__topMenu {
+    padding: 0 1.5rem;
+  }
+  .access__Section .access__topMenu h1 {
+    font-size: var(--h1FontSize);
+  }
+  .access__Section .access__topMenu .access__buttonDiv {
+    gap: 0.8rem;
+    padding: 1.5rem 0;
+    width: 95vw;
+    flex-wrap: wrap;
+  }
+  .access__Section .access__topMenu .access__buttonDiv .access__mobileButton {
+    display: flex;
+    background-color: var(--InputColor);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+  }
+  .access__Section .access__topMenu .access__buttonDiv .access__mobileButton .icon {
+    font-size: var(--h2FontSize);
+    color: var(--TextColor);
+  }
+  .access__Section .access__topMenu .access__buttonDiv button {
+    font-size: var(--SmallestFontSize);
+  }
+  .access__Section .access__bodyDiv {
+    display: flex;
+    padding: 0.5rem 0 1rem;
+  }
+  .access__Section .access__bodyDiv .access__leftMenu {
+    display: none;
+  }
+  .access__Section .access__bodyDiv .access__leftMenu .access__leftList h3 {
+    padding-left: 1rem;
+  }
+  .access__Section .access__bodyDiv #hidden {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 10%;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+    height: 90%;
+    width: 60%;
+    overflow-y: scroll;
+    background-color: white;
+    z-index: 1;
+  }
+  .access__Section .access__bodyDiv #hidden .closeBtn {
+    display: flex;
+    float: right;
+    padding: 0 2rem;
+    cursor: pointer;
+  }
+  .access__Section .access__bodyDiv .access__itemSection {
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .access__Section .access__bodyDiv .access__itemSection .access__topSmall {
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+  }
+  .access__Section .access__bodyDiv .access__itemSection .access__topSmall .access__itemCount {
+    margin: 0 0.5rem 2rem;
+    color: var(--TextColor);
+  }
+  .access__Section .access__bodyDiv .access__itemSection .access__itemLists {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+  .access__Section .access__bodyDiv .access__itemSection .access__itemLists .access__itemCard {
+    margin: 0;
+    width: 100%;
+    height: 360px;
+    background-color: transparent;
+    padding-bottom: 1rem;
+  }
+  .access__Section .access__bodyDiv .access__itemSection .access__itemLists .access__itemCard img {
+    width: 100%;
+    height: 60%;
+  }
+  .access__Section .access__bodyDiv .access__itemSection .access__itemLists .access__itemCard .access__itemText {
+    top: 5%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+  .access__Section .access__bodyDiv .access__itemSection .access__itemLists .access__itemCard .access__itemText h3 {
+    padding-top: 0.5rem;
+  }
+  .access__Section .access__bodyDiv .access__itemSection .access__itemLists .access__itemCard .access__itemText p {
+    font-size: var(--SmallFontSize);
   }
 }/*# sourceMappingURL=Accessories.css.map */

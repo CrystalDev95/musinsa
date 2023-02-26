@@ -264,6 +264,9 @@
 .contentSection .popular {
   display: none;
 }
+.contentSection .celeb__Section {
+  display: none;
+}
 
 @media only screen and (max-width: 1100px) {
   .contentSection {
@@ -442,8 +445,6 @@
     padding: 0 1rem;
   }
   .contentSection .category__Section .category__Wrap {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
     margin: 2rem 0.5rem 1rem;
   }
   .contentSection .category__Section .category__Wrap .category__Div {
@@ -455,8 +456,8 @@
     align-items: center;
   }
   .contentSection .category__Section .category__Wrap .category__Div .category__Container {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
   }
   .contentSection .category__Section .category__Wrap .category__Div .category__Container img {
     width: 100%;
@@ -477,8 +478,6 @@
   }
   .contentSection .popular .popularSection {
     margin: 2rem 0.5rem 1rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 0.2rem;
   }
   .contentSection .popular .popularSection .popularContainer {
@@ -512,10 +511,75 @@
     background: transparent;
     border: 1px solid var(--GreyText);
     font-size: var(--SmallFontSize);
-    padding: 0.6rem 4rem;
-    border-radius: 1rem;
+    padding: 0.8rem 4rem;
+    border-radius: 2rem;
     width: 100%;
     text-align: center;
     font-weight: 600;
+  }
+  .contentSection .celeb__Section {
+    display: block;
+    padding-bottom: 4rem;
+  }
+  .contentSection .celeb__Section .celeb__Main {
+    height: 350px;
+    width: 100%;
+    margin: 2rem auto 0.5rem;
+  }
+  .contentSection .celeb__Section .celeb__Main img {
+    height: 100%;
+    width: 100%;
+  }
+  .contentSection .celeb__Section .celeb__Text {
+    margin: 2rem 0;
+    padding: 0 0.5rem;
+  }
+  .contentSection .celeb__Section .celeb__Text h2 {
+    font-size: var(--h2FontSize);
+    line-height: 2.5rem;
+  }
+  .contentSection .celeb__Section .celeb__Text p {
+    font-size: var(--NormalFontSize);
+    color: var(--TextColor);
+  }
+  .contentSection .celeb__Section .celeb {
+    gap: 0.2rem;
+    padding: 0 0.5rem;
+  }
+  .contentSection .celeb__Section .celeb .celeb__Container {
+    margin-bottom: 3rem;
+  }
+  .contentSection .celeb__Section .celeb .celeb__Container .celeb__Div {
+    height: 150px;
+    width: 100%;
+  }
+  .contentSection .celeb__Section .celeb .celeb__Container .celeb__Div img {
+    height: 100%;
+    width: 100%;
+  }
+  .contentSection .celeb__Section .celeb .celeb__Container .name {
+    color: var(--TextColor);
+    line-height: 1rem;
+    font-size: var(--SmallFontSize);
+    margin: 0.5rem 0;
+  }
+  .contentSection .celeb__Section .celeb .celeb__Container .price {
+    color: var(--BlackColor);
+    font-size: var(--SmallFontSize);
+    font-weight: 600;
+  }
+  .contentSection .view__Btn {
+    padding: 0 0 2rem;
+    margin: 0 2rem;
+  }
+  .contentSection .view__Btn button {
+    background-color: black;
+    color: white;
+    border: 1px solid var(--GreyText);
+    font-size: var(--SmallFontSize);
+    padding: 0.8rem 4rem;
+    border-radius: 2rem;
+    width: 100%;
+    text-align: center;
   }
 }/*# sourceMappingURL=Home.css.map */
