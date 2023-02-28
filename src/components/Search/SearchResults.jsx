@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import './Clothing.css'
+import React, { useState, useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
+import './searchResults.css'
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 import data from '../../data/data2.json';
@@ -7,9 +8,12 @@ import { BsCheck } from 'react-icons/bs';
 import { MdOutlineManageSearch } from 'react-icons/md';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 
-const Clothing = () => {
+const SearchResults = () => {
+  const location = useLocation()
+  console.log(location)
 
-  const [showLinks, setShowLinks] = useState("")
+  const [search, setSearch] = useState(location.state.search)
+  const [showLinks, setShowLinks] = useState(false)
   const [items, setItems] = useState([]);
   const [toggle, setToggle] = useState(false);
   const [bold, setBold] = useState(null);
@@ -20,7 +24,6 @@ const Clothing = () => {
   const [selectedGender, setSelectedGender] = useState(null);
   const [selectedBrand, setSelectedBrand] = useState(null);
   const [selectedColor, setSelectedColor] = useState(null);
-
 
   const types = [
     { id: 11, value: 'All' },
@@ -87,6 +90,8 @@ const Clothing = () => {
     if (e.target.value === 'All') {
       setSelectedCategory(null)
       setToggle(null)
+      setItems(data)
+
     } else {
       setSelectedCategory(e.target.value)
     }
@@ -187,8 +192,11 @@ const Clothing = () => {
         <Navbar />
       </div>
       <div className='cloth__Section'>
+
         <div className="topMenu">
-          <h1>Clothes</h1>
+          <h1>{
+            search.charAt(0).toUpperCase() + search.slice(1)
+          }</h1>
           <div className="buttonDiv">
             <div
               className="mobileButton"
@@ -218,10 +226,10 @@ const Clothing = () => {
 
         <div className="bodyDiv">
           <div className="leftMenu" id={showLinks ? "hidden" : ""}>
-          <div 
-          className='closeBtn'
-          onClick={() => setShowLinks(!showLinks)}
-          ><AiOutlineCloseCircle className='icon' /></div>
+            <div
+              className='closeBtn'
+              onClick={() => setShowLinks(!showLinks)}
+            ><AiOutlineCloseCircle className='icon' /></div>
             <div className='leftList'>
               <h3>Gender</h3>
               {
@@ -289,7 +297,14 @@ const Clothing = () => {
           <div className='itemSection'>
             <div className="topSmall">
               <div className='itemCount'>
-                Total {items.length}
+                Total {
+                  items.
+                    filter((item) => {
+                      if (item.brand.toLowerCase().includes(search.toLowerCase())) {
+                        return item
+                      }
+                    }).length
+                }
               </div>
               <div className="priceDiv">
                 <form action="#">
@@ -313,7 +328,14 @@ const Clothing = () => {
               {items.length === 0
                 ? "No items found"
                 :
-                items.map((item) =>
+                items.
+                  filter((item) => {
+                    if (search == "") {
+                      return item
+                    } else if (item.brand.toLowerCase().includes(search.toLowerCase())) {
+                      return item
+                    }})
+                  .map((item) =>
                     <div className="itemCard" key={item.id}>
                       <img src={item.img} alt='clothes' />
                       <div className="itemText">
@@ -327,14 +349,10 @@ const Clothing = () => {
             </div>
           </div>
         </div>
-          <Footer />
+        <Footer />
       </div>
     </>
   )
 }
 
-export default Clothing
-
-
-
-
+export default SearchResults

@@ -27,15 +27,28 @@
 
     .topDiv {
         display: relative;
-        padding: 1rem 3rem 0.5rem;
+        padding: 1rem 3rem;
+
         .searchDiv {
-            padding: 0 1rem;
+            padding: .3rem 1rem;
             float: left;
             display: flex;
+            align-items: center;
+
+            .search__Container {
+                border: 1px solid var(--GreyText);
+                border-radius: 2rem;
+                padding: .3rem 2rem;
+
+                input {
+                    border: none;
+                    outline: none;
+                    font-size: 1rem;
+                }
+            }
 
             .small-icon {
-                font-size: var(--h1FontSize) !important;
-                color: var(--BlackColor);
+                display: none;
             }
         }
 
@@ -43,7 +56,7 @@
             margin: 0;
             position: absolute;
             left: 50%;
-            top: 20%;
+            top: 22%;
             transform: translate(-50%, -50%);
             color: var(--BlackColor);
 
@@ -57,9 +70,13 @@
             display: flex;
             float: right;
             gap: 1rem;
+            font-size: var(--h1FontSize);
+        }
+
+        .mobileNavPage {
+            display: none;
         }
     }
-
 
     nav ul {
         display: flex;
@@ -100,41 +117,130 @@
 
 @media only screen and (max-width: 1024px) {
     .topSection {
+        .mobileNav {
+            width: 100%;
+            position: fixed;
+            height: 70px;
+            background-color: black;
+            bottom: 0;
+            color: var(--WhiteColor);
+            justify-content: space-around;
+            display: flex;
+            z-index: 2;
+            padding: .2rem .5rem;
+
+            a {
+                color: white;
+            }
+
+            .iconDiv {
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+                display: block;
+                padding: .5rem;
+                text-align: center;
+
+                .icon2 {
+                    font-size: 1.5rem;
+                }
+
+                p {
+                    font-size: var(--SmallFontSize);
+                }
+
+            }
+        }
         .topDiv {
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             padding: 1rem 3rem;
 
             .searchDiv {
-                border: none;
-                width: 60px;
-
-                input {
+                padding: 0;
+    
+                .search__Container {
                     display: none;
                 }
-
+    
                 .small-icon {
-                    font-size: var(--h1FontSize) !important;
+                    display: flex;
+                    font-size: var(--h1FontSize);
                     color: var(--BlackColor);
-                    margin-bottom: .5rem;
+                    margin-left: .5rem;
+                    cursor: pointer;
                 }
             }
-
             .logo {
-                font-size: var(--SmallestFontSize);
+                font-size: var(--SmallFontSize);
                 top: 30%;
             }
 
             .iconDiv {
                 .linkText {
-
                     .person,
                     .heart {
                         display: none;
                     }
                 }
             }
+            #hidden {
+                display: block;
+                position: fixed;
+                left: 0;
+                top: 0;
+                padding: 1rem 0;
+                height: 100%;
+                width: 100%;
+                background-color: #ffffff;
+                z-index: 1;
+                justify-content: center;
+
+                .mobileNavPage__searchDiv {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+        
+                    .mobileNavPage__searchContainer {
+                        border: 1px solid var(--GreyText);
+                        border-radius: 2rem;
+                        padding: .5rem 2rem;
+        
+                        input {
+                            border: none;
+                            outline: none;
+                            font-size: 1rem;
+                        }
+
+                    }
+                    .closeBtn {
+                        padding: 0 .5rem;
+                        cursor: pointer;
+                    }
+                }
+
+                .dropdown {
+                    padding: 1rem 4rem;
+                    background-color: transparent;
+                    width: 100%;
+                    height: 80%;
+                    overflow-y: scroll;
+                    
+                    .dropdown-row {
+                        background-color: white;
+                        text-align: center;
+                        padding: 1rem 0;
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: black;
+                            color: white;
+                        } 
+                    }
+                }
+            }
         }
     }
+
 
 
     nav ul {
@@ -157,8 +263,6 @@
                 }
 
                 .small-icon {
-                    font-size: var(--h1FontSize) !important;
-                    color: var(--BlackColor);
                     margin-bottom: .5rem;
                 }
             }
@@ -171,9 +275,11 @@
     }
 
 
+
     nav ul {
         display: none !important;
     }
+    
 }
 
 
@@ -183,22 +289,22 @@
         background-color: white;
         width: 100%;
         z-index: 2;
-    
+
         .topDiv {
             display: relative;
             padding: 1rem 3rem;
-    
+
             .searchDiv {
                 padding: 0 1rem;
                 float: left;
                 display: flex;
-    
+
                 .small-icon {
                     font-size: var(--h1FontSize) !important;
                     color: var(--BlackColor);
                 }
             }
-    
+
             .logo {
                 margin: 0;
                 position: absolute;
@@ -206,32 +312,34 @@
                 top: 30%;
                 transform: translate(-50%, -50%);
                 color: var(--BlackColor);
-    
+
                 a {
                     text-decoration: none;
                     color: var(--BlackColor);
                 }
             }
-    
+
             .iconDiv {
-                display: flex;
-                float: right;
-                gap: 1rem;
+                .linkText {
+                    .bag {
+                        font-size: var(--h2FontSize);
+                    }
+                }
             }
         }
-    
-    
+
+
         nav ul {
             display: flex;
             justify-content: center;
             gap: 3rem;
             margin: 3rem 4rem 1rem;
-    
+
             li {
                 font-weight: 600;
                 list-style-type: none;
                 color: var(--BlackColor);
-    
+
                 a {
                     &:hover {
                         color: red;
@@ -240,43 +348,8 @@
             }
         }
 
-        .mobileNav {
-            width: 100%;
-            position: fixed;
-            height: 70px;
-            background-color: black;
-            bottom: 0;
-            color: var(--WhiteColor);
-            justify-content: space-between;
-            display: flex;
-            z-index: 2;
-            padding: .2rem .5rem;
-    
-            a {
-                color: white;
-            }
-    
-    
-            .iconDiv {
-                justify-content: center;
-                align-items: center;
-                margin: auto;
-                display: block;
-                padding: .5rem;
-                text-align: center;
-    
-                .icon2 {
-                    font-size: 1.5rem;
-                }
-    
-                p {
-                    font-size: var(--SmallFontSize);
-                }
-    
-            }
-        }
 
-        .hidden{
+        .hidden {
             height: 4rem;
             width: 100%;
             z-index: 40;
@@ -285,7 +358,7 @@
             position: fixed;
             top: -80px;
             transition: 0.3s linear;
-        
+
         }
     }
 

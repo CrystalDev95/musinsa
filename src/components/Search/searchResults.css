@@ -126,7 +126,8 @@
 .cloth__Section .bodyDiv .itemSection .topSmall {
   display: flex;
   justify-content: space-between;
-  padding: 0 9rem;
+  padding: 0 3rem;
+  gap: 5rem;
 }
 .cloth__Section .bodyDiv .itemSection .topSmall .priceDiv select {
   padding: 0.4rem, 0.5rem;
@@ -327,4 +328,4 @@
     font-size: var(--SmallFontSize);
     width: 170px;
   }
-}/*# sourceMappingURL=Clothing.css.map */
+}/*# sourceMappingURL=searchResults.css.map */

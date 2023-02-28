@@ -10,9 +10,7 @@ import data3 from '../../data/data3.json';
 import accessory from '../../data/accessories.json';
 import Slider from 'react-slick';
 import categoryData from '../../data/category.json'
-import cap1 from '../assets/images/cap-b.png';
-import cap2 from '../assets/images/cap-v.png';
-import cap3 from '../assets/images/cap-w.png';
+import { motion } from 'framer-motion'
 
 
 const Home = () => {
@@ -112,7 +110,11 @@ const Home = () => {
         </div>
 
 
-        <section className="heroDiv2">
+        <motion.div
+        initial={{ x: 0, opacity: 0 }}
+        whileInView={{ x: [-250, 0], opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="heroDiv2">
           <div className="imgDiv">
             <img src="https://image.msscdn.net/global/images/2023/02/20/b43422bd79f9401f84d3ab455b5ff40c.jpg" alt="" />
           </div>
@@ -129,7 +131,7 @@ const Home = () => {
               </Link>
             </div>
           </div>
-        </section>
+        </motion.div>
 
 
         <div className="slideDiv">

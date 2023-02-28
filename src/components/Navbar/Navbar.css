@@ -25,22 +25,32 @@
 }
 .topSection .topDiv {
   display: relative;
-  padding: 1rem 3rem 0.5rem;
+  padding: 1rem 3rem;
 }
 .topSection .topDiv .searchDiv {
-  padding: 0 1rem;
+  padding: 0.3rem 1rem;
   float: left;
   display: flex;
+  align-items: center;
+}
+.topSection .topDiv .searchDiv .search__Container {
+  border: 1px solid var(--GreyText);
+  border-radius: 2rem;
+  padding: 0.3rem 2rem;
+}
+.topSection .topDiv .searchDiv .search__Container input {
+  border: none;
+  outline: none;
+  font-size: 1rem;
 }
 .topSection .topDiv .searchDiv .small-icon {
-  font-size: var(--h1FontSize) !important;
-  color: var(--BlackColor);
+  display: none;
 }
 .topSection .topDiv .logo {
   margin: 0;
   position: absolute;
   left: 50%;
-  top: 20%;
+  top: 22%;
   transform: translate(-50%, -50%);
   color: var(--BlackColor);
 }
@@ -52,6 +62,10 @@
   display: flex;
   float: right;
   gap: 1rem;
+  font-size: var(--h1FontSize);
+}
+.topSection .topDiv .mobileNavPage {
+  display: none;
 }
 .topSection nav ul {
   display: flex;
@@ -80,29 +94,107 @@
 }
 
 @media only screen and (max-width: 1024px) {
+  .topSection .mobileNav {
+    width: 100%;
+    position: fixed;
+    height: 70px;
+    background-color: black;
+    bottom: 0;
+    color: var(--WhiteColor);
+    justify-content: space-around;
+    display: flex;
+    z-index: 2;
+    padding: 0.2rem 0.5rem;
+  }
+  .topSection .mobileNav a {
+    color: white;
+  }
+  .topSection .mobileNav .iconDiv {
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: block;
+    padding: 0.5rem;
+    text-align: center;
+  }
+  .topSection .mobileNav .iconDiv .icon2 {
+    font-size: 1.5rem;
+  }
+  .topSection .mobileNav .iconDiv p {
+    font-size: var(--SmallFontSize);
+  }
   .topSection .topDiv {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     padding: 1rem 3rem;
   }
   .topSection .topDiv .searchDiv {
-    border: none;
-    width: 60px;
+    padding: 0;
   }
-  .topSection .topDiv .searchDiv input {
+  .topSection .topDiv .searchDiv .search__Container {
     display: none;
   }
   .topSection .topDiv .searchDiv .small-icon {
-    font-size: var(--h1FontSize) !important;
+    display: flex;
+    font-size: var(--h1FontSize);
     color: var(--BlackColor);
-    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+    cursor: pointer;
   }
   .topSection .topDiv .logo {
-    font-size: var(--SmallestFontSize);
+    font-size: var(--SmallFontSize);
     top: 30%;
   }
   .topSection .topDiv .iconDiv .linkText .person,
   .topSection .topDiv .iconDiv .linkText .heart {
     display: none;
+  }
+  .topSection .topDiv #hidden {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 1rem 0;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 1;
+    justify-content: center;
+  }
+  .topSection .topDiv #hidden .mobileNavPage__searchDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .topSection .topDiv #hidden .mobileNavPage__searchDiv .mobileNavPage__searchContainer {
+    border: 1px solid var(--GreyText);
+    border-radius: 2rem;
+    padding: 0.5rem 2rem;
+  }
+  .topSection .topDiv #hidden .mobileNavPage__searchDiv .mobileNavPage__searchContainer input {
+    border: none;
+    outline: none;
+    font-size: 1rem;
+  }
+  .topSection .topDiv #hidden .mobileNavPage__searchDiv .closeBtn {
+    padding: 0 0.5rem;
+    cursor: pointer;
+  }
+  .topSection .topDiv #hidden .dropdown {
+    padding: 1rem 4rem;
+    background-color: transparent;
+    width: 100%;
+    height: 80%;
+    overflow-y: scroll;
+  }
+  .topSection .topDiv #hidden .dropdown .dropdown-row {
+    background-color: white;
+    text-align: center;
+    padding: 1rem 0;
+    cursor: pointer;
+  }
+  .topSection .topDiv #hidden .dropdown .dropdown-row:hover {
+    background-color: black;
+    color: white;
   }
   nav ul {
     display: none !important;
@@ -120,8 +212,6 @@
     display: none;
   }
   .topSection .topDiv .searchDiv .small-icon {
-    font-size: var(--h1FontSize) !important;
-    color: var(--BlackColor);
     margin-bottom: 0.5rem;
   }
   .topSection .topDiv .logo {
@@ -164,10 +254,8 @@
     text-decoration: none;
     color: var(--BlackColor);
   }
-  .topSection .topDiv .iconDiv {
-    display: flex;
-    float: right;
-    gap: 1rem;
+  .topSection .topDiv .iconDiv .linkText .bag {
+    font-size: var(--h2FontSize);
   }
   .topSection nav ul {
     display: flex;
@@ -182,35 +270,6 @@
   }
   .topSection nav ul li a:hover {
     color: red;
-  }
-  .topSection .mobileNav {
-    width: 100%;
-    position: fixed;
-    height: 70px;
-    background-color: black;
-    bottom: 0;
-    color: var(--WhiteColor);
-    justify-content: space-between;
-    display: flex;
-    z-index: 2;
-    padding: 0.2rem 0.5rem;
-  }
-  .topSection .mobileNav a {
-    color: white;
-  }
-  .topSection .mobileNav .iconDiv {
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    display: block;
-    padding: 0.5rem;
-    text-align: center;
-  }
-  .topSection .mobileNav .iconDiv .icon2 {
-    font-size: 1.5rem;
-  }
-  .topSection .mobileNav .iconDiv p {
-    font-size: var(--SmallFontSize);
   }
   .topSection .hidden {
     height: 4rem;
