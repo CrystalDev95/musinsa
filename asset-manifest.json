@@ -1,16 +1,13 @@
 {
   "files": {
-    "main.css": "/musinsa/static/css/main.6242e492.css",
-    "main.js": "/musinsa/static/js/main.3391f115.js",
-    "static/media/cap-w.png": "/musinsa/static/media/cap-w.cd47c3b83f26f282d016.png",
-    "static/media/cap-b.png": "/musinsa/static/media/cap-b.10dbc90d867eb8333848.png",
-    "static/media/cap-v.png": "/musinsa/static/media/cap-v.81dbd5177252005f136e.png",
+    "main.css": "/musinsa/static/css/main.a6147be9.css",
+    "main.js": "/musinsa/static/js/main.6d3372c6.js",
     "index.html": "/musinsa/index.html",
-    "main.6242e492.css.map": "/musinsa/static/css/main.6242e492.css.map",
-    "main.3391f115.js.map": "/musinsa/static/js/main.3391f115.js.map"
+    "main.a6147be9.css.map": "/musinsa/static/css/main.a6147be9.css.map",
+    "main.6d3372c6.js.map": "/musinsa/static/js/main.6d3372c6.js.map"
   },
   "entrypoints": [
-    "static/css/main.6242e492.css",
-    "static/js/main.3391f115.js"
+    "static/css/main.a6147be9.css",
+    "static/js/main.6d3372c6.js"
   ]
 }
