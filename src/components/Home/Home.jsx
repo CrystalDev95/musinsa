@@ -203,6 +203,7 @@ const Home = () => {
             {
               items.slice(7, 13)
                 .map((item) =>
+                <Link to={`/item/${item.id}`}>
                   <div className="popularContainer" key={item.id}>
                     <div className="popularDiv">
                       <img src={item.img} alt={item.name} />
@@ -210,6 +211,7 @@ const Home = () => {
                     <p className='name'>{item.name}</p>
                     <p className='price'>${item.price}</p>
                   </div>
+                  </Link>
                 )
             }
           </div>
@@ -235,7 +237,7 @@ const Home = () => {
               })
               .slice(1, 7)
                 .map((item) =>
-                <Link to={item.link}>
+                <Link to={`/accessory/${item.id}`}>
                   <div className="popularContainer" key={item.id}>
                     <div className="popularDiv">
                       <img src={item.img} alt={item.name} />

@@ -12,7 +12,8 @@ const SearchResults = () => {
   const location = useLocation()
   console.log(location)
 
-  const [search, setSearch] = useState(location.state.search)
+  const [search, setSearch] = useState(location.state.searchTerm)
+  // const [searchDropDown, setSearchDropDown] = useState(location.state.searchDropDown)
   const [showLinks, setShowLinks] = useState(false)
   const [items, setItems] = useState([]);
   const [toggle, setToggle] = useState(false);
@@ -332,7 +333,7 @@ const SearchResults = () => {
                   filter((item) => {
                     if (search == "") {
                       return item
-                    } else if (item.brand.toLowerCase().includes(search.toLowerCase())) {
+                    } else if (item.name.toLowerCase().includes(search.toLowerCase())) {
                       return item
                     }})
                   .map((item) =>

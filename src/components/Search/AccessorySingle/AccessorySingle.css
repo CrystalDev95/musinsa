@@ -1,0 +1,109 @@
+:root {
+  --PrimaryColor: hsl(190, 100%, 50%);
+  --HoverColor: #90ecff;
+  --PaleColor: hsl(190, 72%, 70%);
+  --WhiteColor: hsl(0, 0%, 100%);
+  --BlackColor: hsl(0, 0%, 18%);
+  --TextColor: hsl(240, 1%, 48%);
+  --BgColor: hsl(220, 10%, 94%);
+  --GreyText: rgb(190, 190, 190);
+  --InputColor: hsl(330, 12%, 97%);
+  --BiggestFontSize: 2.5rem;
+  --h1FontSize: 1.5rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --NormalFontSize: .938rem;
+  --SmallFontSize: .813rem;
+  --SmallestFontSize: .75rem;
+}
+
+.navDiv {
+  z-index: 100 !important;
+}
+
+.singleAcc {
+  width: 100%;
+  position: absolute;
+  top: 25%;
+  padding: 0 5rem;
+}
+.singleAcc .acc {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.singleAcc .acc .acc__image {
+  flex-shrink: 0;
+  width: 500px;
+  margin-right: 2rem;
+}
+.singleAcc .acc .acc__image img {
+  width: 100%;
+}
+.singleAcc .acc .acc__info {
+  flex-basis: 40%;
+  font-size: var(--h1FontSize);
+}
+.singleAcc .acc .acc__info p {
+  padding: 0.5rem 0;
+}
+.singleAcc .acc .acc__info .name {
+  font-size: var(--BiggestFontSize);
+}
+.singleAcc .acc .acc__info .price {
+  font-weight: 600;
+  margin-top: 1rem;
+}
+.singleAcc .acc .acc__info .ship {
+  font-size: var(--NormalFontSize);
+  color: var(--TextColor);
+  font-weight: 500;
+}
+.singleAcc .acc .acc__info .ship .icon {
+  margin-right: 0.5rem;
+  font-size: var(--h3FontSize);
+}
+.singleAcc .acc .acc__info .acc__btn {
+  padding: 2rem 0;
+  display: flex;
+  gap: 1rem;
+}
+.singleAcc .acc .acc__info .acc__btn .black-btn {
+  border-radius: 0.5rem;
+  font-size: var(--NormalFontSize);
+  font-weight: 600;
+}
+.singleAcc .acc .acc__info .acc__btn .heart {
+  width: 60px;
+  height: 50px;
+  border: 1px solid var(--GreyText);
+  border-radius: 0.5rem;
+  color: var(--GreyText);
+  justify-content: center;
+  text-align: center;
+}
+.singleAcc .acc .acc__info .acc__btn .heart .icon {
+  position: relative;
+  top: 25%;
+}
+
+@media only screen and (max-width: 580px) {
+  .singleAcc {
+    top: 10%;
+    padding: 1rem 0 2rem;
+  }
+  .singleAcc .acc .acc__image {
+    width: 400px;
+    margin: 0 0.5rem;
+  }
+  .singleAcc .acc .acc__info {
+    flex-basis: 90%;
+    margin-top: 1rem;
+  }
+  .singleAcc .acc .acc__info .acc__btn .heart {
+    height: 40px;
+  }
+  .singleAcc .acc .acc__info .acc__btn .heart .icon {
+    font-size: var(--h2FontSize);
+  }
+}/*# sourceMappingURL=AccessorySingle.css.map */

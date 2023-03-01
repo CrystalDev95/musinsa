@@ -36,10 +36,6 @@ li {
   list-style: none;
 }
 
-.icon {
-  color: var(--BlackColor);
-  font-size: var(--h1FontSize);
-}
 
 button {
   border: none;
@@ -60,3 +56,14 @@ select {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
+
+.black-btn {
+  background-color: black;
+  color: white;
+  border: 1px solid var(--GreyText);
+  font-size: var(--SmallFontSize);
+  padding: .8rem 4rem;
+  width: 100%;
+  text-align: center;
+}
+

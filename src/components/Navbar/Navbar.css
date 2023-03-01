@@ -189,7 +189,8 @@
   .topSection .topDiv #hidden .dropdown .dropdown-row {
     background-color: white;
     text-align: center;
-    padding: 1rem 0;
+    margin: 1rem 0;
+    padding: 0.5rem 0;
     cursor: pointer;
   }
   .topSection .topDiv #hidden .dropdown .dropdown-row:hover {

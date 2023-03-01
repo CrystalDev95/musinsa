@@ -21,11 +21,18 @@ const Navbar = () => {
 
 
 
-  const handleSearch = (e) => {
+  const handleSearchEnter = (e) => {
     if (e.key === 'Enter') {
-      navigate("/SearchResults", { state: { search, items } });
+      navigate('/search', { state: { search, items } });
       window.location.reload();
-    } 
+    }
+  }
+
+  const handleSearch = (searchTerm) => {
+    console.log(searchTerm)
+    setSearch(searchTerm)
+    navigate('/search', { state: { searchTerm, items } });
+    window.location.reload();
   }
 
 
@@ -66,37 +73,42 @@ const Navbar = () => {
         <div className="mobileNavPage" id={showLinks ? "hidden" : ""}>
           <div className="mobileNavPage__searchDiv">
             <div className="mobileNavPage__searchContainer">
-            <input
-              type="text"
-              placeholder='Search'
-              onChange={(e) => {
-                setSearch(e.target.value)
-              }}
-              onKeyDown={handleSearch}
-            />
-          </div>
-          <div 
-          className='closeBtn'
-          onClick={() => setShowLinks(!showLinks)}
-          ><AiOutlineCloseCircle className='icon' />
-          </div>
+              <input
+                type="text"
+                value={search}
+                placeholder='Search'
+                onChange={(e) => {
+                  setSearch(e.target.value)
+                }}
+                onKeyDown={handleSearchEnter}
+              />
+            </div>
+            <div
+              className='closeBtn'
+              onClick={() => setShowLinks(!showLinks)}
+            ><AiOutlineCloseCircle className='icon' />
+            </div>
           </div>
 
           <div className="dropdown">
             {
               items
-              .filter((item) => {
-              if (search == "") {
-                return false
-              } else if (item.name.toLowerCase().includes(search.toLowerCase())) {
-                return item
-              }}).slice(1,11)
-              .map((item) => 
-              <div 
-              onClick={handleSearch} 
-              className='dropdown-row'
-              >{item.name}</div>
-              )
+                .filter((item) => {
+                  const searchTerm = search.toLowerCase();
+                  const fullName = item.name.toLowerCase();
+
+                  return searchTerm && fullName.startsWith(searchTerm) && item.name !== searchTerm
+                })
+                .map((item) =>
+                  <div
+                    key={item.id}
+                    value={item.name}
+                    onClick={() => {
+                      handleSearch(item.name)
+                    }}
+                    className='dropdown-row'
+                  >{item.name}</div>
+                )
             }
           </div>
         </div>
